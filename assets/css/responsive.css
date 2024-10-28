@@ -1,80 +1,89 @@
 
-
-/*
-Author: Bootstrapthemes
-Author URI: http://www.xpeedstudio.com
-*/
-
-/* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
     body {
         font-size: 1rem;
     }
-
-
-
-
-
-
 }
+
 @media (max-width: 1000px) {
     .navbar-brand {
         height: 80px;
         padding: 10px 15px;
     }
 
+    #logo-innova-black {
+        max-width: 40%;
+        margin-top: -15px;
+        margin-left: 30%;
+        transition: opacity 2s;
+
+    }
+
 }
+
 
 /* Portrait tablets and small desktops */
 @media (max-width: 991px) {
-    nav.navbar.bootsnav .navbar-brand{
-        padding-top:30px;
+    nav.navbar.bootsnav .navbar-brand {
+        padding-top: 30px;
     }
-    nav.navbar.bootsnav .navbar-toggle{
+
+    nav.navbar.bootsnav .navbar-toggle {
         margin-top: 25px;
     }
-    .sm-text-center{
+
+    .sm-text-center {
         text-align: center !important;
     }
-    .sm-pull-none{
+
+    .sm-pull-none {
         float: none !important;
     }
-    .sm-m-top-10{
-        margin-top:10px;
+
+    .sm-m-top-10 {
+        margin-top: 10px;
     }
-    .sm-m-top-20{
-        margin-top:20px;
+
+    .sm-m-top-20 {
+        margin-top: 20px;
     }
-    .sm-m-top-30{
-        margin-top:30px;
+
+    .sm-m-top-30 {
+        margin-top: 30px;
     }
-    .sm-m-top-40{
-        margin-top:40px;
+
+    .sm-m-top-40 {
+        margin-top: 40px;
     }
-    .sm-m-top-50{
-        margin-top:50px;
+
+    .sm-m-top-50 {
+        margin-top: 50px;
     }
-    .sm-m-top-60{
-        margin-top:60px;
+
+    .sm-m-top-60 {
+        margin-top: 60px;
     }
-    .sm-m-top-70{
-        margin-top:70px;
+
+    .sm-m-top-70 {
+        margin-top: 70px;
     }
 
     .work_separator1:before,
-    .work_separator2:before{
-        margin-left:-90px;
+    .work_separator2:before {
+        margin-left: -90px;
         left: 50%;
         top: 50%;
         z-index: 1;
     }
-    .separator_left{
+
+    .separator_left {
         margin: 20px auto;
     }
+
     .main-gallery .grid-item {
         position: relative;
         margin: 5px;
-        width:350px;
+        width: 350px;
         overflow: hidden;
     }
 
@@ -84,41 +93,52 @@ Author URI: http://www.xpeedstudio.com
 
 
 /* Landscape phones and portrait tablets */
-@media  (max-width: 768px) {
-    h2{
-        font-size:2rem;
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
     }
-    p{
-        font-size:90%;
+
+    p {
+        font-size: 90%;
         line-height: 2rem;
     }
-    .xs-pull-none{
+
+    .xs-pull-none {
         float: none !important;
     }
-    .xs-text-center{
+
+    .xs-text-center {
         text-align: center !important;
     }
-    .xs-m-top-10{
-        margin-top:10px;
+
+    .xs-m-top-10 {
+        margin-top: 10px;
     }
-    .xs-m-top-20{
-        margin-top:20px;
+
+    .xs-m-top-20 {
+        margin-top: 20px;
     }
-    .xs-m-top-30{
-        margin-top:30px;
+
+    .xs-m-top-30 {
+        margin-top: 30px;
     }
-    .xs-m-top-40{
-        margin-top:40px;
+
+    .xs-m-top-40 {
+        margin-top: 40px;
     }
-    .xs-m-top-50{
-        margin-top:50px;
+
+    .xs-m-top-50 {
+        margin-top: 50px;
     }
-    .xs-m-bottom-10{
-        margin-bottom:10px;
+
+    .xs-m-bottom-10 {
+        margin-bottom: 10px;
     }
-    .xs-m-bottom-20{
-        margin-bottom:20px;
+
+    .xs-m-bottom-20 {
+        margin-bottom: 20px;
     }
+
     .main_testimonial .testimonial_slid .slick-arrow.nextprevright {
         top: -150px;
     }
@@ -134,6 +154,7 @@ Author URI: http://www.xpeedstudio.com
     html {
         font-size: 85%;
     }
+
     .testimonial_slid .slick-arrow {
         display: none;
     }
@@ -144,20 +165,15 @@ Author URI: http://www.xpeedstudio.com
 
 
 
-@media (max-width: 400px) {
-
-
-}
+@media (max-width: 400px) {}
 
 @media (max-width: 320px) {
     html {
         font-size: 60.5%;
     }
-    .btn.btnxs{
-        padding:2.01rem 1.5rem;
+
+    .btn.btnxs {
+        padding: 2.01rem 1.5rem;
     }
 
 }
-
-
-

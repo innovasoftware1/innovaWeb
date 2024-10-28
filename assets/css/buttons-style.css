@@ -1,0 +1,151 @@
+.btn-hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    height: 55px;
+    text-align: center;
+    border: 1px solid #999da1;
+    border-radius: 20px;
+    background-size: 300% 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+/* Colores de fondo para los botones */
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, rgb(55, 67, 154), #6686c0, #3a9bdc, #6ca0e5);
+    box-shadow: 0 4px 15px 0 rgba(55, 67, 154, 0.75);
+}
+
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, rgb(63, 73, 157), #757cbf, #6b6fbc, #5f65a4, #545d9a);
+    box-shadow: 0 4px 15px 0 rgba(63, 73, 157, 0.75);
+
+}
+
+.btn-hover.color-3 {
+    background-image: linear-gradient(to right, rgb(233, 63, 51), #d1524a, #c44c45, #b8433f);
+    box-shadow: 0 4px 15px 0 rgba(233, 63, 51, 0.75);
+}
+
+.btn-hover.color-4 {
+    background-image: linear-gradient(to right, rgb(14, 167, 81), #12b96f, #0fb867, #0ca95e, #0a9b54);
+    box-shadow: 0 4px 15px 0 rgba(14, 167, 81, 0.75);
+
+}
+
+.btn-hover.color-5 {
+    background-image: linear-gradient(to right, rgb(245, 140, 48), #f3b057, #f68a3c, #f57731, #f26527);
+    box-shadow: 0 4px 15px 0 rgba(245, 140, 48, 0.75);
+}
+
+.btn-hover.color-6 {
+    background-image: linear-gradient(to right, rgb(88, 198, 208), #8cd1d6, #7fc3cc, #6db5c2, #5aa7b8);
+    box-shadow: 0 4px 15px 0 rgba(88, 198, 208, 0.75);
+
+}
+
+.btn-hover.color-7 {
+    background-image: linear-gradient(to right, rgb(170, 80, 140), #b86f9f, #a8618f, #9c5a7f, #924c70);
+    box-shadow: 0 4px 15px 0 rgba(170, 80, 140, 0.75);
+}
+
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, rgb(168, 206, 59), #b0cd5a, #99b354, #84a24f, #749b45);
+    box-shadow: 0 4px 15px 0 rgba(168, 206, 59, 0.75);
+
+}
+
+.btn-hover.color-9 {
+    background-image: linear-gradient(to right, rgb(170, 173, 175), #b0b3b5, #a6a8aa, #9da0a2, #94999b);
+    box-shadow: 0 4px 15px 0 rgba(170, 173, 175, 0.75);
+
+}
+
+.btn-hover.color-10 {
+    background-image: linear-gradient(to right, rgb(129, 92, 111), #d28cb1, #b77a97, #a76a87, #9a5a78);
+    box-shadow: 0 4px 15px 0 rgba(129, 92, 111, 0.75);
+}
+
+.btn-hover.color-11 {
+    background-image: linear-gradient(to right, rgb(169, 207, 64), #b3d75b, #99c652, #87b84b, #78a740);
+    box-shadow: 0 4px 15px 0 rgba(169, 207, 64, 0.75);
+
+}
+
+.btn-hover.color-12 {
+    background-image: linear-gradient(to right, rgb(237, 23, 81), #e12f8f, #d03b7c, #c2476b, #b2545a);
+    box-shadow: 0 4px 15px 0 rgba(237, 23, 81, 0.75);
+
+}
+
+.btn-hover.color-13 {
+    background-image: linear-gradient(to right, rgb(131, 92, 58), #b29b7c, #a58f6e, #9b7e61, #8f6e54);
+    box-shadow: 0 4px 15px 0 rgba(131, 92, 58, 0.75);
+
+}
+
+.btn-hover.color-14 {
+    background-image: linear-gradient(to right, rgb(173, 76, 157), #d282b3, #c575a0, #b1688d, #a25c7a);
+    box-shadow: 0 4px 15px 0 rgba(173, 76, 157, 0.75);
+
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.span {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Media query para responsive */
+@media (max-width: 767.98px) {
+    .btn-hover {
+        width: 100%;
+        height: 45px;
+        font-size: 13px;
+        margin: 5px 0;
+    }
+
+    .circle {
+        width: 25px;
+        height: 25px;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .buttons .col-4 {
+        flex: 0 1 calc(50% - 10px);
+        margin: 5px;
+    }
+}
