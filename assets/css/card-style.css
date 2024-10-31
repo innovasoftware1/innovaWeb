@@ -308,8 +308,7 @@
   z-index: 10;
   font-size: 130px;
   font-weight: bold;
-  font-family: 'Lobster', cursive;
-  /* font-family: 'Pacifico', cursive; */
+  font-family: 'Pacifico', cursive;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #49853f;
@@ -328,8 +327,7 @@
   z-index: 10;
   font-size: 60px;
   font-weight: bold;
-  font-family: 'Lobster', cursive;
-  /* font-family: 'Pacifico', cursive; */
+  font-family: 'Pacifico', cursive;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #449b34;
