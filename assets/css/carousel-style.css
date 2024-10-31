@@ -269,6 +269,12 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+@media screen (max-widht: 768px) {
+    .slider-infinite-title{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
+
 .slider-infinite-title h1 {
   font-size: 40px;
   font-weight: 900;
