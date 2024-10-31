@@ -7,4 +7,4 @@ function nextSlide() {
     radios[currentIndex].checked = true;
 }
 
-setInterval(nextSlide, 10000);
+setInterval(nextSlide, 4000);

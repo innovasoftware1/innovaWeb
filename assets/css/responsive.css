@@ -90,6 +90,18 @@
 
 }
 
+/* Head Title */
+
+@media (max-width: 768px) {
+    .head_title h2 {
+        font-weight: bold;
+        font-size: 2.000rem;    
+    }
+    .main_feature {
+        margin-top: 10px !important;
+}
+}
+
 
 
 /* Landscape phones and portrait tablets */
