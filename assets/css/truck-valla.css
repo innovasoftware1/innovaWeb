@@ -1,0 +1,40 @@
+.container-vallatruck {
+    position: relative;
+    width: 100%;
+    height: 200px; 
+    background-color: transparent;
+
+    opacity: 20;
+}
+.valla {
+    position: absolute;
+    top: 60px;
+    left: 45%; 
+    width: 150px; 
+    height: 250px;
+    display: none; 
+}
+.camion {
+    position: absolute;
+    bottom: 0;
+    top: 135px;
+    left: -100px; 
+    width: 100px; 
+    height: 40px; 
+    animation: moverCamion 10s forwards; 
+}
+
+@keyframes moverCamion {
+    0% {
+        left: -100px; 
+    }
+    70% {
+        left: calc(50% - 100px); 
+    }
+    80% {
+        left: calc(48% - 100px);
+    }
+    100% {
+        left: 100%;
+    }
+}
