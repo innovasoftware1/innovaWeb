@@ -4,23 +4,24 @@
     height: 200px; 
     background-color: transparent;
 
-    opacity: 20;
+    opacity: 1;
 }
 .valla {
     position: absolute;
-    top: 60px;
-    left: 45%; 
-    width: 150px; 
-    height: 250px;
+    top: 15px;
+    left: 43%; 
+    width: 200px; 
+    height: 100px;
     display: none; 
 }
-.camion {
+.camion img{
     position: absolute;
     bottom: 0;
-    top: 135px;
+    top: 125px;
     left: -100px; 
     width: 100px; 
-    height: 40px; 
+    height: 100px;
+    z-index: 21; 
     animation: moverCamion 10s forwards; 
 }
 

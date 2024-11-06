@@ -334,15 +334,17 @@
   font-size: 60px;
   font-weight: 900;
   margin: 0 20px;
+  text-align: center;
   font-family: 'Bebas Neue', sans-serif;  
-  /* font-family: 'Pacifico', cursive; */
-  -webkit-text-fill-color: transparent;
+  
+
+  /* -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
   text-shadow:
     0 0 5px rgba(0, 0, 0, 0.288),
     0 0 15px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(0, 0, 0, 0.356);
+    0 0 20px rgba(0, 0, 0, 0.356); */
 
 
 }
