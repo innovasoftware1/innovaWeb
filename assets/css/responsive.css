@@ -84,6 +84,7 @@
         position: relative;
         margin: 5px;
         width: 350px;
+        left: 20px;
         overflow: hidden;
     }
 
@@ -101,6 +102,13 @@
         margin-top: 10px !important;
 }
 }
+
+@media (max-width: 768px) {
+    .grid {
+        left: 7% !important;
+    }
+}
+
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
