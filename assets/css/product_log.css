@@ -1,0 +1,109 @@
+.main-wrapper {
+	border-radius: 5px;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	position: relative;
+	text-align: center;
+	font-family: "Monserrat", sans-serif;
+	text-decoration: none;
+	left: -6px;
+}
+
+.button {
+	width: 60px;
+	border-radius: 50%;
+	padding: 0;
+}
+
+img.material-icons {
+	width: 60px;
+	position: relative;
+	border-radius: 50%;
+	padding: 5px;
+	margin: 3px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+}
+
+img.material-icons:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border: solid 2px;
+	transform: scale(0.8);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+
+}
+
+img.material-icons:hover:after {
+	transform: scale(1);
+	box-shadow: 10px 0 20px rgba(0, 0, 0, 0.19), 6px 0 6px rgba(0, 0, 0, 0.23);
+}
+
+img.material-icons:hover {
+	background-color: transparent;
+	transform: rotate(90deg);
+	cursor: pointer;
+	box-shadow: none;
+}
+
+p {
+	color: #999;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+@media (min-width:601px) {
+	i.material-icons {
+		padding: 10px;
+		margin: 5px;
+		font-size: 2rem;
+	}
+}
+
+@media (min-width:993px) {
+	i.material-icons {
+		padding: 20px;
+		margin: 10px;
+		font-size: 4rem;
+	}
+
+	i.material-icons:after {
+		border-width: 3px;
+		top: -3px;
+		left: -3px;
+	}
+}
+
+
+/* Estilos para el tooltip */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 150px;
+  background-color: rgba(125, 138, 255, 0.75);
+  font-family: "Monserrat", sans-serif;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -75px;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+}
+

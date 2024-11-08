@@ -3,18 +3,20 @@
     width: 100%;
     height: 200px; 
     background-color: transparent;
-
     opacity: 1;
 }
+
 .valla {
     position: absolute;
     top: 15px;
-    left: 43%; 
+    left: 50%;
+    transform: translateX(-50%); 
     width: 200px; 
     height: 100px;
-    display: none; 
+    display: block; 
 }
-.camion img{
+
+.camion img {
     position: absolute;
     bottom: 0;
     top: 125px;
@@ -22,7 +24,7 @@
     width: 100px; 
     height: 100px;
     z-index: 21; 
-    animation: moverCamion 10s forwards; 
+    animation: moverCamion 14s infinite; 
 }
 
 @keyframes moverCamion {
@@ -37,5 +39,41 @@
     }
     100% {
         left: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .valla {
+        width: 150px; 
+        height: 80px; 
+        margin-top: 40px !important;
+    }
+
+    .camion img {
+        width: 80px; 
+        height: 80px; 
+        top: 115px; 
+    }
+
+    .container-vallatruck {
+        height: 180px; 
+    }
+}
+
+/* Responsivo: para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .valla {
+        width: 120px;
+        height: 60px; 
+    }
+
+    .camion img {
+        width: 60px; 
+        height: 60px; 
+        top: 110px; 
+    }
+
+    .container-vallatruck {
+        height: 160px;
     }
 }

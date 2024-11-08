@@ -1,0 +1,64 @@
+.all-btn {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+  }
+  
+  .all-btn button {
+	width: 110px;
+	height: 55px;
+	border-radius: 10px;
+	border: 1px solid grey;
+	padding: 5px; 
+    line-height: 1; 
+  }
+  
+  .btn1{
+	background-color: #000;
+	color: #fff;	
+  } 
+  #sp11 {
+	font-size: 10px;
+  }
+  #sp12 {
+	font-size: 20px;
+  }
+  
+  .btn2{
+	background: linear-gradient(to bottom, #79b240, #185f3a);
+	color: #fff;	
+  } 
+  #sp21 {
+	font-size: 20px;
+  }
+  #sp22 {
+	font-size: 10px;
+  }
+  
+  .btn3{
+	background: linear-gradient(to bottom, #164085, #101742);
+	color: #fff;	
+  } 
+  #sp31 {
+	font-size: 10px;
+  }
+  #sp32 {
+	font-size: 20px;
+  }
+  
+  .btn4{
+	background: linear-gradient(to bottom, #8f2626, #e92324);
+	color: #fff;
+  } 
+  #sp41 {
+	font-size: 10px;
+  }
+  #sp42 {
+	font-size: 20px;
+	transform: scaleX(2); /* Estira el texto horizontalmente */
+	display: inline-block;	
+  }
+  #sp43 {
+	font-size: 10px;
+  }
+  

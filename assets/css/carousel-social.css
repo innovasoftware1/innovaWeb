@@ -11,6 +11,11 @@
     /* Puede que esto necesite ajuste para ser responsive */
 }
 
+#carousel-social .item {
+    top: 90px;
+    bottom: 20px;
+}
+
 #carousel-social:hover {
     animation-play-state: paused;
 }
