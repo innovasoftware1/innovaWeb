@@ -1940,6 +1940,64 @@ footer {
     border-radius: 50%;
 }
 
+.action_item .btn-general {
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid;
+    font-weight: bold;
+}
+
+.action_item .btn-ver-ctg {
+    background: linear-gradient(#009ACC, #00A659);
+    color: #fff;
+}
+
+.action_item .btn-ver-ctg:hover {
+    color: #009ACC;
+    background: #fff;
+}
+
+.action_item .btn-descarga-ctg {
+    background: linear-gradient(#FFCC29, #AF2040);
+    color: #fff;
+}
+.action_item .btn-descarga-ctg:hover {
+    color: #AF2040;
+    background: #fff;
+}
+
+.hr-ctg {
+    background-color: #b8b8b8;
+    width: 90%;
+    height: 5px;
+    margin: 50px 20px;
+    border-radius: 5px;
+}
+
+
+.hand-icon {
+    position: absolute;
+    top: -40px;  /* Ubicación por encima del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    animation: moveHand 1s ease-in-out infinite;
+}
+
+@keyframes moveHand {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px); /* Movimiento hacia arriba */
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+
 
 /*our Maps*/
 .ourmap {
