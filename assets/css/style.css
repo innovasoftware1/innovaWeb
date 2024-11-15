@@ -534,6 +534,49 @@ Button
     }
 }
 
+
+.btn-default-static {
+    background-color: transparent;
+    font-size: 25px;
+    color: #fff;
+    padding: 0.1rem 0.8rem;
+    position: absolute;   
+    top: 50%;             
+    left: 80%;   
+    border-radius: 30px;
+    animation: alejar 5s linear infinite alternate;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-default-static:hover {
+    border-color: #ee997b;
+    background-color: #ee997b;
+}
+
+@keyframes alejar {
+    0% {
+        background-color: #FFCC29;
+    }
+
+    25% {
+        background-color: #AF2040;
+    }
+
+    50% {
+        background-color: #E9258C;
+    }
+
+    75% {
+        background-color: #009ACC;
+    }
+
+    100% {
+        background-color: #00A659;
+    }
+}
+
+
+
 @media (max-width: 768px) {
     .btn-default {
         display: none;
