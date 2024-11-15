@@ -622,7 +622,21 @@ Button
 .btn-link {}
 
 
-
+.tittle-us {
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin: 50px;
+    filter: blur(6px); /* Desenfoque inicial */
+    position: relative;
+    transition: filter 1s ease; 
+  }
+  
+  .tittle-us:hover {
+    filter: blur(0);
+  }
+  
+  
 /*
 socail icon
 --------------------------------*/
