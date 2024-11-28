@@ -260,3 +260,22 @@ p {
 .cl14 {
 	color: #ac4a9c;
 }
+
+
+/* colores adicionales */
+
+.construccion {
+	box-shadow: 0 0 15px 0 #005fce;
+}
+.gubernamental {
+	box-shadow: 0 0 15px 0 #7f18aa;
+}
+.publicitario {
+	box-shadow: 0 0 15px 0 #e3c400;
+}
+.bancario {
+	box-shadow: 0 0 15px 0 #00c3bc;
+}
+.educativo {
+	box-shadow: 0 0 15px 0 #ca6c00;
+}

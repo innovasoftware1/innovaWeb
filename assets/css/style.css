@@ -625,36 +625,11 @@ Separator
 
 
 .tittle-us {
-    font-weight: bold;
     font-size: 50px;
     text-align: center;
     margin: 50px;
-    filter: blur(6px);
-    /* Desenfoque inicial */
-    position: relative;
-    transition: filter 1s ease;
 }
 
-.tittle-us:hover {
-    filter: blur(0);
-}
-
-
-
-
-/*
-socail icon
---------------------------------*/
-/*a i.share{
-    color:#1E8BC3;
-    -webkit-transition: all .6s;
-    transition: all .6s;
-}*/
-
-
-/*
-Extra height css
-*/
 .m-0 {
     margin: 0 !important;
 }
@@ -1373,7 +1348,7 @@ About section style
 
 #hello-products {
     position: relative;
-    height: 13vh;
+    height: 100vh;
     width: 100vw;
     overflow: hidden;
 }
@@ -1707,6 +1682,7 @@ Models Section style
 
 .model_img img {
     width: 100%;
+    height: 240px !important;
     max-height: 240px;
     -webkit-filter: blur(100%);
     filter: blur(100%);
@@ -2089,6 +2065,8 @@ footer {
 
 .main-model .model-item {
     width: 270px;
+    height: 240px;
+    max-height: 240px;
     margin: 10px;
     border-radius: 25px;
     position: relative;

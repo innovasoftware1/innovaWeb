@@ -1,12 +1,8 @@
-* {
-    box-sizing: border-box;
-    outline: none;
-}
 
 #flipbook {
     margin-top: -40px;
     width: 80%;
-    height: 500px;
+    height: 560px;
     left: 10%;
 }
 
@@ -15,9 +11,8 @@
     height: 500px;  
 }
 
-
 #flipbook img {
-    height: 500px;
+    height: 560px;
     width: 100%;
     max-width: 520px;
     border: 1px inset grey;   
@@ -27,7 +22,7 @@
     #flipbook {
         margin-top: 0;
         width: 90%;
-        left: 25px;
+        left: 20px;
         height: 500px;
     }
  }

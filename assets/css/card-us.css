@@ -340,4 +340,7 @@
         font-size: 0.7rem;
         margin: 10px 30px 0 10px ;
     }
+    .outer-div {
+        margin-left: 10%;
+    }
 }

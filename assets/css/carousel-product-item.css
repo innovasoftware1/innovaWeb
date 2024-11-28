@@ -1,9 +1,9 @@
-
 /* Estilos para el carrusel */
 .carousel-products {
 	position: relative;
 	width: 100%;
-	max-width: 500px; /* Tamaño máximo para pantallas grandes */
+	max-width: 500px;
+	/* Tamaño máximo para pantallas grandes */
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -97,26 +97,34 @@
 		opacity: 0;
 		visibility: hidden;
 	}
-	3%, 11.1111111111% {
+
+	3%,
+	11.1111111111% {
 		transform: translateY(100%) scale(0.7);
 		opacity: 0.4;
 		visibility: visible;
 	}
-	14.1111111111%, 22.2222222222% {
+
+	14.1111111111%,
+	22.2222222222% {
 		transform: translateY(0) scale(1);
 		opacity: 1;
 		visibility: visible;
 	}
-	25.2222222222%, 33.3333333333% {
+
+	25.2222222222%,
+	33.3333333333% {
 		transform: translateY(-100%) scale(0.7);
 		opacity: 0.4;
 		visibility: visible;
 	}
+
 	36.3333333333% {
 		transform: translateY(-100%) scale(0.5);
 		opacity: 0;
 		visibility: visible;
 	}
+
 	100% {
 		transform: translateY(-100%) scale(0.5);
 		opacity: 0;
@@ -130,26 +138,34 @@
 		opacity: 0;
 		visibility: hidden;
 	}
-	3%, 11.1111111111% {
+
+	3%,
+	11.1111111111% {
 		transform: translateY(100%) scale(0.7);
 		opacity: 0.4;
 		visibility: visible;
 	}
-	14.1111111111%, 22.2222222222% {
+
+	14.1111111111%,
+	22.2222222222% {
 		transform: translateY(0) scale(1);
 		opacity: 1;
 		visibility: visible;
 	}
-	25.2222222222%, 33.3333333333% {
+
+	25.2222222222%,
+	33.3333333333% {
 		transform: translateY(-100%) scale(0.7);
 		opacity: 0.4;
 		visibility: visible;
 	}
+
 	36.3333333333% {
 		transform: translateY(-100%) scale(0.5);
 		opacity: 0;
 		visibility: visible;
 	}
+
 	100% {
 		transform: translateY(-100%) scale(0.5);
 		opacity: 0;
@@ -157,4 +173,23 @@
 	}
 }
 
+
+@media (max-width:768px) {
+	.carousel__item {
+		height: 240px !important;
+		margin-top: -250px !important;
+	}
+	.responsive {
+		text-align: center;
+		margin-top: 20px;
+	}
+	.responsive ul li {
+		list-style-type: none !important;
+	}
+	.responsive .all-btn {
+		align-items: center;
+	}
+
+	
+}
 
