@@ -1,27 +1,26 @@
 * {
     box-sizing: border-box;
-    outline: none
+    outline: none;
 }
 
 #flipbook {
     margin-top: -40px;
     width: 80%;
-    height: 600px;
+    height: 500px;
     left: 10%;
 }
 
 #flipbook .page {
     width: 80%;
-    height: 600px;  
+    height: 500px;  
 }
 
 
 #flipbook img {
-    height: 600px;
+    height: 500px;
     width: 100%;
     max-width: 520px;
-    border: 1px inset grey;    
-    border-radius: 1px; /* Opcional: bordes redondeados */
+    border: 1px inset grey;   
 }
 
  @media screen and (max-width: 768px) {
@@ -29,5 +28,6 @@
         margin-top: 0;
         width: 90%;
         left: 25px;
+        height: 500px;
     }
  }

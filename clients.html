@@ -14,7 +14,7 @@
 
     <!--Google Fonts link-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 
@@ -27,26 +27,79 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/bootsnav.css">
-
-
-    <!--For Plugins external css-->
-    <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
-
-    <!--Theme custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!--Theme Responsive css-->
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <!-- Estilos footer social network -->
     <link rel="stylesheet" href="assets/css/carousel-social.css">
-
     <link rel="stylesheet" href="assets/css/clientes-style.css">
+    <link rel="stylesheet" href="assets/css/product_log.css">
+    <!-- Whatsapp icon -->
+    <link rel="stylesheet" href="assets/css/whatsapp-style.css">
 
     <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <style>
+        .model_img {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .top-left-img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            max-width: 100px;
+            height: 100px !important;
+            z-index: 1;
+        }
+
+        .carousel-container {
+            display: flex;
+            animation: slide 20s infinite;
+        }
+
+        .carousel-container img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-100%);
+            }
+
+            40% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-300%);
+            }
+
+            80% {
+                transform: translateX(-400%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
 
+    <!-- Open our button of whatsapp -->
+    <a href="https://api.whatsapp.com/send?phone=573209018590&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20producto"
+        target="_blank" class="float">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
 
     <!-- Preloader -->
 
@@ -125,74 +178,562 @@
                             </ol> -->
                         </div>
                     </div>
-                </div><!--End off row-->
-            </div><!--End off container -->
-        </section> <!--End off Home Sections-->
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery margin-top-120 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="main-gallery main-model-client roomy-80">
+                        <h4 class="text-center">"Nos enorgullece la confianza que depositan en nosotros, y trabajamos
+                            incansablemente para retribuirla con excelencia y calidad."</h4>
+                            <br>
+                        <div class="col-md-12">
+                            <div class="filters-button-group sm-text-center main-wrapper">
+                                <button class="button tooltip-container" data-filter=".construccion"><img
+                                        class="material-icons" style="background-color: #005fce;"
+                                        src="assets/images/clientes/construccion.svg" alt=""><span
+                                        class="tooltip-text bg1" style="background-color: #005fce;"><b>SECTOR CONSTRUCCION</b></span></button>
+                                <button class="button tooltip-container" data-filter=".gubernamental"><img
+                                        class="material-icons" style="background-color: #7f18aa;"
+                                        src="assets/images/clientes/gubernamental.svg" alt=""><span
+                                        class="tooltip-text bg2" style="background-color: #7f18aa;"><b>SECTOR GUBERNAMENTAL</b></span></button>
+                                <button class="button tooltip-container" data-filter=".publicitario"><img
+                                        class="material-icons" style="background-color: #e3c400;"
+                                        src="assets/images/clientes/publicitario.svg" alt=""><span
+                                        class="tooltip-text bg3" style="background-color: #e3c400;"><b>SECTOR PUBLICITARIO</b></span></button>
+                                <button class="button tooltip-container" data-filter=".bancario"><img
+                                        class="material-icons" style="background-color: #00c3bc;"
+                                        src="assets/images/clientes/bancario.svg" alt=""><span
+                                        class="tooltip-text bg4" style="background-color: #00c3bc;"><b>SECTOR <br>BANCARIO</b></span></button>
+                                <button class="button tooltip-container" data-filter=".educativo"><img
+                                        class="material-icons" style="background-color: #ca6c00;"
+                                        src="assets/images/clientes/educativo.svg" alt=""><span
+                                        class="tooltip-text bg5" style="background-color: #ca6c00;"><b>SECTOR EDUCATIVO</b></span></button>
+                            </div>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="grid text-center">
+
+                            <!-- SECTOR DE CONSTRUCCION -->
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/prodesa/prodesa.png" alt="Imagen PNG"
+                                        class="top-left-img" style="">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/prodesa/p1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/prodesa/p2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/prodesa/p3.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/prodesa/p4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/prodesa/p5.jpeg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/cuzesar/cusezar.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/cuzesar/c1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cuzesar/c2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cuzesar/c3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cuzesar/c4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cuzesar/c5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/yuma/yuma.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/yuma/y1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/yuma/y2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/yuma/y3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/yuma/y4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/yuma/y5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/coninsa/coninsa.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/coninsa/cn1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/cn2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/cn3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/cn1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/cn2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/cumbrera/cumbrera.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/cumbrera/cm1.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbrera/cm2.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbrera/cm3.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbrera/cm4.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbrera/cm5.jpeg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/vivienda2000/vivienda2000.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/transforma/transforma.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/transforma/t1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/transforma/t2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/transforma/t3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/transforma/t4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/transforma/t5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/cumbria/cumbria.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/cumbria/cb1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbria/cb2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbria/cb3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbria/cb4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbria/cb5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/maya/maya.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/maya/m1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/maya/m2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/maya/m3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/maya/m2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/maya/m3.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/attmosfera/attmosfera.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/attmosfera/att5.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att4.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/agrobetania/agrobetania.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/agrobetania/ag1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/agrobetania/ag2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/agrobetania/ag3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/agrobetania/ag4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/agrobetania/ag2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/actual/actual.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/actual/ac1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/actual/ac2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/actual/ac3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/actual/ac4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/actual/ac5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SECTOR GUBERNAMENTAL -->
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/policia/policia.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/policia/p1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/policia/p2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/policia/p3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/policia/p4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/policia/p5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/fiscalia/fiscalia.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/fiscalia/f1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/fiscalia/f2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/fiscalia/f3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/fiscalia/f4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/fiscalia/f2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/pnud/pnud.jpg" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/pnud/p1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/pnud/p2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/pnud/p3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/pnud/p4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/pnud/p5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/opain/opain.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/opain/o1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/alcaldia/alcaldia.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/acueducto/acueducto.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/acueducto/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/acueducto/a2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/acueducto/a3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/acueducto/a4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/acueducto/a2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/alcaldiaCali/alcaldiaCali.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCali/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCali/a2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCali/a3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCali/a4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCali/a5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/alcaldiaSopo/alcaldiaSopo.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaSopo/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaSopo/a2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaSopo/a3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaSopo/a4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaSopo/a5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/alcaldiaCombita/alcaldiaCombita.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCombita/c1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCombita/c2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCombita/c3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCombita/c1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaCombita/c2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/alcaldiaChia/alcaldiaChia.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaChia/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaChia/a2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaChia/a3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaChia/a4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldiaChia/a5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/gobernacionCun/gobernacionCun.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g3.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/gobernacionHui/gobernacionHui.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/gobernacionHui/g1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionHui/g2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionHui/g3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionHui/g4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionHui/g5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/iucn/iucn.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/iucn/i1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/iucn/i2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/iucn/i3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/iucn/i4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/iucn/i5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/gobernacionTol/gobernacionTol.webp"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition gubernamental">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/gubernamental/hospitalCali/hospitalCali.png"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/gubernamental/hospitalCali/h1.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/hospitalCali/h2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/hospitalCali/h4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/hospitalCali/h4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/hospitalCali/h5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SECTOR PUBLICITARIO -->
+                            <div class="grid-item model-item-client transition bancario">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/bancario/bRepublica/bReplubica.jpg"
+                                        alt="Imagen PNG" class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/bancario/bRepublica/b1.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bRepublica/b2.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bRepublica/b3.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bRepublica/b4.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bRepublica/b2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition bancario">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/bancario/bAgrario/bAgrario.jpg" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/bancario/bAgrario/b1.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bAgrario/b2.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bAgrario/b1.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bAgrario/b1.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bAgrario/b1.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition bancario">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/bancario/bbva/bbva.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/bancario/bRepublica/b1.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bRepublica/b2.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bRepublica/b3.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bRepublica/b4.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bRepublica/b2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SECTOR PUBLICITARIO -->
+                            <div class="grid-item model-item-client transition publicitario">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/publicitario/severo/severo.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/publicitario/severo/s1.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/severo/s2.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/severo/s3.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/severo/s4.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/severo/s5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition publicitario">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/publicitario/acei/acei.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SECTOR EDUCATIVO -->
+                            <div class="grid-item model-item-client transition educativo">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/educativo/uNacional/uNacional.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/educativo/uNacional/u1.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uNacional/u2.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uNacional/u3.jpeg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uNacional/u4.jpeg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uNacional/u5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition educativo">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/educativo/uMetro/uMetro.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/educativo/uMetro/u1.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uMetro/u2.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uMetro/u3.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uMetro/u1.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uMetro/u2.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition educativo">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/educativo/uTomas/uTomas.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/educativo/uTomas/u1.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uTomas/u2.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uTomas/u3.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uTomas/u1.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uTomas/u3.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition educativo">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/educativo/uPedagogica/uPedagogica.jpg" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/educativo/uPedagogica/u1.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uPedagogica/u2.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uPedagogica/u3.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uPedagogica/u1.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uPedagogica/u3.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition educativo">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/educativo/uCaldas/uCaldas.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/educativo/uCaldas/u1.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uCaldas/u2.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uCaldas/u3.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uCaldas/u4.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/uCaldas/u5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition educativo">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/educativo/kumon/kumon.jpg" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/educativo/kumon/k1.jpeg" alt="" />
+                                        <img src="assets/images/clientes/educativo/kumon/k2.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/kumon/k3.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/kumon/k4.jpeg" alt="" />
+                                        <img src="assets/images/clientes/educativo/kumon/k5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
 
 
+                        <div style="clear: both;"></div>
 
-
-        <!--Portfolio Section-->
-        <section>
-                <h2 class="title-clientes">SECTORES</h2>
-                <div class="container-clientes">
-                    <div class="box" data-color="clr1">
-                        <div class="imgBox">
-                            <img src="../innovaWeb/assets/images/card_inicio/construccion.jpg" alt="construccion">
-                        </div>
-                        <div class="glass">
-                            <h3><span>Sector <br></span> Contruccion</h3>
-                            <ul>
-                                <a href="index.html" target="_blank" class="btn-plus">+</a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box" data-color="clr2">
-                        <div class="imgBox">
-                            <img src="../innovaWeb/assets/images/card_inicio/publicitario.jpg" alt="publicitario">
-                        </div>
-                        <div class="glass">
-                            <h3><span>Sector <br></span> Publicitario</h3>
-                            <ul>
-                                <a href="index.html" target="_blank" class="btn-plus">+</a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box" data-color="clr3">
-                        <div class="imgBox">
-                            <img src="../innovaWeb/assets/images/card_inicio/educativo.jpg" alt="educativo">
-                        </div>
-                        <div class="glass">
-                            <h3><span>Sector <br></span> Educativo</h3>
-                            <ul>
-                                <a href="index.html" target="_blank" class="btn-plus">+</a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box" data-color="clr4">
-                        <div class="imgBox">
-                            <img src="../innovaWeb/assets/images/card_inicio/gubernamental.jpg" alt="gubernamental">
-                        </div>
-                        <div class="glass">
-                            <h3><span>Sector <br></span> Gubernamental</h3>
-                            <ul>
-                                <a href="index.html" target="_blank" class="btn-plus">+</a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="box" data-color="clr5">
-                        <div class="imgBox">
-                            <img src="../innovaWeb/assets/images/card_inicio/bancario.jpg" alt="bancario">
-                        </div>
-                        <div class="glass">
-                            <h3><span>Sector <br></span> Bancario</h3>
-                            <ul>
-                                <a href="index.html" target="_blank" class="btn-plus">+</a>
-                            </ul>
-                        </div>
                     </div>
                 </div>
+            </div><!-- Portfolio container end -->
         </section><!-- End off portfolio section -->
+
 
 
         <!-- scroll up-->
@@ -253,6 +794,19 @@
 
     <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
     <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
+
+    <script>
+        document.querySelectorAll('.model_img').forEach((carousel) => {
+            carousel.addEventListener('mouseenter', () => {
+                carousel.querySelector('.carousel-container').style.animationPlayState = 'paused';
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                carousel.querySelector('.carousel-container').style.animationPlayState = 'running';
+            });
+        });
+
+    </script>
 
 </body>
 

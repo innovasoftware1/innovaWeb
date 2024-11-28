@@ -6,7 +6,6 @@
 	position: relative;
 	text-align: center;
 	font-family: "Monserrat", sans-serif;
-	text-decoration: none;
 	left: -6px;
 }
 
@@ -90,7 +89,6 @@ p {
 .tooltip-text {
   visibility: hidden;
   width: 150px;
-  background-color: rgba(125, 138, 255, 0.75);
   font-family: "Monserrat", sans-serif;
   color: #fff;
   text-align: center;
@@ -107,3 +105,158 @@ p {
   visibility: visible;
 }
 
+.impresion {
+	box-shadow: 0 0 12px 2px #6768ad;
+}
+.vallas {
+	box-shadow: 0 0 12px 2px #00bff2;
+}
+.fachada {
+	box-shadow: 0 0 12px 2px #e73a2f;
+}
+.pventa {
+	box-shadow: 0 0 12px 2px #2eab5a;
+}
+.cerramiento {
+	box-shadow: 0 0 12px 2px #f79847;
+}
+.vehicular {
+	box-shadow: 0 0 12px 2px #5cc6d0;
+}
+.banderas {
+	box-shadow: 0 0 12px 2px #b06095;
+}
+.inflable {
+	box-shadow: 0 0 12px 2px #dbbd60;
+}
+.señalizacion {
+	box-shadow: 0 0 12px 2px #99a3a4;
+}
+.exportatil {
+	box-shadow: 0 0 12px 2px #927181;
+}
+.alquiler {
+	box-shadow: 0 0 12px 2px #b5d559;
+}
+.cyglaser {
+	box-shadow: 0 0 12px 2px #f05768;
+}
+.audiovisual {
+	box-shadow: 0 0 12px 2px #876141;
+}
+.obra {
+	box-shadow: 0 0 12px 2px #ac4a9c;
+}
+
+
+.bg1 {
+	background-color: #6768ad;
+}
+
+.cl1 {
+	color: #6768ad;
+}
+
+.bg2 {
+	background-color: #00bff2;
+}
+
+.cl2 {
+	color: #00bff2;
+}
+
+.bg3 {
+	background-color: #e73a2f;
+}
+
+.cl3 {
+	color: #e73a2f;
+}
+
+.bg4 {
+	background-color: #2eab5a;
+}
+
+.cl4 {
+	color: #2eab5a;
+}
+
+.bg5 {
+	background-color: #f79847;
+}
+
+.cl5 {
+	color: #f79847;
+}
+
+.bg6 {
+	background-color: #5cc6d0;
+}
+
+.cl6 {
+	color: #5cc6d0;
+}
+
+.bg7 {
+	background-color: #b06095;
+}
+
+.cl7 {
+	color: #b06095;
+}
+ 
+.bg8 {
+	background-color: #dbbd60;
+}
+
+.cl8 {
+	color: #dbbd60;
+}
+
+.bg9 {
+	background-color: #b8b9bb;
+}
+
+.cl9 {
+	color: #b8b9bb;
+}
+
+.bg10 {
+	background-color: #927181;
+}
+
+.cl10 {
+	color: #927181;
+}
+
+.bg11 {
+	background-color: #b5d559;
+}
+
+.cl11 {
+	color: #b5d559;
+}
+
+.bg12 {
+	background-color: #f05768;
+}
+
+.cl12 {
+	color: #f05768;
+}
+
+.bg13 {
+	background-color: #876141;
+}
+
+.cl13 {
+	color: #876141;
+}
+
+.bg14 {
+	background-color: #ac4a9c;
+}
+
+.cl14 {
+	color: #ac4a9c;
+}

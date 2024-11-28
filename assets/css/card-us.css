@@ -114,11 +114,10 @@
 .content p {
     font-size: 1rem;
     color: #fff;
-    padding: 30px;
     word-wrap: break-word;
     white-space: normal;
     line-height: 1.5;
-    margin: 0px 30px;
+    margin: 10px 30px;
 }
 
 /* estilos de las tarjetas de aesores */
@@ -330,4 +329,15 @@
     color: #fff; 
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+}
+
+
+@media (max-width: 479px) {
+    .title-card {
+        font-size: 10px !important;
+    }
+    .content p {
+        font-size: 0.7rem;
+        margin: 10px 30px 0 10px ;
+    }
 }
