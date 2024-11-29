@@ -16,6 +16,36 @@
     display: none;
 }
 
+.btn-hint {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.radio:not(:checked)+.content .btn-hint {
+    opacity: 1;
+}
+
+.radio:checked+.content .btn-hint {
+    opacity: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .btn-hint {
+        left: -10px !important;
+    }
+}
+
 .content {
     background: transparent;
     background:
@@ -202,18 +232,46 @@
     width: 100%;
 }
 
-.front__face-photo {
+.front__face-photo-asesor1 {
     position: relative;
-    top: -50px;  /* Ajusté la posición para que no sobresalga tanto */
-    height: 100px;  /* Reduje el tamaño de la foto del rostro */
-    width: 100px;   /* Reduje el tamaño de la foto del rostro */
+    top: -50px; 
+    height: 100px; 
+    width: 100px; 
     margin: 0 auto;
     border-radius: 50%;
+    background: url(../images/pilares/pedro.png);
     border: 5px solid #fff;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/156905/profile/profile-512.jpg?1530296477") no-repeat;
     background-size: contain;
     overflow: hidden;
 }
+
+.front__face-photo-asesor2 {
+    position: relative;
+    top: -50px; 
+    height: 100px; 
+    width: 100px; 
+    margin: 0 auto;
+    border-radius: 50%;
+    background: url(../images/pilares/adriana.jpg);
+    border: 5px solid #fff;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.front__face-photo-asesor3 {
+    position: relative;
+    top: -50px; 
+    height: 100px; 
+    width: 100px; 
+    margin: 0 auto;
+    border-radius: 50%;
+    background: url(../images/pilares/luis.png);
+    border: 5px solid #fff;
+    background-size: contain;
+    overflow: hidden;
+}
+
+
 
 .front__text {
     position: relative;
