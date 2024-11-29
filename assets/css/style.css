@@ -1377,7 +1377,7 @@ About section style
 
 
 @media (max-width: 768px) {
-    #hello {
+    #hello, #hello-products {
     overflow: hidden;
 }
 

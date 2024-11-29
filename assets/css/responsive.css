@@ -98,8 +98,8 @@
         font-size: 2.000rem;
     }
 
-    .main_feature {
-        margin-top: -550px !important;
+    .main_feature, .m_details {
+        margin-top: -650px !important;
     }
 }
 
