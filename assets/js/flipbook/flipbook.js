@@ -1,4 +1,3 @@
-//FLIPBOOK
 if (window.innerWidth >= 900) {
     $("#flipbook").turn({
         autoCenter: true,
@@ -9,7 +8,16 @@ if (window.innerWidth >= 900) {
         display: 'single'
     });
 }
-// Arrows
+
+$("#catalogo").on("wheel", function(e) {
+    e.preventDefault();
+    if (e.originalEvent.deltaY > 0) {
+        $("#flipbook").turn("next");
+    } else {
+        $("#flipbook").turn("previous");
+    }
+});
+
 $(document).keydown(function (e) {
     var previous = 37,
         next = 39;
@@ -17,11 +25,9 @@ $(document).keydown(function (e) {
     switch (e.keyCode) {
         case previous:
             $("#flipbook").turn("previous");
-
             break;
         case next:
             $("#flipbook").turn("next");
-
             break;
     }
 });

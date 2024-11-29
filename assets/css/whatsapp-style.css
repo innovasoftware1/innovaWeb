@@ -5,7 +5,7 @@
     bottom: 20px;
     right: 20px;
     background-color: #25d366;
-    color: #FFF;
+    color: #FFF !important;
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
@@ -15,7 +15,7 @@
 
 .float:hover {
     text-decoration: none;
-    color: #25d366;
+    color: #25d366 !important;
     background-color: #fff;
 }
 
