@@ -4,22 +4,6 @@
     }
 }
 
-@media (max-width: 1000px) {
-    .navbar-brand {
-        height: 80px;
-        padding: 10px 15px;
-    }
-
-    #logo-innova-black {
-        max-width: 40%;
-        margin-top: -15px;
-        margin-left: 30%;
-        transition: opacity 2s;
-
-    }
-
-}
-
 
 /* Portrait tablets and small desktops */
 @media (max-width: 991px) {
@@ -92,16 +76,38 @@
 
 /* Head Title */
 
+/* resposnive de productos-items */
 @media (max-width: 768px) {
     .head_title h2 {
         font-weight: bold;
         font-size: 2.000rem;
     }
 
-    .main_feature, .m_details {
+    /* .main_feature , .m_details {
+        top: 1200px !important;
+    } */
+}
+
+
+
+@media (max-width: 900px) {
+    .m_details {
         margin-top: -500px !important;
     }
 }
+
+@media (max-width: 600px) {
+    .m_details {
+        margin-top: -350px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .m_details {
+        margin-top: -200px !important;
+    }
+}
+
 
 @media (max-width: 768px) {
     .grid {
