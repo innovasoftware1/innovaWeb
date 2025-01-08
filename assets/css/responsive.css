@@ -4,6 +4,17 @@
     }
 }
 
+@media (max-width: 900px) {
+    .main_home {
+        /* Aquí puedes eliminar los estilos o modificarlos */
+        overflow: initial;
+        padding-top: 430px;
+        padding-bottom: 0;
+        position: initial;
+        z-index: initial;
+    }
+}
+
 
 /* Portrait tablets and small desktops */
 @media (max-width: 991px) {
@@ -80,15 +91,10 @@
         font-weight: bold;
         font-size: 2.000rem;
     }
-
-    /* .main_feature , .m_details {
-        top: 1200px !important;
-    } */
 }
 
 
-
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .m_details {
         margin-top: -500px !important;
     }
@@ -111,13 +117,14 @@
     .grid {
         left: 7% !important;
     }
-}
+} */
 
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
     h2 {
         font-size: 2rem;
+        margin-top: 30%;
     }
 
     p {
