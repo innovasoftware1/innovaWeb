@@ -80,23 +80,7 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 }
 
 
-/*
-    Page Content
-------------------------------------------*/
-/*
-.page-content, 
-section { overflow: hidden; }*/
 
-/*
-    On Scroll Animations 
-------------------------------------------*/
-
-/*.animated { visibility: hidden; }
-.visible { visibility: visible; }*/
-
-/*
-    Spacing & Alignment 
-------------------------------------------*/
 
 .roomy-100 {
     padding-top: 35px;
@@ -430,15 +414,6 @@ ul {
     list-style: none;
 }
 
-/*
-.overlay {
-    background-color: rgba(51, 51, 51, 0.50);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-} */
 
 .no-padding {
     padding: 0 !important;
@@ -961,19 +936,6 @@ textarea::-ms-input-placeholder {
     padding: 5px;
 }
 
-/*for image bg*/
-/*.img-bg{
-  background: url(../images/home-msg.jpg) no-repeat center top fixed;
-  background-size
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  overflow: hidden;
-}*/
-
-
 .transform_scal_rotate:hover img {
     -webkit-transform: scale(1.1) rotate(4deg);
     transform: scale(1.1) rotate(4deg);
@@ -1178,7 +1140,7 @@ Nav Menu style
 ==================*/
 
 .navbar-brand {
-    height: 80px;
+    height: 80%;
     padding: 10px 15px;
 }
 
@@ -1272,14 +1234,66 @@ Home Section style
 ==================*/
 
 
+/* Estilos generales */
 .main_home {
     overflow: hidden;
-    padding-top: 430px;
-    padding-bottom: 230px;
+    padding-top: 43vh;
+    padding-bottom: 23vh;
     width: 100%;
     position: relative;
     z-index: 1;
 }
+
+/* @media (max-width: 1024px) {
+    .main_home {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_home {
+        padding-top: 0;
+        padding-bottom: 0; 
+    }
+
+@media (max-width: 480px) {
+    .main_home {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+} */
+
+.main_home_product {
+    overflow: hidden;
+    padding-top: 43vh;
+    padding-bottom: 23vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .main_home_product {
+        padding-top: 0vh;
+        padding-bottom: 0vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .main_home_product {
+        padding-top: 0vh;
+        padding-bottom: 0vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .main_home_product {
+        padding-top: 0vh;
+        padding-bottom: 0vh;
+    }
+}
+
+
 
 .home_text h1 {
     font-size: 4.286rem;

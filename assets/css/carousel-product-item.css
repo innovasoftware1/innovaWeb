@@ -174,7 +174,7 @@
 }
 
 
-@media (max-width:768px) {
+@media (max-width: 968px) {
 	.carousel__item {
 		height: 240px !important;
 		margin-top: -250px !important;
@@ -229,39 +229,4 @@
 			visibility: hidden;
 		}
 	}
-
-	
 }
-
-/* 
-@media (max-width:768px) {
-	.carousel__item {
-		height: 240px !important;
-		margin-top: -250px !important;
-		opacity: 0.4; 
-	}
-
-	.carousel__item.active {
-		opacity: 1; 
-	}
-
-	.carousel-products {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		z-index: 3;
-	}
-
-	.responsive {
-		text-align: center;
-		margin-top: 20px;
-	}
-	.responsive ul li {
-		list-style-type: none !important;
-	}
-	.responsive .all-btn {
-		align-items: center;
-	}
-}
- */

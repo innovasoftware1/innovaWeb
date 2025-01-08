@@ -4,18 +4,6 @@
     }
 }
 
-@media (max-width: 900px) {
-    .main_home {
-        /* Aquí puedes eliminar los estilos o modificarlos */
-        overflow: initial;
-        padding-top: 430px;
-        padding-bottom: 0;
-        position: initial;
-        z-index: initial;
-    }
-}
-
-
 /* Portrait tablets and small desktops */
 @media (max-width: 991px) {
     nav.navbar.bootsnav .navbar-brand {
@@ -76,7 +64,7 @@
 
     .main-gallery .grid-item {
         position: relative;
-        margin: 5px;
+        margin: 6%;
         width: 85%;
         left: 0px;
         overflow: hidden;
@@ -94,9 +82,21 @@
 }
 
 
+/* Ajustes para pantallas pequeñas */
 /* @media (max-width: 900px) {
     .m_details {
         margin-top: -500px !important;
+    }
+    .grid {
+        left: 7% !important;
+    }
+}
+@media (max-width: 768px) {
+    .m_details {
+        margin-top: -400px !important; 
+    }
+    .grid {
+        left: 5% !important; 
     }
 }
 
@@ -110,14 +110,11 @@
     .m_details {
         margin-top: -200px !important;
     }
-}
-
-
-@media (max-width: 768px) {
     .grid {
-        left: 7% !important;
+        left: 3% !important;
     }
 } */
+
 
 
 /* Landscape phones and portrait tablets */
@@ -170,6 +167,10 @@
 
     .main_testimonial .testimonial_slid .slick-arrow.nextprevright {
         top: -150px;
+    }
+
+    .mb-3 {
+        margin-top: 10%;
     }
 
 
