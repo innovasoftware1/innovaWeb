@@ -66,12 +66,10 @@
     .main-gallery .grid-item {
         position: relative;
         margin: 5px;
-        width: 350px;
-        left: 20px;
+        width: 85%;
+        left: 0px;
         overflow: hidden;
     }
-
-
 }
 
 /* Head Title */

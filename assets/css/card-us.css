@@ -378,13 +378,14 @@
     top: -5px;
 }
 
-.back__text {
+.back__text p {
     position: relative; 
     margin: 0 auto;
     top: 10px;
     padding: 5px;
     font-size: 14px;
-    color: #fff; 
+    color: #fff;
+    font-weight: bold; 
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }

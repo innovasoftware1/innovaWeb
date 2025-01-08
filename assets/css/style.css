@@ -50,10 +50,10 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
     width: 100%;
 }
 
-.font-title {
+/* .font-title {
     color: #000;
     font-size: 60px;
-}
+} */
 
 /*------------------------------------------------------------------*/
 /*   IE10 in Windows 8 and Windows Phone 8 Bug fix
@@ -181,6 +181,10 @@ section { overflow: hidden; }*/
 
 .text-black {
     color: #000 !important;
+}
+
+.text-grey {
+    color: #6d6d5e;
 }
 
 .text-warning {}
@@ -1466,7 +1470,7 @@ Home Section style
 
 .main-gallery .button:active,
 .main-gallery .button.is-checked {
-    color: #ee997b;
+    color: #c5552c;
 }
 
 .main-gallery .button.is-checked {
@@ -1862,11 +1866,57 @@ footer {
     list-style: none;
     background-color: transparent;
     border-radius: 0px;
+    position: absolute;
+    margin: 5% 40%;
 }
 
 .breadcrumb li a {
     font-size: 16px;
     color: #000;
+}
+
+/* Active de cada producto */
+.breadcrumb .active1 a {
+    color: #6768ad;
+}
+.breadcrumb .active2 a {
+    color: #00bff2;
+}
+.breadcrumb .active3 a {
+    color: #e73a2f;
+}
+.breadcrumb .active4 a {
+    color: #2eab5a;
+}
+.breadcrumb .active5 a {
+    color: #f79847;
+}
+.breadcrumb .active6 a {
+    color: #5cc6d0;
+}
+.breadcrumb .active7 a {
+    color: #8f4d79;
+}
+.breadcrumb .active8 a {
+    color: #dbbd60;
+}
+.breadcrumb .active9 a {
+    color: #818181;
+}
+.breadcrumb .active10 a {
+    color: #927181;
+}
+.breadcrumb .active11 a {
+    color: #859b43;
+}
+.breadcrumb .active12 a {
+    color: #f05768;
+}
+.breadcrumb .active13 a {
+    color: #876141;
+}
+.breadcrumb .active14 a {
+    color: #ac4a9c;
 }
 
 /*About Feature section
