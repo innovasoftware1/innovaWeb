@@ -8,14 +8,14 @@
 
 #flipbook .page {
     width: 80%;
-    height: 500px;  
+    height: 500px;
 }
 
 #flipbook img {
     height: 560px;
     width: 100%;
     max-width: 520px;
-    border: 1px inset grey;   
+    border: 1px inset grey;
 }
 
  @media screen and (max-width: 768px) {

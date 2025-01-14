@@ -81,48 +81,12 @@
     }
 }
 
-
-/* Ajustes para pantallas pequeñas */
-/* @media (max-width: 900px) {
-    .m_details {
-        margin-top: -500px !important;
-    }
-    .grid {
-        left: 7% !important;
-    }
-}
-@media (max-width: 768px) {
-    .m_details {
-        margin-top: -400px !important; 
-    }
-    .grid {
-        left: 5% !important; 
-    }
-}
-
-@media (max-width: 600px) {
-    .m_details {
-        margin-top: -350px !important;
-    }
-}
-
-@media (max-width: 400px) {
-    .m_details {
-        margin-top: -200px !important;
-    }
-    .grid {
-        left: 3% !important;
-    }
-} */
-
-
-
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
-    h2 {
+    /* h2 {
         font-size: 2rem;
         margin-top: 30%;
-    }
+    } */
 
     p {
         font-size: 90%;
@@ -190,10 +154,6 @@
     }
 
 }
-
-
-
-
 
 @media (max-width: 400px) {}
 
