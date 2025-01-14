@@ -1279,6 +1279,14 @@ Home Section style
     }
 }
 
+@media (max-width: 900px) and (min-width: 769px) {
+    .main_home_product {
+        padding-top: 50vh;
+        padding-bottom: 0vh;
+    }
+}
+
+
 @media (max-width: 600px) {
     .main_home_product {
         padding-top: 0vh;

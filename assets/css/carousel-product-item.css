@@ -3,7 +3,6 @@
 	position: relative;
 	width: 100%;
 	max-width: 500px;
-	/* Tamaño máximo para pantallas grandes */
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -174,7 +173,7 @@
 }
 
 
-@media (max-width: 968px) {
+@media (max-width: 991px) {
 	.carousel__item {
 		height: 240px !important;
 		margin-top: -250px !important;
