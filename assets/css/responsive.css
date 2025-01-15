@@ -167,3 +167,17 @@
     }
 
 }
+
+/* 
+
+@media (max-width: 768px) {
+    .responsive-bar {
+      display: none;
+    }
+  }
+
+  @media (min-width: 320px) {
+    .responsive-bar {
+        display: none;
+    }
+  } */

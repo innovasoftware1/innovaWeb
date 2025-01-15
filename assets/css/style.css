@@ -1005,7 +1005,8 @@ textarea::-ms-input-placeholder {
 
 /*Preloader css*/
 #loading {
-    background-color: #ee997b;
+    background-color: #A3C9E2
+    ;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -1018,6 +1019,7 @@ textarea::-ms-input-placeholder {
 #loading-center {
     width: 100%;
     height: 100%;
+    align-items: center;
     position: relative;
 }
 
@@ -1028,7 +1030,7 @@ textarea::-ms-input-placeholder {
     height: 50px;
     width: 150px;
     margin-top: -25px;
-    margin-left: -75px;
+    /* margin-left: -75px; */
 }
 
 .object {
@@ -1158,6 +1160,7 @@ Nav Menu style
 /*All Banner style*/
 .service-banner,
 .model-banner,
+.mmodel-clinets,
 .contact-banner,
 .about-banner,
 .blog-banner,
@@ -1176,6 +1179,11 @@ Nav Menu style
 
 .model-banner {
     background: url(../images/lineas/products.JPG) no-repeat bottom center;
+    background-size: cover;
+}
+
+.model-clients {
+    background: url(../images/lineas/clients.png) no-repeat bottom center;
     background-size: cover;
 }
 
