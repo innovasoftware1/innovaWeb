@@ -83,10 +83,9 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
-    /* h2 {
-        font-size: 2rem;
-        margin-top: 30%;
-    } */
+    .object {
+        left: -75px;
+    }
 
     p {
         font-size: 90%;
