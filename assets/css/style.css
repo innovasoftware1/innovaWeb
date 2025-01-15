@@ -50,11 +50,6 @@ body {
     width: 100%;
 }
 
-/* .font-title {
-    color: #000;
-    font-size: 60px;
-} */
-
 /*------------------------------------------------------------------*/
 /*   IE10 in Windows 8 and Windows Phone 8 Bug fix
 /*-----------------------------------------------------------------*/
@@ -160,7 +155,6 @@ body {
 
 .text-white {
     color: #fff !important;
-    ;
 }
 
 .text-black {
@@ -306,6 +300,7 @@ select:-webkit-autofill {
     box-shadow: inset 0 0px 0px rgba(0, 0, 0, .075), 0 0 0px rgba(102, 175, 233, .6);
 }
 
+
 h1,
 h2,
 h3,
@@ -314,7 +309,6 @@ h5,
 h6 {
     margin: 0;
     color: #1a1a1a;
-    margin-bottom: 10px;
 }
 
 h1 {
@@ -1169,12 +1163,11 @@ Nav Menu style
 .blog-banner,
 .home {
     background-size: cover;
-    height: 645px;
     position: relative;
 }
 
 .home {
-    background: source(../videos/innova_intro.mp4) no-repeat top center;
+    /* background: source(../videos/innova_intro.mp4) no-repeat top center; */
 }
 
 .service-banner {
@@ -1244,24 +1237,6 @@ Home Section style
     border: none;
 }
 
-/* @media (max-width: 1024px) {
-    .main_home {
-        padding-bottom: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .main_home {
-        padding-top: 0;
-        padding-bottom: 0; 
-    }
-
-@media (max-width: 480px) {
-    .main_home {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-} */
 
 .main_home_product {
     overflow: hidden;
@@ -1321,38 +1296,6 @@ Home Section style
     color: #000;
 }
 
-
-/* .main_feature {
-    margin-top: 70px;
-}
-
-
-@media (max-width: 1024px) {
-    .main_feature {
-        margin-top: -40vh;
-    }
-}
-
-@media (max-width: 767px) {
-    .main_feature {
-        margin-top: -50vh;
-    }
-}
-
-@media (max-width: 540px) {
-    .main_feature {
-        margin-top: -40vh;
-    }
-}
-
-@media (max-width: 430px) {
-    .main_feature {
-        margin-top: -50vh;
-    }
-} */
-
-
-
 #hello {
     position: relative;
     /* height: 100vh; */
@@ -1366,13 +1309,6 @@ Home Section style
     width: 100vw;
     overflow: hidden;
 }
-
-/* .video-background {
-    position: relative;
-    top: -10px;
-    width: 100%;
-    height: 100%;
-} */
 
 .video-background iframe {
     position: absolute;
@@ -1525,7 +1461,7 @@ Home Section style
 .main-gallery .grid-item {
     position: relative;
     margin: 5px;
-    width: 372px;
+    width: 384px;
     overflow: hidden;
 }
 
@@ -1739,7 +1675,7 @@ Models Section style
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: -60px;
+    bottom: -50px;
     transition: all 0.6s;
 }
 
@@ -1760,10 +1696,6 @@ Models Section style
     font-size: 14px;
     color: #000;
 }
-
-
-
-
 
 /*
 Contact Section style
@@ -1874,7 +1806,18 @@ footer {
 
 }
 
-
+@media (max-width: 768px) {
+    .mb-3 {
+        margin-top: 10%;
+    }
+  }
+  
+  /* Estilos para pantallas móviles */
+  @media (max-width: 480px) {
+    .mb-3 {
+      margin-top: 10%;
+    }
+  }
 
 
 /*
@@ -2164,7 +2107,7 @@ footer {
 
 .main-model .model-item {
     width: 270px;
-    height: 240px;
+    height: 240;
     max-height: 240px;
     margin: 10px;
     border-radius: 25px;
