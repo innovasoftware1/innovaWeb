@@ -43,6 +43,47 @@
     <link rel="stylesheet" href="assets/css/whatsapp-style.css">
 
     <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <style>
+        @keyframes moveDown {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .btn-hint i {
+            font-size: 24px;
+            animation: moveDown 1.5s infinite;
+        }
+
+        .btn-hint i:hover {
+            color: #5499c7;
+        }
+
+        .btn-hint {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            .btn-hint i {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 
@@ -84,8 +125,8 @@
                     </button>
                     <!-- Inicio logos INNOVA -->
                     <a class="navbar-brand" href="index">
-                        <img src="assets/images/innova-logo/white-log.png" class="logo logo-display" alt="">
-                        <img src="assets/images/innova-logo/black-log.png" class="logo logo-scrolled" alt="">
+                        <img src="assets/images/innova-logo/logo-innova-white.png" class="logo logo-display" alt="">
+                        <img src="assets/images/innova-logo/logo-innova-black.png" class="logo logo-scrolled" alt="">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-menu">
@@ -93,8 +134,8 @@
                         <li id="id"><a href="index">Inicio</a></li>
                         <li id="ab"><a href="lineasdenegocio">Productos</a></li>
                         <li id="md"><a href="clientes">Clientes</a></li>
-                        <li id="bg"><a href="#">Nosotros</a></li>
-                        <li><a style="font-size: 25px;">|</a></li>
+                        <li id="bg" class="active"><a href="nosotros">Nosotros</a></li>
+                        <li><a id="none" style="font-size: 25px;">|</a></li>
                         <li id="dw"><a href="catalogo">
                                 Catálogo <i class="fas fa-download"></i>
                             </a></li>
@@ -108,7 +149,7 @@
             <div class="container">
                 <div class="row">
                     <div class="main_home text-center">
-                        <div class="model_text">
+                        <div class="model_text_down">
                             <h3 class="text-white text-uppercase"><b>Acerca de</b></h3>
                             <h1 class="text-white text-uppercase font-title"><b>NOSOTROS</b></h1>
                             <hr>
@@ -437,6 +478,15 @@
     <script src="assets/js/truck-valla.js"></script>
     <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
 
+    <script>
+        document.querySelectorAll('.btn-hint').forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.stopPropagation();
+                const cardId = button.closest('label').getAttribute('for');
+                document.getElementById(cardId).checked = true;
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -39,26 +39,6 @@
             overflow: hidden;
         }
 
-        .top-left-img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            max-width: 120px;
-            max-height: 120px !important;
-            z-index: 1;
-        }
-
-        .carousel-container {
-            display: flex;
-            animation: slide 20s infinite;
-        }
-
-        .carousel-container img {
-            width: 100%;
-            flex-shrink: 0;
-        }
-
-
         @keyframes slide {
             0% {
                 transform: translateX(0);
@@ -83,6 +63,34 @@
             100% {
                 transform: translateX(0%);
             }
+        }
+
+        .top-left-img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 30px;
+            width: 120px !important;
+            object-fit: contain;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .top-left-img {
+                height: 25px;
+                width: auto;
+            }
+        }
+
+        .carousel-container {
+            display: flex;
+            animation: slide 20s infinite;
+        }
+
+        .carousel-container img {
+            width: 100%;
+            flex-shrink: 0;
         }
     </style>
 </head>
@@ -130,17 +138,17 @@
                     </button>
                     <!-- Inicio logos INNOVA -->
                     <a class="navbar-brand" href="index">
-                        <img src="assets/images/innova-logo/white-log.png" class="logo logo-display" alt="">
-                        <img src="assets/images/innova-logo/black-log.png" class="logo logo-scrolled" alt="">
+                        <img src="assets/images/innova-logo/logo-innova-white.png" class="logo logo-display" alt="">
+                        <img src="assets/images/innova-logo/logo-innova-black.png" class="logo logo-scrolled" alt="">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                         <li id="id"><a href="index">Inicio</a></li>
                         <li id="ab"><a href="lineasdenegocio">Productos</a></li>
-                        <li id="md"><a href="#">Clientes</a></li>
+                        <li id="md" class="active"><a href="clientes">Clientes</a></li>
                         <li id="bg"><a href="nosotros">Nosotros</a></li>
-                        <li><a style="font-size: 25px;">|</a></li>
+                        <li><a id="none" style="font-size: 25px;">|</a></li>
                         <li id="dw"><a href="catalogo">
                                 Catálogo <i class="fas fa-download"></i>
                             </a></li>
@@ -160,7 +168,7 @@
             <div class="container">
                 <div class="row">
                     <div class="main_home text-center">
-                        <div class="model_text">
+                        <div class="model_text_down">
                             <h3 class="text-white text-uppercase"><b>Conoce nuestros</b></h3>
                             <h1 class="text-white text-uppercase font-title"><b>CLIENTES</b></h1>
                             <hr>
@@ -176,29 +184,32 @@
                     <div class="main-gallery main-model-client roomy-80">
                         <h4 class="text-center">"Nos enorgullece la confianza que depositan en nosotros, y trabajamos
                             incansablemente para retribuirla con excelencia y calidad."</h4>
-                            <br>
+                        <br>
                         <div class="col-md-12">
                             <div class="filters-button-group sm-text-center main-wrapper">
                                 <button class="button tooltip-container" data-filter=".construccion"><img
                                         class="material-icons" style="background-color: #247fe7;"
                                         src="assets/images/clientes/construccion.svg" alt=""><span
-                                        class="tooltip-text bg1" style="background-color: #247fe7;"><b>SECTOR CONSTRUCCION</b></span></button>
+                                        class="tooltip-text bg1" style="background-color: #247fe7;"><b>SECTOR
+                                            CONSTRUCCION</b></span></button>
                                 <button class="button tooltip-container" data-filter=".gubernamental"><img
                                         class="material-icons" style="background-color: #be3bf7;"
                                         src="assets/images/clientes/gubernamental.svg" alt=""><span
-                                        class="tooltip-text bg2" style="background-color: #be3bf7;"><b>SECTOR GUBERNAMENTAL</b></span></button>
+                                        class="tooltip-text bg2" style="background-color: #be3bf7;"><b>SECTOR
+                                            GUBERNAMENTAL</b></span></button>
                                 <button class="button tooltip-container" data-filter=".publicitario"><img
                                         class="material-icons" style="background-color: #e3c400;"
                                         src="assets/images/clientes/publicitario.svg" alt=""><span
-                                        class="tooltip-text bg3" style="background-color: #e3c400;"><b>SECTOR PUBLICITARIO</b></span></button>
+                                        class="tooltip-text bg3" style="background-color: #e3c400;"><b>SECTOR
+                                            PUBLICITARIO</b></span></button>
                                 <button class="button tooltip-container" data-filter=".bancario"><img
                                         class="material-icons" style="background-color: #00c3bc;"
-                                        src="assets/images/clientes/bancario.svg" alt=""><span
-                                        class="tooltip-text bg4" style="background-color: #00c3bc;"><b>SECTOR <br>BANCARIO</b></span></button>
+                                        src="assets/images/clientes/bancario.svg" alt=""><span class="tooltip-text bg4"
+                                        style="background-color: #00c3bc;"><b>SECTOR <br>BANCARIO</b></span></button>
                                 <button class="button tooltip-container" data-filter=".educativo"><img
                                         class="material-icons" style="background-color: #ca6c00;"
-                                        src="assets/images/clientes/educativo.svg" alt=""><span
-                                        class="tooltip-text bg5" style="background-color: #ca6c00;"><b>SECTOR EDUCATIVO</b></span></button>
+                                        src="assets/images/clientes/educativo.svg" alt=""><span class="tooltip-text bg5"
+                                        style="background-color: #ca6c00;"><b>SECTOR EDUCATIVO</b></span></button>
                             </div>
                         </div>
 
@@ -674,8 +685,8 @@
                             </div>
                             <div class="grid-item model-item-client transition educativo">
                                 <div class="model_img">
-                                    <img src="assets/images/clientes/educativo/uPedagogica/uPedagogica.jpg" alt="Imagen PNG"
-                                        class="top-left-img">
+                                    <img src="assets/images/clientes/educativo/uPedagogica/uPedagogica.jpg"
+                                        alt="Imagen PNG" class="top-left-img">
                                     <div class="carousel-container">
                                         <img src="assets/images/clientes/educativo/uPedagogica/u1.jpg" alt="" />
                                         <img src="assets/images/clientes/educativo/uPedagogica/u2.jpg" alt="" />

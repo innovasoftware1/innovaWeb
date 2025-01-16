@@ -1128,8 +1128,10 @@ Nav Menu style
 ==================*/
 
 .navbar-brand {
-    height: 80%;
+    width: 150px;
+    height: auto;
     padding: 10px 15px;
+    /* max-height: 80%; */
 }
 
 @media (max-width: 768px) {
@@ -1230,8 +1232,8 @@ Home Section style
 /* Estilos generales */
 .main_home {
     overflow: hidden;
-    padding-top: 43vh;
-    padding-bottom: 23vh;
+    /* /* padding-top: 43vh; */
+    /* padding-bottom: 23vh; */
     width: 100%;
     position: relative;
     z-index: 1;
@@ -1257,7 +1259,7 @@ Home Section style
 .main_home_product {
     overflow: hidden;
     padding-top: 43vh;
-    padding-bottom: 23vh;
+    padding-bottom: 23vh; 
     width: 100%;
     position: relative;
     z-index: 1;
@@ -1361,6 +1363,12 @@ Home Section style
         border: none;
     }
 
+}
+
+/* Estilo para los enlaces activos */
+.navbar-nav .active a {
+    font-weight: bold !important;
+    font-size: 20px !important;
 }
 
 
@@ -1672,10 +1680,10 @@ Models Section style
     bottom: 0;
 }
 
-.model_img img {
+.model_img img{
     width: 90%;
     height: 240px !important;
-    max-height: 240px;
+    max-height: 240px !important;
     -webkit-filter: blur(100%);
     filter: blur(100%);
 }
@@ -1711,6 +1719,10 @@ Models Section style
     font-weight: 400;
     font-size: 14px;
     color: #000;
+}
+
+.model_text_down {
+    margin-top: 200px;
 }
 
 /*
@@ -1850,13 +1862,16 @@ footer {
 /*About home
 ============================*/
 .breadcrumb {
-    padding: 8px 15px;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 2% auto;
+    padding: 0;
     list-style: none;
-    background-color: transparent;
-    border-radius: 0px;
-    position: absolute;
-    margin: 5% 40%;
+    width: fit-content;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .breadcrumb li a {
