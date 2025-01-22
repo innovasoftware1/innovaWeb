@@ -165,7 +165,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Animación para el carrusel */
         @keyframes slide {
             0% {
                 transform: translateX(0);
@@ -192,23 +191,24 @@
             }
         }
 
-        /* Ajustes para tablets (dos columnas) */
         @media (max-width: 992px) {
             .grid-item {
                 flex: 1 1 calc(50% - 30px);
-                /* Dos columnas en tablets */
                 max-width: calc(50% - 30px);
             }
         }
 
-        /* Ajustes para móviles (una columna) */
         @media (max-width: 576px) {
             .grid-item {
                 flex: 1 1 100%;
-                /* Una columna en móviles */
                 max-width: 100%;
             }
         }
+        .button.selected {
+        filter: brightness(80%); 
+        box-shadow: 0px 0px 0px;
+        transform: translateY(3px); 
+    }
     </style>
 </head>
 
@@ -962,46 +962,55 @@
             educativo: { border: '#ca6c00', background: '#ca6c00' } // Naranja
         };
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".filters-button-group .button");
-            const categoryTitle = document.getElementById("category-title");
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".filters-button-group .button");
+        const categoryTitle = document.getElementById("category-title");
 
-            buttons.forEach(button => {
-                button.addEventListener("click", function () {
-                    const filterValue = this.getAttribute("data-filter").replace(".", "");
-                    const tooltipText = this.querySelector("span").textContent;
+        // Objeto con los colores para cada categoría
+        const categoryColors = {
+            construccion: { border: '#247fe7', background: '#247fe7' }, // Azul
+            gubernamental: { border: '#be3bf7', background: '#be3bf7' }, // Morado
+            publicitario: { border: '#e3c400', background: '#e3c400' }, // Amarillo
+            bancario: { border: '#00c3bc', background: '#00c3bc' }, // Turquesa
+            educativo: { border: '#ca6c00', background: '#ca6c00' } // Naranja
+        };
 
-                    categoryTitle.style.display = "block";
-                    categoryTitle.textContent = tooltipText;
+        buttons.forEach(button => {
+            button.addEventListener("click", function () {
+                // Remover la clase 'selected' de todos los botones
+                buttons.forEach(btn => btn.classList.remove("selected"));
 
-                    if (categoryColors[filterValue]) {
-                        categoryTitle.style.borderColor = categoryColors[filterValue].border;
-                        categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
-                    }
-                });
-            });
+                // Agregar la clase 'selected' al botón clickeado
+                this.classList.add("selected");
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
+                // Aquí puedes agregar la lógica de filtrado que ya tienes
+                const filterValue = this.getAttribute("data-filter").replace(".", "");
+                const buttonText = this.querySelector("span").textContent;
 
-            if (category) {
-                const button = document.querySelector(`button[data-filter=".${category}"]`);
-                if (button) {
-                    button.click();
-                    const tooltipText = button.querySelector("span").textContent; // Cambiado para usar el texto del span
-                    categoryTitle.textContent = tooltipText;
+                // Mostrar el título de la categoría
+                categoryTitle.style.display = "block";
+                categoryTitle.textContent = buttonText;
 
-                    categoryTitle.style.display = "block";
-
-                    if (categoryColors[category]) {
-                        categoryTitle.style.borderColor = categoryColors[category].border;
-                        categoryTitle.style.backgroundColor = categoryColors[category].background;
-                    }
+                // Aplicar el color de fondo correspondiente
+                if (categoryColors[filterValue]) {
+                    categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
+                    categoryTitle.style.borderColor = categoryColors[filterValue].border;
                 }
-            }
+            });
         });
 
-    </script>
+        // Manejar la categoría desde la URL (opcional)
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+
+        if (category) {
+            const button = document.querySelector(`button[data-filter=".${category}"]`);
+            if (button) {
+                button.click();
+            }
+        }
+    });
+</script>
 
 </body>
 

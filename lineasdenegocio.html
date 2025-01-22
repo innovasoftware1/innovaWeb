@@ -362,6 +362,16 @@
                 margin: 0 10px 0 100px;
             }
         }
+
+        /* Estilo para el botón seleccionado */
+        .button.selected {
+            filter: brightness(80%);
+            /* Oscurece el botón */
+            box-shadow: 0px 0px 0px;
+            /* Elimina la sombra para dar efecto de "presionado" */
+            transform: translateY(3px);
+            /* Efecto de hundido */
+        }
     </style>
 </head>
 
@@ -1511,10 +1521,26 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".filters-button-group .button");
-            const categoryTitle = document.getElementById("category-title");
+    const buttons = document.querySelectorAll(".filters-button-group .button");
 
-            // Objeto con los colores para cada categoría
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Remover la clase 'selected' de todos los botones
+            buttons.forEach(btn => btn.classList.remove("selected"));
+
+            // Agregar la clase 'selected' al botón clickeado
+            this.classList.add("selected");
+
+            // Aquí puedes agregar la lógica de filtrado que ya tienes
+            const filterValue = this.getAttribute("data-filter").replace(".", "");
+            const buttonText = this.querySelector("span").textContent;
+
+            // Mostrar el título de la categoría
+            const categoryTitle = document.getElementById("category-title");
+            categoryTitle.style.display = "block";
+            categoryTitle.textContent = buttonText;
+
+            // Aplicar el color de fondo correspondiente
             const categoryColors = {
                 impresion: { border: '#6768ad', background: '#6768ad' },
                 vallas: { border: '#00bff2', background: '#00bff2' },
@@ -1532,34 +1558,24 @@
                 obra: { border: '#ac4a9c', background: '#ac4a9c' }
             };
 
-            buttons.forEach(button => {
-                button.addEventListener("click", function () {
-                    const filterValue = this.getAttribute("data-filter").replace(".", "");
-                    const buttonText = this.querySelector("span").textContent;
-
-                    // Mostrar el título de la categoría
-                    categoryTitle.style.display = "block";
-                    categoryTitle.textContent = buttonText;
-
-                    // Aplicar el color de fondo correspondiente
-                    if (categoryColors[filterValue]) {
-                        categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
-                        categoryTitle.style.borderColor = categoryColors[filterValue].border;
-                    }
-                });
-            });
-
-            // Manejar la categoría desde la URL (opcional)
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-
-            if (category) {
-                const button = document.querySelector(`button[data-filter=".${category}"]`);
-                if (button) {
-                    button.click();
-                }
+            if (categoryColors[filterValue]) {
+                categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
+                categoryTitle.style.borderColor = categoryColors[filterValue].border;
             }
         });
+    });
+
+    // Manejar la categoría desde la URL (opcional)
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+
+    if (category) {
+        const button = document.querySelector(`button[data-filter=".${category}"]`);
+        if (button) {
+            button.click();
+        }
+    }
+});
     </script>
 
 

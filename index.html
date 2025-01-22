@@ -51,22 +51,37 @@
 
 <style>
     .container.buttons {
-    width: 90%;
-    padding: 5px;
-}
+        width: 90%;
+        padding: 5px;
+    }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-}
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
 
-.grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    /* Oculta el texto corto por defecto (solo se mostrará en móviles) */
+    .text-short {
+        display: none;
+    }
+
+    /* Oculta el texto largo y muestra el corto en dispositivos móviles */
+    @media (max-width: 768px) {
+        .text-long {
+            display: none;
+        }
+
+        .text-short {
+            display: block;
+        }
+    }
 </style>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -150,24 +165,33 @@
                                 <div class="separator_left"></div>
                             </div>
                             <div class="feature_content wow fadeIn m-top-10">
-                                <p>En <b>INNOVA Publicidad Visual SAS</b>, nuestra fortaleza se basa en cinco pilares
+                                <!-- Texto largo (desktop) -->
+                                <p class="text-long">
+                                    En <b>INNOVA Publicidad Visual SAS</b>, nuestra fortaleza se basa en cinco pilares
                                     fundamentales. <b>Nuestro personal</b> está altamente comprometido y capacitado,
-                                    brindando
-                                    confianza y asesoría en cada etapa, desde la venta hasta la postventa. <b>Nuestra
-                                        infraestructura moderna</b> facilita el trabajo diario con espacios
-                                    especializados,
-                                    garantizando eficiencia en todos nuestros procesos. <b>Con maquinaria de última
-                                        generación</b>, aseguramos calidad y rapidez en cada proyecto, ofreciendo
-                                    soluciones
-                                    efectivas que superan las expectativas. <b>Nuestro equipo logístico</b>, altamente
-                                    calificado, se dedica a proporcionar un servicio excepcional, asegurando una
-                                    experiencia óptima para nuestros clientes. Finalmente, <b>nuestra presencia a nivel
-                                        nacional</b> nos posiciona como el aliado ideal, con asesores especializados que
-                                    atienden las diversas necesidades de nuestros clientes en todo el país.</p>
+                                    brindando confianza y asesoría en cada etapa, desde la venta hasta la postventa.
+                                    <b>Nuestra infraestructura moderna</b> facilita el trabajo diario con espacios
+                                    especializados, garantizando eficiencia en todos nuestros procesos. <b>Con
+                                        maquinaria de última generación</b>, aseguramos calidad y rapidez en cada
+                                    proyecto, ofreciendo soluciones efectivas que superan las expectativas. <b>Nuestro
+                                        equipo logístico</b>, altamente calificado, se dedica a proporcionar un servicio
+                                    excepcional, asegurando una experiencia óptima para nuestros clientes. Finalmente,
+                                    <b>nuestra presencia a nivel nacional</b> nos posiciona como el aliado ideal, con
+                                    asesores especializados que atienden las diversas necesidades de nuestros clientes
+                                    en todo el país.
+                                </p>
+
+                                <!-- Texto corto (móvil) -->
+                                <p class="text-short">
+                                    En <b>INNOVA Publicidad Visual SAS</b>, nos destacamos por nuestro personal
+                                    capacitado, infraestructura moderna, maquinaria de última generación, logística
+                                    eficiente y presencia nacional. Somos tu mejor aliado en publicidad visual.
+                                </p>
+
                                 <div class="feature_btns m-top-30">
-                                    <a href="lineasdenegocio" class="btn btn-default text-uppercase">Conoce nuestras
-                                        Lineas de Negocio
-                                        <i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="lineasdenegocio" class="btn btn-default text-uppercase">
+                                        Conoce nuestras Líneas de Negocio <i class="fa fa-long-arrow-right"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -176,121 +200,149 @@
                                 <div class="grid-container">
                                     <!-- Fila 1 -->
                                     <div class="grid-item">
-                                        <button class="btn-hover color-1" aria-label="Impresión" onclick="window.location.href='lineasdenegocio?category=impresion'">
+                                        <button class="btn-hover color-1" aria-label="Impresión"
+                                            onclick="window.location.href='lineasdenegocio?category=impresion'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/priter.svg" alt="Icono de impresión" class="icon">
+                                                <img src="assets/images/botones_inicio/priter.svg"
+                                                    alt="Icono de impresión" class="icon">
                                             </div>
                                             <span class="span">IMPRESION</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-2" aria-label="Vallas publicitarias" onclick="window.location.href='lineasdenegocio?category=vallas'">
+                                        <button class="btn-hover color-2" aria-label="Vallas publicitarias"
+                                            onclick="window.location.href='lineasdenegocio?category=vallas'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/valla.svg" alt="Icono de valla" class="icon">
+                                                <img src="assets/images/botones_inicio/valla.svg" alt="Icono de valla"
+                                                    class="icon">
                                             </div>
                                             <span class="span">VALLAS PUBLICITARIAS</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-3" aria-label="Avisos de fachada" onclick="window.location.href='lineasdenegocio?category=fachada'">
+                                        <button class="btn-hover color-3" aria-label="Avisos de fachada"
+                                            onclick="window.location.href='lineasdenegocio?category=fachada'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/fachada.svg" alt="Icono de aviso de fachada" class="icon">
+                                                <img src="assets/images/botones_inicio/fachada.svg"
+                                                    alt="Icono de aviso de fachada" class="icon">
                                             </div>
                                             <span class="span">AVISOS DE FACHADA</span>
                                         </button>
                                     </div>
-                        
+
                                     <!-- Fila 2 -->
                                     <div class="grid-item">
-                                        <button class="btn-hover color-4" aria-label="Puntos de venta" onclick="window.location.href='lineasdenegocio?category=pventa'">
+                                        <button class="btn-hover color-4" aria-label="Puntos de venta"
+                                            onclick="window.location.href='lineasdenegocio?category=pventa'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/puntoventa.svg" alt="Icono de punto de venta" class="icon">
+                                                <img src="assets/images/botones_inicio/puntoventa.svg"
+                                                    alt="Icono de punto de venta" class="icon">
                                             </div>
                                             <span class="span">PUNTOS DE VENTA</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-5" aria-label="Cerramientos" onclick="window.location.href='lineasdenegocio?category=cerramiento'">
+                                        <button class="btn-hover color-5" aria-label="Cerramientos"
+                                            onclick="window.location.href='lineasdenegocio?category=cerramiento'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/cerramiento.svg" alt="Icono de cerramiento" class="icon">
+                                                <img src="assets/images/botones_inicio/cerramiento.svg"
+                                                    alt="Icono de cerramiento" class="icon">
                                             </div>
                                             <span class="span">CERRAMIENTOS</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-6" aria-label="Decoración vehicular" onclick="window.location.href='lineasdenegocio?category=vehicular'">
+                                        <button class="btn-hover color-6" aria-label="Decoración vehicular"
+                                            onclick="window.location.href='lineasdenegocio?category=vehicular'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/carro.svg" alt="Icono de decoración vehicular" class="icon">
+                                                <img src="assets/images/botones_inicio/carro.svg"
+                                                    alt="Icono de decoración vehicular" class="icon">
                                             </div>
                                             <span class="span">DECORACION VEHICULAR</span>
                                         </button>
                                     </div>
-                        
+
                                     <!-- Fila 3 -->
                                     <div class="grid-item">
-                                        <button class="btn-hover color-7" aria-label="Banderas" onclick="window.location.href='lineasdenegocio?category=banderas'">
+                                        <button class="btn-hover color-7" aria-label="Banderas"
+                                            onclick="window.location.href='lineasdenegocio?category=banderas'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/flag.svg" alt="Icono de bandera" class="icon">
+                                                <img src="assets/images/botones_inicio/flag.svg" alt="Icono de bandera"
+                                                    class="icon">
                                             </div>
                                             <span class="span">BANDERAS</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-8" aria-label="Inflables" onclick="window.location.href='lineasdenegocio?category=inflable'">
+                                        <button class="btn-hover color-8" aria-label="Inflables"
+                                            onclick="window.location.href='lineasdenegocio?category=inflable'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/inflable.svg" alt="Icono de inflable" class="icon">
+                                                <img src="assets/images/botones_inicio/inflable.svg"
+                                                    alt="Icono de inflable" class="icon">
                                             </div>
                                             <span class="span">INFLABLES</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-9" aria-label="Señalización" onclick="window.location.href='lineasdenegocio?category=señalizacion'">
+                                        <button class="btn-hover color-9" aria-label="Señalización"
+                                            onclick="window.location.href='lineasdenegocio?category=señalizacion'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/señalizacion.svg" alt="Icono de señalización" class="icon">
+                                                <img src="assets/images/botones_inicio/señalizacion.svg"
+                                                    alt="Icono de señalización" class="icon">
                                             </div>
                                             <span class="span">SEÑALIZACIÓN</span>
                                         </button>
                                     </div>
-                        
+
                                     <!-- Fila 4 -->
                                     <div class="grid-item">
-                                        <button class="btn-hover color-10" aria-label="Exhibición portátil" onclick="window.location.href='lineasdenegocio?category=exportatil'">
+                                        <button class="btn-hover color-10" aria-label="Exhibición portátil"
+                                            onclick="window.location.href='lineasdenegocio?category=exportatil'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/portatil.svg" alt="Icono de exhibición portátil" class="icon">
+                                                <img src="assets/images/botones_inicio/portatil.svg"
+                                                    alt="Icono de exhibición portátil" class="icon">
                                             </div>
                                             <span class="span">EXHIBICIÓN PORTATIL</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-11" aria-label="Alquiler de publicidad exterior" onclick="window.location.href='lineasdenegocio?category=alquiler'">
+                                        <button class="btn-hover color-11" aria-label="Alquiler de publicidad exterior"
+                                            onclick="window.location.href='lineasdenegocio?category=alquiler'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/exterior.svg" alt="Icono de publicidad exterior" class="icon">
+                                                <img src="assets/images/botones_inicio/exterior.svg"
+                                                    alt="Icono de publicidad exterior" class="icon">
                                             </div>
                                             <span class="span">ALQUILER DE <br>PUBLICIDAD EXTERIOR</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-12" aria-label="Corte y grabado láser" onclick="window.location.href='lineasdenegocio?category=cyglaser'">
+                                        <button class="btn-hover color-12" aria-label="Corte y grabado láser"
+                                            onclick="window.location.href='lineasdenegocio?category=cyglaser'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/laser.svg" alt="Icono de corte láser" class="icon">
+                                                <img src="assets/images/botones_inicio/laser.svg"
+                                                    alt="Icono de corte láser" class="icon">
                                             </div>
                                             <span class="span">CORTE Y GRABADO LASER</span>
                                         </button>
                                     </div>
-                        
+
                                     <!-- Fila 5 -->
                                     <div class="grid-item">
-                                        <button class="btn-hover color-13" aria-label="Audiovisual" onclick="window.location.href='lineasdenegocio?category=audiovisual'">
+                                        <button class="btn-hover color-13" aria-label="Audiovisual"
+                                            onclick="window.location.href='lineasdenegocio?category=audiovisual'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/drone.svg" alt="Icono audiovisual" class="icon">
+                                                <img src="assets/images/botones_inicio/drone.svg"
+                                                    alt="Icono audiovisual" class="icon">
                                             </div>
                                             <span class="span">AUDIOVISUAL</span>
                                         </button>
                                     </div>
                                     <div class="grid-item">
-                                        <button class="btn-hover color-14" aria-label="Mano de obra e instalaciones" onclick="window.location.href='lineasdenegocio?category=obra'">
+                                        <button class="btn-hover color-14" aria-label="Mano de obra e instalaciones"
+                                            onclick="window.location.href='lineasdenegocio?category=obra'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/obra.svg" alt="Icono de mano de obra" class="icon">
+                                                <img src="assets/images/botones_inicio/obra.svg"
+                                                    alt="Icono de mano de obra" class="icon">
                                             </div>
                                             <span class="span">MANO DE OBRA E <br> INSTALACIONES</span>
                                         </button>
@@ -803,6 +855,25 @@
     <script src="assets/js/carousel-style.js"></script>
     <script src="assets/js/truck-valla.js"></script>
     <script src="assets/js/btn-whatsapp.js"></script>
+
+    <script>
+        function adjustText() {
+            const textLong = document.querySelector('.text-long');
+            const textShort = document.querySelector('.text-short');
+
+            if (window.innerWidth <= 768) {
+                textLong.style.display = 'none';
+                textShort.style.display = 'block';
+            } else {
+                textLong.style.display = 'block';
+                textShort.style.display = 'none';
+            }
+        }
+
+        // Ejecutar al cargar la página y al cambiar el tamaño de la ventana
+        window.addEventListener('load', adjustText);
+        window.addEventListener('resize', adjustText);
+    </script>
 
     <script>
 
