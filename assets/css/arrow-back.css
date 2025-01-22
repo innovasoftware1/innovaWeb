@@ -1,0 +1,153 @@
+/* Flecha de retroceso - Lineas*/
+@keyframes move-left-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.back-arrow {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: move-left-right 2s ease-in-out infinite;
+}
+
+.arrow-text {
+    margin-right: 10px;
+}
+
+.back-arrow i {
+    font-size: 24px;
+}
+
+.back-arrow:hover {
+    transform: translateX(-10px);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .back-arrow {
+        font-size: 16px;
+        padding: 8px 12px;
+        margin-top: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: move-left-right 3s ease-in-out infinite;
+    }
+
+    .arrow-text {
+        display: none;
+    }
+
+    .back-arrow i {
+        font-size: 20px;
+    }
+
+    .col-md-4.text-right {
+        text-align: left;
+    }
+}
+
+
+
+/* Ruta de la direccion de lineas */
+@media (max-width: 768px) {
+    .breadcrumb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        z-index: 2;
+    }
+
+    .breadcrumb li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .breadcrumb li::before {
+        display: none;
+    }
+
+    .breadcrumb li a {
+        font-size: 16px;
+    }
+}
+
+
+.impresion {
+    color: #6768ad; /* Color de impresión */
+}
+
+.vallas {
+    color: #00bff2; /* Color de vallas */
+}
+
+.fachada {
+    color: #e73a2f; /* Color de fachada */
+}
+
+.pventa {
+    color: #2eab5a; /* Color de punto de venta */
+}
+
+.cerramiento {
+    color: #f79847; /* Color de cerramiento */
+}
+
+.vehicular {
+    color: #5cc6d0; /* Color de decoración vehicular */
+}
+
+.banderas {
+    color: #b06095; /* Color de banderas */
+}
+
+.inflable {
+    color: #dbbd60; /* Color de inflables */
+}
+
+.señalizacion {
+    color: #b8b9bb; /* Color de señalización */
+}
+
+.exportatil {
+    color: #927181; /* Color de exhibición portátil */
+}
+
+.alquiler {
+    color: #859b43; /* Color de alquiler */
+}
+
+.cyglaser {
+    color: #f05768; /* Color de corte y grabado láser */
+}
+
+.audiovisual {
+    color: #876141; /* Color de audiovisual */
+}
+
+.obra {
+    color: #ac4a9c; /* Color de mano de obra */
+}

@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="../../assets/css/carousel-social.css">
     <link rel="stylesheet" href="../../assets/css/carousel-product-item.css">
     <link rel="stylesheet" href="../../assets/css/btn-resolution.css">
+    <link rel="stylesheet" href="../../assets/css/arrow-back.css">
+    <link rel="stylesheet" href="../../assets/css/whatsapp-style.css">
 
     <script src="../../assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
@@ -36,6 +38,13 @@
 
 <body data-spy="scroll" data-target=".navbar-collapse">
 
+    <!-- icono de whatsapp inicio -->
+    <a href="https://api.whatsapp.com/send?phone=573202005197&text=Quiero%20más%20información%20acerca%20de%20Inflables,%20tipo%20colchón..."
+        target="_blank" class="float">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
+    <div id="tooltip" class="tooltip"><b>¡Contáctanos por WhatsApp!</b></div>
+    <!-- icono de whatsapp final -->
 
     <!-- Preloader -->
     <div id="loading">
@@ -98,12 +107,24 @@
         </section>
 
         <div class="model_text">
-            <ol class="breadcrumb text-uppercase">
-                <li><a href="../../index"><b>INICIO</b></a></li>
-                <li class="active"><a href="../../lineasdenegocio"><b>NUESTRAS LINEAS</b></a></li>
-                <li class="active8"><a href="#"><b>INFLABLES, TIPO COLCHÓN</b></a>
-                </li>
-            </ol>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <ol class="breadcrumb text-uppercase">
+                            <li><a href="../../index"><b>INICIO</b></a></li>
+                            <li class="active"><a href="../../lineasdenegocio"><b>NUESTRAS LINEAS</b></a></li>
+                            <li class="active8"><a href="#"><b>INFLABLES</b></a></li>
+                            <li class="active8"><a href="#"><b>TIPO COLCHÓN</b></a></li>
+                        </ol>
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-right">
+                        <a href="../../lineasdenegocio" class="back-arrow">
+                            <span class="arrow-text">Regresar</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--Model Details Section-->
         <section id="m_details" class="m_details roomy-100 fix">
@@ -170,7 +191,7 @@
                     <br>
                     <div class="col-md-6">
                         <div class="m_details_content m-top-40 m-bottom-40">
-                            <h2 class="text-center"><b>INFLABLES <br> TIPO COLCHÓN</b></h2>
+                            <h2 class="text-center inflable"><b>INFLABLES <br> TIPO COLCHÓN</b></h2>
                             <br>
                             <p class="text-black">Ofrecemos inflables tipo colchón, ideales para actividades
                                 recreativas, promociones y eventos que requieren comodidad, seguridad y una gran
@@ -225,13 +246,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-white text-center">
                         <p>
-                        <p><b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. | <b>Teléfono: </b>(601)7560547 |
-                            <b>Whatsapp: </b>(+57) 3202005197 | <b>E-mail: </b>
-                            info@innovapublicidad.com.co
+                        <p>
+                            <b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. |
+                            <b>Teléfono: </b>(601) 7560547 |
+                            <b><span style="color: #25D366;">Whatsapp: </span></b><i class="fab fa-whatsapp"
+                                style="color: #25D366;"></i> 3202005197 |
+                            <b>E-mail: </b>info@innovapublicidad.com.co
                         </p>
-
                         </p>
                     </div>
                 </div>
@@ -258,6 +281,7 @@
 
     <script src="../../assets/js/plugins.js"></script>
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/btn-whatsapp.js"></script>
 
 
 

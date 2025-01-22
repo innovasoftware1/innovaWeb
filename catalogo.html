@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Catálogo de productos</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../innovaWeb/assets/images/innova-logo/logo-bm.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
@@ -26,15 +26,17 @@
     <!-- Estilos footer social network -->
     <link rel="stylesheet" href="assets/css/carousel-social.css">
     <!-- FlipBook styles -->
-    <link rel="stylesheet" href="assets/css/flipbook/css-flipbook.css">
-    <!-- <link rel="stylesheet" href="assets/css/flipbook/css-flipbook.scss"> -->
-    <link rel="stylesheet" href="assets/css/flipbook/html-pages.css">
+    <!-- <link rel="stylesheet" href="assets/css/flipbook/css-flipbook.css"> -->
+    <link rel="stylesheet" href="assets/css/flipbook/css-flipbook.scss">
+    <!-- <link rel="stylesheet" href="assets/css/flipbook/html-pages.css"> -->
     <link rel="stylesheet" href="assets/css/flipbook/html-pages.scss">
     <!-- Whatsapp icon -->
     <link rel="stylesheet" href="assets/css/whatsapp-style.css">
 
     <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
+    <style>
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -44,6 +46,7 @@
         target="_blank" class="float">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
+    <div id="tooltip" class="tooltip"><b>¡Contáctanos por WhatsApp!</b></div>
 
     <!-- Preloader -->
 
@@ -71,7 +74,7 @@
         <!--Home page style-->
 
 
-        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav text-uppercase"
+        <nav class="navbar navdif navbar-default navbar-fixed white no-background bootsnav text-uppercase"
             style="z-index: 40;">
             <div class="container">
                 <!-- Start Header Navigation -->
@@ -102,9 +105,7 @@
                 </div>
             </div>
         </nav>
-
-
-        <!--Home Sections-->
+        <div class="gradient-line"></div>
 
         <section id="hello" class="model-banner bg-mega">
             <div class="overlay"></div>
@@ -112,20 +113,29 @@
                 <div class="row">
                     <div class="main_home text-center">
                         <div class="model_text_down">
-                            <h3 class="text-white text-uppercase"><b>Conoce nuestro</b></h3>
-                            <h1 class="text-white text-uppercase font-title"><b>CATÁLOGO</b></h1>
-                            <hr>
                         </div>
                     </div>
-                </div><!--End off row-->
-            </div><!--End off container -->
-        </section> <!--End off Home Sections-->
-
+                </div>
+            </div>
+        </section>
 
         <!--Call To Action Section-->
         <br>
         <br>
         <section id="action" class="action roomy-100">
+            <div class="container">
+                <div class="row">
+                    <div class="main_home text-center">
+                        <div class="model_text_down">
+                            <h3 class="text-black text-uppercase"><b>Conoce nuestro</b></h3>
+                            <h1 class="text-black text-uppercase font-title"><b>CATÁLOGO</b></h1>
+                            <hr>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div><!--End off row-->
+            </div><!--End off container -->
             <div class="container">
                 <div class="row">
                     <div class="main_action text-center">
@@ -170,7 +180,7 @@
         </section>
         <hr class="hr-ctg">
         <!-- catalogo -->
-        <section id="feature" class="ab_feature roomy-100">
+            <section id="feature" class="ab_feature roomy-100">
             <div class="container">
                 <div class="row">
                     <div class="main_ab_feature">
@@ -188,123 +198,121 @@
 
                         <div id="fh5co-blog" class="fh5co-bg-section">
                             <div id="catalogo" class="container">
-                                <div class="row animate-box">
-                                </div>
-                                <main>
+                                <main class="parent-container">
                                     <article id="flipbook">
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-1.jpg" alt="logo Innova.">
+                                            <img src="assets/images/catalgo-innova/cat-inno-1.jpg" class="logo Innova.">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-2.jpg" alt="p-2">
+                                            <img src="assets/images/catalgo-innova/cat-inno-2.jpg" class="p-2">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-3.jpg" alt="p-3">
+                                            <img src="assets/images/catalgo-innova/cat-inno-3.jpg" class="p-3">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-4.jpg" alt="p-4">
+                                            <img src="assets/images/catalgo-innova/cat-inno-4.jpg" class="p-4">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-5.jpg" alt="p-5">
+                                            <img src="assets/images/catalgo-innova/cat-inno-5.jpg" class="p-5">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-6.jpg" alt="p-6">
+                                            <img src="assets/images/catalgo-innova/cat-inno-6.jpg" class="p-6">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-7.jpg" alt="p-7">
+                                            <img src="assets/images/catalgo-innova/cat-inno-7.jpg" class="p-7">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-8.jpg" alt="p-8">
+                                            <img src="assets/images/catalgo-innova/cat-inno-8.jpg" class="p-8">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-9.jpg" alt="p-9">
+                                            <img src="assets/images/catalgo-innova/cat-inno-9.jpg" class="p-9">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-10.jpg" alt="p-10">
+                                            <img src="assets/images/catalgo-innova/cat-inno-10.jpg" class="p-10">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-11.jpg" alt="p-11">
+                                            <img src="assets/images/catalgo-innova/cat-inno-11.jpg" class="p-11">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-12.jpg" alt="p-12">
+                                            <img src="assets/images/catalgo-innova/cat-inno-12.jpg" class="p-12">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-13.jpg" alt="p-13">
+                                            <img src="assets/images/catalgo-innova/cat-inno-13.jpg" class="p-13">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-14.jpg" alt="p-14">
+                                            <img src="assets/images/catalgo-innova/cat-inno-14.jpg" class="p-14">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-15.jpg" alt="p-15">
+                                            <img src="assets/images/catalgo-innova/cat-inno-15.jpg" class="p-15">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-16.jpg" alt="p-16">
+                                            <img src="assets/images/catalgo-innova/cat-inno-16.jpg" class="p-16">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-17.jpg" alt="p-17">
+                                            <img src="assets/images/catalgo-innova/cat-inno-17.jpg" class="p-17">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-18.jpg" alt="p-18">
+                                            <img src="assets/images/catalgo-innova/cat-inno-18.jpg" class="p-18">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-19.jpg" alt="p-19">
+                                            <img src="assets/images/catalgo-innova/cat-inno-19.jpg" class="p-19">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-20.jpg" alt="p-20">
+                                            <img src="assets/images/catalgo-innova/cat-inno-20.jpg" class="p-20">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-21.jpg" alt="p-21">
+                                            <img src="assets/images/catalgo-innova/cat-inno-21.jpg" class="p-21">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-22.jpg" alt="p-22">
+                                            <img src="assets/images/catalgo-innova/cat-inno-22.jpg" class="p-22">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-23.jpg" alt="p-23">
+                                            <img src="assets/images/catalgo-innova/cat-inno-23.jpg" class="p-23">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-24.jpg" alt="p-24">
+                                            <img src="assets/images/catalgo-innova/cat-inno-24.jpg" class="p-24">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-25.jpg" alt="p-25">
+                                            <img src="assets/images/catalgo-innova/cat-inno-25.jpg" class="p-25">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-26.jpg" alt="p-26">
+                                            <img src="assets/images/catalgo-innova/cat-inno-26.jpg" class="p-26">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-27.jpg" alt="p-27">
+                                            <img src="assets/images/catalgo-innova/cat-inno-27.jpg" class="p-27">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-30.jpg" alt="p-30">
+                                            <img src="assets/images/catalgo-innova/cat-inno-30.jpg" class="p-30">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-31.jpg" alt="p-31">
+                                            <img src="assets/images/catalgo-innova/cat-inno-31.jpg" class="p-31">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-32.jpg" alt="p-32">
+                                            <img src="assets/images/catalgo-innova/cat-inno-32.jpg" class="p-32">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-33.jpg" alt="p-33">
+                                            <img src="assets/images/catalgo-innova/cat-inno-33.jpg" class="p-33">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-34.jpg" alt="p-34">
+                                            <img src="assets/images/catalgo-innova/cat-inno-34.jpg" class="p-34">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-35.jpg" alt="p-35">
+                                            <img src="assets/images/catalgo-innova/cat-inno-35.jpg" class="p-35">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-36.jpg" alt="p-36">
+                                            <img src="assets/images/catalgo-innova/cat-inno-36.jpg" class="p-36">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-37.jpg" alt="p-37">
+                                            <img src="assets/images/catalgo-innova/cat-inno-37.jpg" class="p-37">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-38.jpg" alt="p-38">
+                                            <img src="assets/images/catalgo-innova/cat-inno-38.jpg" class="p-38">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-39.jpg" alt="p-39">
+                                            <img src="assets/images/catalgo-innova/cat-inno-39.jpg" class="p-39">
                                         </section>
                                         <section>
-                                            <img src="assets/images/catalgo-innova/cat-inno-40.jpg" alt="p-40">
+                                            <img src="assets/images/catalgo-innova/cat-inno-40.jpg" class="p-40">
                                         </section>
 
                                     </article>
@@ -318,6 +326,7 @@
                                     //CONTENTS
                                     const intro = document.getElementsByTagName("li")[0]; const structure = document.getElementsByTagName("li")[1]; const elements = document.getElementsByTagName("li")[2]; const semantic = document.getElementsByTagName("li")[3]; const next = document.getElementsByTagName("li")[4]; intro.onclick = function () { $("#flipbook").turn("page", 3); }; structure.onclick = function () { $("#flipbook").turn("page", 5); }; elements.onclick = function () { $("#flipbook").turn("page", 7); }; semantic.onclick = function () { $("#flipbook").turn("page", 22); }; next.onclick = function () { $("#flipbook").turn("page", 26); };
                                 </script>
+                                
                             </div>
 
                         </div>
@@ -352,13 +361,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-grey text-center">
+                    <div class="text-white text-center">
                         <p>
-                        <p><b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. | <b>Teléfono: </b>(601)7560547 |
-                            <b>Whatsapp: </b>(+57) 3202005197 | <b>E-mail: </b>
-                            info@innovapublicidad.com.co
+                        <p>
+                            <b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. |
+                            <b>Teléfono: </b>(601) 7560547 |
+                            <b><span style="color: #25D366;">Whatsapp: </span></b><i class="fab fa-whatsapp"
+                                style="color: #25D366;"></i> 3202005197 |
+                            <b>E-mail: </b>info@innovapublicidad.com.co
                         </p>
-
                         </p>
                     </div>
                 </div>
@@ -381,38 +392,11 @@
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
     <script src="assets/js/bootsnav.js"></script>
-
-
-    <!-- paradise slider js -->
-
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyD_tAQD36pKp9v4at5AnpGbvBUsLCOSJx8"></script>
-    <script src="assets/js/gmaps.min.js"></script>
-    <script>
-        var map = new GMaps({
-            el: '.ourmap',
-            lat: -12.043333,
-            lng: -77.028333,
-            scrollwheel: false,
-            zoom: 15,
-            zoomControl: true,
-            panControl: false,
-
-            streetViewControl: false,
-            mapTypeControl: false,
-            overviewMapControl: false,
-            clickable: false,
-            styles: [{
-                'stylers': [{ 'hue': 'gray' }, { saturation: -100 },
-                { gamma: 0.80 }]
-            }]
-        });
-
-    </script>
-
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/carousel-style.js"></script>
     <script src="assets/js/truck-valla.js"></script>
+    <script src="assets/js/btn-whatsapp.js"></script>
 
 </body>
 

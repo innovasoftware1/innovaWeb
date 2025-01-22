@@ -1,5 +1,5 @@
 <!doctype html>
- <html class="no-js" lang="en">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -49,15 +49,35 @@
     <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
+<style>
+    .container.buttons {
+    width: 90%;
+    padding: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+</style>
+
 <body data-spy="scroll" data-target=".navbar-collapse">
 
-    <!-- Open whatsapp -->
-    <a href="https://api.whatsapp.com/send?phone=573209018590&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20producto"
+    <!-- icono de whatsapp inicio -->
+    <a href="https://api.whatsapp.com/send?phone=573202005197&text=Quiero%20más%20información%20acerca%20de%20sus%20productos..."
         target="_blank" class="float">
-        <i class="fa fa-whatsapp my-float"></i>
+        <i class="fab fa-whatsapp my-float"></i>
     </a>
-
-    <!-- Preloader -->
+    <div id="tooltip" class="tooltip"><b>¡Contáctanos por WhatsApp!</b></div>
+    <!-- icono de whatsapp final -->
 
     <!--  <div id="loading">
         <div id="loading-center">
@@ -99,10 +119,10 @@
                         <li id="bg"><a href="nosotros">Nosotros</a></li>
                         <li><a id="none" style="font-size: 25px;">|</a></li>
                         <li id="dw"><a href="catalogo">
-                            Catálogo <i class="fas fa-download"></i>
-                        </a></li>
+                                Catálogo <i class="fas fa-download"></i>
+                            </a></li>
                     </ul>
-                    
+
                 </div>
             </div>
         </nav>
@@ -145,174 +165,138 @@
                                         nacional</b> nos posiciona como el aliado ideal, con asesores especializados que
                                     atienden las diversas necesidades de nuestros clientes en todo el país.</p>
                                 <div class="feature_btns m-top-30">
-                                    <a href="lineasdenegocio" class="btn btn-default text-uppercase">Conoce nuestras Lineas de Negocio
+                                    <a href="lineasdenegocio" class="btn btn-default text-uppercase">Conoce nuestras
+                                        Lineas de Negocio
                                         <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 m-top-10">
                             <div class="container buttons">
-                                <div class="row">
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-1" aria-label="Impresión"
-                                            onclick="window.location.href='lineasdenegocio?category=impresion'">
+                                <div class="grid-container">
+                                    <!-- Fila 1 -->
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-1" aria-label="Impresión" onclick="window.location.href='lineasdenegocio?category=impresion'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/priter.svg"
-                                                    alt="Icono de impresión" class="icon">
+                                                <img src="assets/images/botones_inicio/priter.svg" alt="Icono de impresión" class="icon">
                                             </div>
                                             <span class="span">IMPRESION</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-2" aria-label="Vallas publicitarias"
-                                            onclick="window.location.href='lineasdenegocio?category=vallas'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-2" aria-label="Vallas publicitarias" onclick="window.location.href='lineasdenegocio?category=vallas'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/valla.svg" alt="Icono de valla"
-                                                    class="icon">
+                                                <img src="assets/images/botones_inicio/valla.svg" alt="Icono de valla" class="icon">
                                             </div>
                                             <span class="span">VALLAS PUBLICITARIAS</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-3" aria-label="Avisos de fachada"
-                                            onclick="window.location.href='lineasdenegocio?category=fachada'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-3" aria-label="Avisos de fachada" onclick="window.location.href='lineasdenegocio?category=fachada'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/fachada.svg"
-                                                    alt="Icono de aviso de fachada" class="icon">
+                                                <img src="assets/images/botones_inicio/fachada.svg" alt="Icono de aviso de fachada" class="icon">
                                             </div>
                                             <span class="span">AVISOS DE FACHADA</span>
                                         </button>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-4" aria-label="Puntos de venta"
-                                            onclick="window.location.href='lineasdenegocio?category=pventa'">
+                        
+                                    <!-- Fila 2 -->
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-4" aria-label="Puntos de venta" onclick="window.location.href='lineasdenegocio?category=pventa'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/puntoventa.svg"
-                                                    alt="Icono de punto de venta" class="icon">
+                                                <img src="assets/images/botones_inicio/puntoventa.svg" alt="Icono de punto de venta" class="icon">
                                             </div>
                                             <span class="span">PUNTOS DE VENTA</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-5" aria-label="Cerramientos"
-                                            onclick="window.location.href='lineasdenegocio?category=cerramiento'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-5" aria-label="Cerramientos" onclick="window.location.href='lineasdenegocio?category=cerramiento'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/cerramiento.svg"
-                                                    alt="Icono de cerramiento" class="icon">
+                                                <img src="assets/images/botones_inicio/cerramiento.svg" alt="Icono de cerramiento" class="icon">
                                             </div>
                                             <span class="span">CERRAMIENTOS</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-6" aria-label="Decoración vehicular"
-                                            onclick="window.location.href='lineasdenegocio?category=vehicular'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-6" aria-label="Decoración vehicular" onclick="window.location.href='lineasdenegocio?category=vehicular'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/carro.svg"
-                                                    alt="Icono de decoración vehicular" class="icon">
+                                                <img src="assets/images/botones_inicio/carro.svg" alt="Icono de decoración vehicular" class="icon">
                                             </div>
                                             <span class="span">DECORACION VEHICULAR</span>
                                         </button>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-7" aria-label="Banderas"
-                                            onclick="window.location.href='lineasdenegocio?category=banderas'">
+                        
+                                    <!-- Fila 3 -->
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-7" aria-label="Banderas" onclick="window.location.href='lineasdenegocio?category=banderas'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/flag.svg" alt="Icono de bandera"
-                                                    class="icon">
+                                                <img src="assets/images/botones_inicio/flag.svg" alt="Icono de bandera" class="icon">
                                             </div>
                                             <span class="span">BANDERAS</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-8" aria-label="Inflables"
-                                            onclick="window.location.href='lineasdenegocio?category=inflable'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-8" aria-label="Inflables" onclick="window.location.href='lineasdenegocio?category=inflable'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/inflable.svg"
-                                                    alt="Icono de inflable" class="icon">
+                                                <img src="assets/images/botones_inicio/inflable.svg" alt="Icono de inflable" class="icon">
                                             </div>
                                             <span class="span">INFLABLES</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-9" aria-label="Señalización"
-                                            onclick="window.location.href='lineasdenegocio?category=señalizacion'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-9" aria-label="Señalización" onclick="window.location.href='lineasdenegocio?category=señalizacion'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/señalizacion.svg"
-                                                    alt="Icono de señalización" class="icon">
+                                                <img src="assets/images/botones_inicio/señalizacion.svg" alt="Icono de señalización" class="icon">
                                             </div>
                                             <span class="span">SEÑALIZACIÓN</span>
                                         </button>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-10" aria-label="Exhibición portátil"
-                                            onclick="window.location.href='lineasdenegocio?category=exportatil'">
+                        
+                                    <!-- Fila 4 -->
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-10" aria-label="Exhibición portátil" onclick="window.location.href='lineasdenegocio?category=exportatil'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/portatil.svg"
-                                                    alt="Icono de exhibición portátil" class="icon">
+                                                <img src="assets/images/botones_inicio/portatil.svg" alt="Icono de exhibición portátil" class="icon">
                                             </div>
                                             <span class="span">EXHIBICIÓN PORTATIL</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-11" aria-label="Alquiler de publicidad exterior"
-                                            onclick="window.location.href='lineasdenegocio?category=alquiler'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-11" aria-label="Alquiler de publicidad exterior" onclick="window.location.href='lineasdenegocio?category=alquiler'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/exterior.svg"
-                                                    alt="Icono de publicidad exterior" class="icon">
+                                                <img src="assets/images/botones_inicio/exterior.svg" alt="Icono de publicidad exterior" class="icon">
                                             </div>
                                             <span class="span">ALQUILER DE <br>PUBLICIDAD EXTERIOR</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-12" aria-label="Corte y grabado láser"
-                                            onclick="window.location.href='lineasdenegocio?category=cyglaser'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-12" aria-label="Corte y grabado láser" onclick="window.location.href='lineasdenegocio?category=cyglaser'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/laser.svg"
-                                                    alt="Icono de corte láser" class="icon">
+                                                <img src="assets/images/botones_inicio/laser.svg" alt="Icono de corte láser" class="icon">
                                             </div>
                                             <span class="span">CORTE Y GRABADO LASER</span>
                                         </button>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-13" aria-label="Audiovisual"
-                                            onclick="window.location.href='lineasdenegocio?category=audiovisual'">
+                        
+                                    <!-- Fila 5 -->
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-13" aria-label="Audiovisual" onclick="window.location.href='lineasdenegocio?category=audiovisual'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/drone.svg"
-                                                    alt="Icono audiovisual" class="icon">
+                                                <img src="assets/images/botones_inicio/drone.svg" alt="Icono audiovisual" class="icon">
                                             </div>
                                             <span class="span">AUDIOVISUAL</span>
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <button class="btn-hover color-14" aria-label="Mano de obra e instalaciones"
-                                            onclick="window.location.href='lineasdenegocio?category=obra'">
+                                    <div class="grid-item">
+                                        <button class="btn-hover color-14" aria-label="Mano de obra e instalaciones" onclick="window.location.href='lineasdenegocio?category=obra'">
                                             <div class="circle">
-                                                <img src="assets/images/botones_inicio/obra.svg"
-                                                    alt="Icono de mano de obra" class="icon">
+                                                <img src="assets/images/botones_inicio/obra.svg" alt="Icono de mano de obra" class="icon">
                                             </div>
                                             <span class="span">MANO DE OBRA E <br> INSTALACIONES</span>
-
                                         </button>
                                     </div>
-                                    <div class="col-4 col-md-2">
-                                        <!-- <button class="btn-hover color-14" aria-label="Mano de obra e instalaciones"
-                                            onclick="window.location.href='lineasdenegocio?category=obra'">
-                                            <div class="circle">
-                                                <img src="assets/images/botones_inicio/obra.svg"
-                                                    alt="Icono de mano de obra" class="icon">
-                                            </div>
-                                            <span class="span">MANO DE OBRA E <br> INSTALACIONES</span> -->
-
-                                        </button>
-                                    </div>
+                                    <!-- Espacio vacío para mantener la alineación -->
+                                    <div class="grid-item"></div>
                                 </div>
                             </div>
                         </div>
@@ -780,13 +764,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-white text-center">
                         <p>
-                        <p><b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. | <b>Teléfono: </b>(601)7560547 |
-                            <b>Whatsapp: </b>(+57) 3202005197 | <b>E-mail: </b>
-                            info@innovapublicidad.com.co
+                        <p>
+                            <b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. |
+                            <b>Teléfono: </b>(601) 7560547 |
+                            <b><span style="color: #25D366;">Whatsapp: </span></b><i class="fab fa-whatsapp"
+                                style="color: #25D366;"></i> 3202005197 |
+                            <b>E-mail: </b>info@innovapublicidad.com.co
                         </p>
-
                         </p>
                     </div>
                 </div>
@@ -816,9 +802,10 @@
     <script src="assets/js/truck-valla.js"></script>
     <script src="assets/js/carousel-style.js"></script>
     <script src="assets/js/truck-valla.js"></script>
+    <script src="assets/js/btn-whatsapp.js"></script>
 
     <script>
-        
+
     </script>
 
 </body>

@@ -92,16 +92,135 @@
             width: 100%;
             flex-shrink: 0;
         }
+
+        #category-title {
+            display: none;
+            border-radius: 5px;
+            border: 1px solid;
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px;
+            color: #fff;
+        }
+
+        /* Contenedor principal de las tarjetas */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Centra las tarjetas horizontalmente */
+            gap: 15px;
+            /* Espacio entre las tarjetas */
+        }
+
+        /* Estilos para cada tarjeta */
+        .grid-item {
+            flex: 1 1 calc(33.333% - 30px);
+            /* Tres columnas en pantallas grandes */
+            max-width: calc(33.333% - 30px);
+            /* Asegura que no se desborden */
+            margin-bottom: 15px;
+            /* Espacio inferior entre las tarjetas */
+            box-sizing: border-box;
+            /* Incluye el padding y el borde en el ancho */
+        }
+
+        /* Estilos para las imágenes dentro de las tarjetas */
+        .model_img {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Sombra suave */
+        }
+
+        .carousel-container {
+            display: flex;
+            animation: slide 20s infinite;
+            width: 100%;
+            /* Asegura que el carrusel ocupe todo el ancho de la tarjeta */
+        }
+
+        .carousel-container img {
+            width: 100%;
+            flex-shrink: 0;
+            border-radius: 10px;
+            /* Bordes redondeados para las imágenes */
+            object-fit: cover;
+            /* Ajusta la imagen para cubrir el espacio sin distorsionar */
+            height: 200px;
+            /* Altura fija para las imágenes */
+        }
+
+        .top-left-img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 30px;
+            width: 120px !important;
+            object-fit: contain;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        /* Animación para el carrusel */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-100%);
+            }
+
+            40% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-300%);
+            }
+
+            80% {
+                transform: translateX(-400%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        /* Ajustes para tablets (dos columnas) */
+        @media (max-width: 992px) {
+            .grid-item {
+                flex: 1 1 calc(50% - 30px);
+                /* Dos columnas en tablets */
+                max-width: calc(50% - 30px);
+            }
+        }
+
+        /* Ajustes para móviles (una columna) */
+        @media (max-width: 576px) {
+            .grid-item {
+                flex: 1 1 100%;
+                /* Una columna en móviles */
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
 
-    <!-- Open our button of whatsapp -->
-    <a href="https://api.whatsapp.com/send?phone=573209018590&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20producto"
+    <!-- icono de whatsapp inicio -->
+    <a href="https://api.whatsapp.com/send?phone=573202005197&text=Quiero%20más%20información%20acerca%20de%20sus%20productos..."
         target="_blank" class="float">
-        <i class="fa fa-whatsapp my-float"></i>
+        <i class="fab fa-whatsapp my-float"></i>
     </a>
+    <div id="tooltip" class="tooltip"><b>¡Contáctanos por WhatsApp!</b></div>
+    <!-- icono de whatsapp final -->
 
     <!-- Preloader -->
 
@@ -129,7 +248,7 @@
         <!--Home page style-->
 
 
-        <nav class="navbar navbar-default navbar-fixed white no-background bootsnav text-uppercase">
+        <nav class="navbar navdif navbar-default navbar-fixed white no-background bootsnav text-uppercase">
             <div class="container">
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
@@ -159,19 +278,14 @@
                 </div>
             </div>
         </nav>
+        <div class="gradient-line"></div>
 
-
-        <!--Home Sections-->
-
-        <section id="hello" class="model-clients bg-mega">
+        <section id="hello" class="model-banner bg-mega">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
                     <div class="main_home text-center">
                         <div class="model_text_down">
-                            <h3 class="text-white text-uppercase"><b>Conoce nuestros</b></h3>
-                            <h1 class="text-white text-uppercase font-title"><b>CLIENTES</b></h1>
-                            <hr>
                         </div>
                     </div>
                 </div>
@@ -182,39 +296,55 @@
             <div class="container">
                 <div class="row">
                     <div class="main-gallery main-model-client roomy-80">
+                        <div class="container">
+                            <div class="row">
+                                <div class="main_home text-center">
+                                    <div class="model_text_down">
+                                        <h3 class="text-uppercase"><b>Conoce nuestros</b></h3>
+                                        <h1 class="text-uppercase font-title"><b>CLIENTES</b></h1>
+                                        <hr>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <h4 class="text-center">"Nos enorgullece la confianza que depositan en nosotros, y trabajamos
                             incansablemente para retribuirla con excelencia y calidad."</h4>
                         <br>
                         <div class="col-md-12">
                             <div class="filters-button-group sm-text-center main-wrapper">
-                                <button class="button tooltip-container" data-filter=".construccion"><img
-                                        class="material-icons" style="background-color: #247fe7;"
-                                        src="assets/images/clientes/construccion.svg" alt=""><span
-                                        class="tooltip-text bg1" style="background-color: #247fe7;"><b>SECTOR
-                                            CONSTRUCCION</b></span></button>
-                                <button class="button tooltip-container" data-filter=".gubernamental"><img
-                                        class="material-icons" style="background-color: #be3bf7;"
-                                        src="assets/images/clientes/gubernamental.svg" alt=""><span
-                                        class="tooltip-text bg2" style="background-color: #be3bf7;"><b>SECTOR
-                                            GUBERNAMENTAL</b></span></button>
-                                <button class="button tooltip-container" data-filter=".publicitario"><img
-                                        class="material-icons" style="background-color: #e3c400;"
-                                        src="assets/images/clientes/publicitario.svg" alt=""><span
-                                        class="tooltip-text bg3" style="background-color: #e3c400;"><b>SECTOR
-                                            PUBLICITARIO</b></span></button>
-                                <button class="button tooltip-container" data-filter=".bancario"><img
-                                        class="material-icons" style="background-color: #00c3bc;"
-                                        src="assets/images/clientes/bancario.svg" alt=""><span class="tooltip-text bg4"
-                                        style="background-color: #00c3bc;"><b>SECTOR <br>BANCARIO</b></span></button>
-                                <button class="button tooltip-container" data-filter=".educativo"><img
-                                        class="material-icons" style="background-color: #ca6c00;"
-                                        src="assets/images/clientes/educativo.svg" alt=""><span class="tooltip-text bg5"
-                                        style="background-color: #ca6c00;"><b>SECTOR EDUCATIVO</b></span></button>
+                                <button class="button" data-filter=".construccion">
+                                    <img src="assets/images/clientes/construccion.svg" alt="Construcción">
+                                    <span>SECTOR CONSTRUCCIÓN</span>
+                                </button>
+                                <button class="button" data-filter=".gubernamental">
+                                    <img src="assets/images/clientes/gubernamental.svg" alt="Gubernamental">
+                                    <span>SECTOR GUBERNAMENTAL</span>
+                                </button>
+                                <button class="button" data-filter=".publicitario">
+                                    <img src="assets/images/clientes/publicitario.svg" alt="Publicitario">
+                                    <span>SECTOR PUBLICITARIO</span>
+                                </button>
+                                <button class="button" data-filter=".bancario">
+                                    <img src="assets/images/clientes/bancario.svg" alt="Bancario">
+                                    <span>SECTOR BANCARIO</span>
+                                </button>
+                                <button class="button" data-filter=".educativo">
+                                    <img src="assets/images/clientes/educativo.svg" alt="Educativo">
+                                    <span>SECTOR EDUCATIVO</span>
+                                </button>
                             </div>
+
+
                         </div>
 
                         <div style="clear: both;"></div>
                         <br>
+
+                        <h2 id="category-title" class="text-center"
+                            style="display: none; border-radius: 5px; border: 1px solid; width: 80%; margin: 0 auto; padding: 10px; color: #fff;">
+                        </h2>
                         <br>
                         <br>
                         <div class="grid text-center">
@@ -227,9 +357,9 @@
                                     <div class="carousel-container">
                                         <img src="assets/images/clientes/construccion/prodesa/p1.jpg" alt="" />
                                         <img src="assets/images/clientes/construccion/prodesa/p2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/prodesa/p3.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/prodesa/p3.jpg" alt="" />
                                         <img src="assets/images/clientes/construccion/prodesa/p4.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/prodesa/p5.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/prodesa/p5.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -253,9 +383,9 @@
                                     <div class="carousel-container">
                                         <img src="assets/images/clientes/construccion/yuma/y1.jpg" alt="" />
                                         <img src="assets/images/clientes/construccion/yuma/y2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/yuma/y3.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/yuma/y4.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/yuma/y5.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/yuma/y3.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/yuma/y4.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/yuma/y5.jpeg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -264,11 +394,11 @@
                                     <img src="assets/images/clientes/construccion/coninsa/coninsa.png" alt="Imagen PNG"
                                         class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/construccion/coninsa/cn1.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/coninsa/cn2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/coninsa/cn3.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/coninsa/cn1.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/coninsa/cn2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/c1.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/c2.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/c3.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/c4.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/coninsa/c5.JPG" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -277,9 +407,9 @@
                                     <img src="assets/images/clientes/construccion/cumbrera/cumbrera.png"
                                         alt="Imagen PNG" class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/construccion/cumbrera/cm1.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbrera/cm1.jpg" alt="" />
                                         <img src="assets/images/clientes/construccion/cumbrera/cm2.jpeg" alt="" />
-                                        <img src="assets/images/clientes/construccion/cumbrera/cm3.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbrera/cm3.jpg" alt="" />
                                         <img src="assets/images/clientes/construccion/cumbrera/cm4.jpeg" alt="" />
                                         <img src="assets/images/clientes/construccion/cumbrera/cm5.jpeg" alt="" />
                                     </div>
@@ -287,14 +417,66 @@
                             </div>
                             <div class="grid-item model-item-client transition construccion">
                                 <div class="model_img">
-                                    <img src="assets/images/clientes/construccion/vivienda2000/vivienda2000.png"
+                                    <img src="assets/images/clientes/construccion/cemex/cemex.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/cemex/c1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cemex/c2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cemex/c3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cemex/c4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/cemex/c5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/actual/actual.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/actual/ac1.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/actual/ac2.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/actual/ac3.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/actual/ac4.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/actual/ac5.JPG" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/attmosfera/attmosfera.png"
                                         alt="Imagen PNG" class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/construccion/vivienda2000/v1.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/vivienda2000/v2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/vivienda2000/v3.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/vivienda2000/v4.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/vivienda2000/v5.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/attmosfera/att5.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/cumbria/cumbria.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/cumbria/cb1.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbria/cb2.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbria/cb3.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbria/cb4.JPG" alt="" />
+                                        <img src="assets/images/clientes/construccion/cumbria/cb5.JPG" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition construccion">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/construccion/maya/maya.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/construccion/maya/m1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/maya/m2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/maya/m3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/maya/m4.jpeg" alt="" />
+                                        <img src="assets/images/clientes/construccion/maya/m2.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -313,45 +495,6 @@
                             </div>
                             <div class="grid-item model-item-client transition construccion">
                                 <div class="model_img">
-                                    <img src="assets/images/clientes/construccion/cumbria/cumbria.png" alt="Imagen PNG"
-                                        class="top-left-img">
-                                    <div class="carousel-container">
-                                        <img src="assets/images/clientes/construccion/cumbria/cb1.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/cumbria/cb2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/cumbria/cb3.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/cumbria/cb4.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/cumbria/cb5.jpg" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item model-item-client transition construccion">
-                                <div class="model_img">
-                                    <img src="assets/images/clientes/construccion/maya/maya.png" alt="Imagen PNG"
-                                        class="top-left-img">
-                                    <div class="carousel-container">
-                                        <img src="assets/images/clientes/construccion/maya/m1.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/maya/m2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/maya/m3.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/maya/m2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/maya/m3.jpg" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item model-item-client transition construccion">
-                                <div class="model_img">
-                                    <img src="assets/images/clientes/construccion/attmosfera/attmosfera.png"
-                                        alt="Imagen PNG" class="top-left-img">
-                                    <div class="carousel-container">
-                                        <img src="assets/images/clientes/construccion/attmosfera/att5.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/attmosfera/att1.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/attmosfera/att2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/attmosfera/att3.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/attmosfera/att4.jpg" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-item model-item-client transition construccion">
-                                <div class="model_img">
                                     <img src="assets/images/clientes/construccion/agrobetania/agrobetania.png"
                                         alt="Imagen PNG" class="top-left-img">
                                     <div class="carousel-container">
@@ -365,14 +508,14 @@
                             </div>
                             <div class="grid-item model-item-client transition construccion">
                                 <div class="model_img">
-                                    <img src="assets/images/clientes/construccion/actual/actual.png" alt="Imagen PNG"
-                                        class="top-left-img">
+                                    <img src="assets/images/clientes/construccion/vivienda2000/vivienda2000.png"
+                                        alt="Imagen PNG" class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/construccion/actual/ac1.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/actual/ac2.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/actual/ac3.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/actual/ac4.jpg" alt="" />
-                                        <img src="assets/images/clientes/construccion/actual/ac5.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v1.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v2.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v3.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v4.jpg" alt="" />
+                                        <img src="assets/images/clientes/construccion/vivienda2000/v5.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -385,9 +528,9 @@
                                     <div class="carousel-container">
                                         <img src="assets/images/clientes/gubernamental/policia/p1.jpg" alt="" />
                                         <img src="assets/images/clientes/gubernamental/policia/p2.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/policia/p3.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/policia/p4.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/policia/p5.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/policia/p3.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/policia/p4.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/policia/p5.JPG" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -422,11 +565,11 @@
                                     <img src="assets/images/clientes/gubernamental/opain/opain.png" alt="Imagen PNG"
                                         class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/gubernamental/opain/o1.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/opain/o2.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/opain/o3.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/opain/o4.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/opain/o5.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o1.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o2.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o3.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o4.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/opain/o5.JPG" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -436,10 +579,10 @@
                                         alt="Imagen PNG" class="top-left-img">
                                     <div class="carousel-container">
                                         <img src="assets/images/clientes/gubernamental/alcaldia/a1.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/alcaldia/a2.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/alcaldia/a3.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/alcaldia/a4.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/alcaldia/a5.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a2.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a3.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a4.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/alcaldia/a5.jpeg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -452,7 +595,7 @@
                                         <img src="assets/images/clientes/gubernamental/acueducto/a2.jpg" alt="" />
                                         <img src="assets/images/clientes/gubernamental/acueducto/a3.jpg" alt="" />
                                         <img src="assets/images/clientes/gubernamental/acueducto/a4.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/acueducto/a2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/acueducto/a5.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -513,11 +656,11 @@
                                     <img src="assets/images/clientes/gubernamental/gobernacionCun/gobernacionCun.png"
                                         alt="Imagen PNG" class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g1.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g2.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g3.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g4.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g3.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g1.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g2.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g3.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g4.JPG" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionCun/g1.JPG" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -539,10 +682,10 @@
                                     <img src="assets/images/clientes/gubernamental/iucn/iucn.png" alt="Imagen PNG"
                                         class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/gubernamental/iucn/i1.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/iucn/i2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/iucn/i1.jpeg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/iucn/i2.jpeg" alt="" />
                                         <img src="assets/images/clientes/gubernamental/iucn/i3.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/iucn/i4.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/iucn/i4.jfif" alt="" />
                                         <img src="assets/images/clientes/gubernamental/iucn/i5.jpg" alt="" />
                                     </div>
                                 </div>
@@ -552,11 +695,11 @@
                                     <img src="assets/images/clientes/gubernamental/gobernacionTol/gobernacionTol.webp"
                                         alt="Imagen PNG" class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g1.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g2.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g3.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g4.jpg" alt="" />
-                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g2.jpg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g1.jpeg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g2.jpeg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g3.jpeg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g4.jpeg" alt="" />
+                                        <img src="assets/images/clientes/gubernamental/gobernacionTol/g5.jpeg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -595,9 +738,9 @@
                                     <div class="carousel-container">
                                         <img src="assets/images/clientes/bancario/bAgrario/b1.jpg" alt="" />
                                         <img src="assets/images/clientes/bancario/bAgrario/b2.jpg" alt="" />
-                                        <img src="assets/images/clientes/bancario/bAgrario/b1.jpg" alt="" />
-                                        <img src="assets/images/clientes/bancario/bAgrario/b1.jpg" alt="" />
-                                        <img src="assets/images/clientes/bancario/bAgrario/b1.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bAgrario/b3.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bAgrario/b4.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bAgrario/b5.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -606,11 +749,24 @@
                                     <img src="assets/images/clientes/bancario/bbva/bbva.png" alt="Imagen PNG"
                                         class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/bancario/bRepublica/b1.jpg" alt="" />
-                                        <img src="assets/images/clientes/bancario/bRepublica/b2.jpg" alt="" />
-                                        <img src="assets/images/clientes/bancario/bRepublica/b3.jpg" alt="" />
-                                        <img src="assets/images/clientes/bancario/bRepublica/b4.jpg" alt="" />
-                                        <img src="assets/images/clientes/bancario/bRepublica/b2.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bbva/d1.jpeg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bbva/d2.jpeg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bbva/d3.jpeg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bbva/d4.jpeg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bbva/d5.jpeg" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item model-item-client transition bancario">
+                                <div class="model_img">
+                                    <img src="assets/images/clientes/bancario/bogota/banco_bogota.png" alt="Imagen PNG"
+                                        class="top-left-img">
+                                    <div class="carousel-container">
+                                        <img src="assets/images/clientes/bancario/bogota/b1.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bogota/b2.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bogota/b3.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bogota/b4.jpg" alt="" />
+                                        <img src="assets/images/clientes/bancario/bogota/b2.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -624,8 +780,8 @@
                                         <img src="assets/images/clientes/publicitario/severo/s1.jpg" alt="" />
                                         <img src="assets/images/clientes/publicitario/severo/s2.jpg" alt="" />
                                         <img src="assets/images/clientes/publicitario/severo/s3.jpg" alt="" />
-                                        <img src="assets/images/clientes/publicitario/severo/s4.jpg" alt="" />
-                                        <img src="assets/images/clientes/publicitario/severo/s5.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/severo/s4.jpeg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/severo/s5.jpeg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -634,11 +790,11 @@
                                     <img src="assets/images/clientes/publicitario/acei/acei.png" alt="Imagen PNG"
                                         class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
-                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
-                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
-                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
-                                        <img src="assets/images/clientes/publicitario/acei/a1.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/ai1.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/ai2.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/ai3.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/ai4.jpg" alt="" />
+                                        <img src="assets/images/clientes/publicitario/acei/ai5.jpg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -714,11 +870,11 @@
                                     <img src="assets/images/clientes/educativo/kumon/kumon.jpg" alt="Imagen PNG"
                                         class="top-left-img">
                                     <div class="carousel-container">
-                                        <img src="assets/images/clientes/educativo/kumon/k1.jpeg" alt="" />
+                                        <img src="assets/images/clientes/educativo/kumon/k1.jpg" alt="" />
                                         <img src="assets/images/clientes/educativo/kumon/k2.jpg" alt="" />
                                         <img src="assets/images/clientes/educativo/kumon/k3.jpg" alt="" />
                                         <img src="assets/images/clientes/educativo/kumon/k4.jpeg" alt="" />
-                                        <img src="assets/images/clientes/educativo/kumon/k5.jpg" alt="" />
+                                        <img src="assets/images/clientes/educativo/kumon/k5.jpeg" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -760,11 +916,13 @@
                     </div>
                     <div class="text-white text-center">
                         <p>
-                        <p><b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. | <b>Teléfono: </b>(601)7560547 |
-                            <b>Whatsapp: </b>(+57) 3202005197 | <b>E-mail: </b>
-                            info@innovapublicidad.com.co
+                        <p>
+                            <b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. |
+                            <b>Teléfono: </b>(601) 7560547 |
+                            <b><span style="color: #25D366;">Whatsapp: </span></b><i class="fab fa-whatsapp"
+                                style="color: #25D366;"></i> 3202005197 |
+                            <b>E-mail: </b>info@innovapublicidad.com.co
                         </p>
-
                         </p>
                     </div>
                 </div>
@@ -790,19 +948,57 @@
 
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/btn-whatsapp.js"></script>
 
     <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
     <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
 
     <script>
-        document.querySelectorAll('.model_img').forEach((carousel) => {
-            carousel.addEventListener('mouseenter', () => {
-                carousel.querySelector('.carousel-container').style.animationPlayState = 'paused';
+        const categoryColors = {
+            construccion: { border: '#247fe7', background: '#247fe7' }, // Azul
+            gubernamental: { border: '#be3bf7', background: '#be3bf7' }, // Morado
+            publicitario: { border: '#e3c400', background: '#e3c400' }, // Amarillo
+            bancario: { border: '#00c3bc', background: '#00c3bc' }, // Turquesa
+            educativo: { border: '#ca6c00', background: '#ca6c00' } // Naranja
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".filters-button-group .button");
+            const categoryTitle = document.getElementById("category-title");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const filterValue = this.getAttribute("data-filter").replace(".", "");
+                    const tooltipText = this.querySelector("span").textContent;
+
+                    categoryTitle.style.display = "block";
+                    categoryTitle.textContent = tooltipText;
+
+                    if (categoryColors[filterValue]) {
+                        categoryTitle.style.borderColor = categoryColors[filterValue].border;
+                        categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
+                    }
+                });
             });
 
-            carousel.addEventListener('mouseleave', () => {
-                carousel.querySelector('.carousel-container').style.animationPlayState = 'running';
-            });
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+
+            if (category) {
+                const button = document.querySelector(`button[data-filter=".${category}"]`);
+                if (button) {
+                    button.click();
+                    const tooltipText = button.querySelector("span").textContent; // Cambiado para usar el texto del span
+                    categoryTitle.textContent = tooltipText;
+
+                    categoryTitle.style.display = "block";
+
+                    if (categoryColors[category]) {
+                        categoryTitle.style.borderColor = categoryColors[category].border;
+                        categoryTitle.style.backgroundColor = categoryColors[category].background;
+                    }
+                }
+            }
         });
 
     </script>

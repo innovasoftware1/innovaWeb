@@ -94,11 +94,13 @@
 
 <body data-spy="scroll" data-target=".navbar-collapse">
 
-    <!-- Open our button of whatsapp -->
-    <a href="https://api.whatsapp.com/send?phone=573209018590&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20producto"
+    <!-- icono de whatsapp inicio -->
+    <a href="https://api.whatsapp.com/send?phone=573202005197&text=Quiero%20más%20información%20acerca%20de%20sus%20productos..."
         target="_blank" class="float">
-        <i class="fa fa-whatsapp my-float"></i>
+        <i class="fab fa-whatsapp my-float"></i>
     </a>
+    <div id="tooltip" class="tooltip"><b>¡Contáctanos por WhatsApp!</b></div>
+    <!-- icono de whatsapp final -->
 
     <div id="loading">
         <div id="loading-center">
@@ -132,17 +134,19 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                         <li id="id"><a href="index">Inicio</a></li>
-                        <li id="ab"><a href="lineasdenegocio">Productos</a></li>
+                        <li id="ab" class="active"><a href="lineasdenegocio">Productos</a></li>
                         <li id="md"><a href="clientes">Clientes</a></li>
-                        <li id="bg" class="active"><a href="nosotros">Nosotros</a></li>
+                        <li id="bg"><a href="nosotros">Nosotros</a></li>
                         <li><a id="none" style="font-size: 25px;">|</a></li>
                         <li id="dw"><a href="catalogo">
                                 Catálogo <i class="fas fa-download"></i>
                             </a></li>
                     </ul>
+
                 </div>
             </div>
-        </nav>
+        </nav>  
+        <div class="gradient-line"></div>
 
         <section id="hello" class="model-banner bg-mega">
             <div class="overlay"></div>
@@ -150,16 +154,24 @@
                 <div class="row">
                     <div class="main_home text-center">
                         <div class="model_text_down">
-                            <h3 class="text-white text-uppercase"><b>Acerca de</b></h3>
-                            <h1 class="text-white text-uppercase font-title"><b>NOSOTROS</b></h1>
-                            <hr>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="action" class="action roomy-100">
+
+        
+        <section id="action" class="action roomy-80">
             <div class="container">
+                    <div class="row">
+                        <div class="main_home text-center">
+                            <div class="model_text_down">
+                                <h3 class="text-uppercase"><b>Acerca de</b></h3>
+                                <h1 class="text-uppercase font-title"><b>NOSOTROS</b></h1>
+                                <hr>
+                            </div>
+                        </div>
+                </div>
                 <h2 class="tittle-us">Pilares de Innova</h2>
                 <div class="general-container">
                     <input class="radio" type="radio" name="card" id="cardUno" checked />
@@ -442,11 +454,13 @@
                     </div>
                     <div class="text-white text-center">
                         <p>
-                        <p><b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. | <b>Teléfono: </b>(601)7560547 |
-                            <b>Whatsapp: </b>(+57) 3202005197 | <b>E-mail: </b>
-                            info@innovapublicidad.com.co
+                        <p>
+                            <b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. |
+                            <b>Teléfono: </b>(601) 7560547 |
+                            <b><span style="color: #25D366;">Whatsapp: </span></b><i class="fab fa-whatsapp"
+                                style="color: #25D366;"></i> 3202005197 |
+                            <b>E-mail: </b>info@innovapublicidad.com.co
                         </p>
-
                         </p>
                     </div>
                 </div>
@@ -469,6 +483,7 @@
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
     <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/btn-whatsapp.js"></script>
 
 
     <!-- paradise slider js -->

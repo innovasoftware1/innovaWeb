@@ -1,52 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Permanent+Marker&display=swap");
-$title: "Permanent Marker", cursive;
-$links: "Indie Flower", cursive;
-$text: "Lato", sans-serif;
-$back: #fef4a9;
-$color: #3b9a9c;
-$color2: #4bc2c5;
-$light: #78fee0;
-
+/* Estilos generales */
 * {
   box-sizing: border-box;
   outline: none;
+  margin: 0;
+  padding: 0;
 }
 
-body {
+.parent-container {
   display: flex;
-  place-content: center;
-  background-color: #fef4a9;
+  justify-content: center;
+  align-items: center;
+  background-color: $back;
+  padding: 1rem;
 }
 
+/* Estilos del flipbook */
 #flipbook {
-  margin-top: 2rem;
   width: 800px;
-  height: 600px;
+  height: 575px;
+  max-height: 575px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 575px;
+    display: block;
+  }
+
+  .page {
+    width: 400px;
+    height: 600px;
+    background: whitesmoke;
+    border: 1px solid #aeb6bf;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
   a {
     font-family: $links;
     color: $color;
     text-decoration: none;
     cursor: pointer;
+
     &:hover {
       color: $color2;
       text-decoration: underline;
     }
   }
+
   p {
     font-family: $text;
-    padding: 0px 20px;
+    padding: 0 20px;
   }
+
   h1 {
     font-family: $title;
     letter-spacing: 3px;
     color: $color;
     padding-left: 0.5rem;
   }
+
   h2,
   h3,
   h4 {
-    padding: 0px 20px;
+    padding: 0 20px;
   }
+
   .w3-panel {
     margin-top: 20px;
     background-color: $color2;
@@ -54,71 +74,194 @@ body {
     padding: 5px;
     margin: 0 20px;
   }
+
   .shadow {
-    box-shadow: 10px 4px 10px black;
+    box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.5);
   }
-  .page {
-    width: 400px;
-    height: 600px;
-    background: whitesmoke;
-  }
+
   .hard {
     background-image: url("/pictures/cover-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
     p {
       @extend h1;
       position: absolute;
       bottom: 10px;
     }
   }
+
   .pageNum {
     font-family: $links;
     color: $color;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 200px;
   }
+
   .content-list {
     @extend .pageNum;
     font-size: small;
   }
+
   .p2 {
-    //CONTENT-LIST
     text-align: center;
+
     h2 {
       @extend h1;
     }
+
     ol {
       text-align: left;
       list-style-type: none;
+
       li {
         margin-bottom: 1rem;
       }
     }
   }
+
   .final {
     background-image: linear-gradient(to bottom, #1a5276, #136f63);
+
     img {
       max-width: 90%;
       pointer-events: none;
     }
+
     p {
       font-family: $links;
     }
+
     a {
       color: white;
       padding: 0 5px;
     }
   }
 }
+
+/* Estilos específicos para páginas */
+.p4 {
+  h3 {
+    margin: 19.92px 0;
+  }
+
+  ul {
+    margin-top: 25px;
+  }
+}
+
+.p7 *,
+.p10 * {
+  margin-bottom: 6px;
+}
+
+.p11 p {
+  margin-top: 56px;
+}
+
+.p13 p {
+  margin-top: 101px;
+}
+
+.p21 form {
+  padding-left: 23px;
+}
+
+.p23 p,
+.p24 p,
+.p25 p {
+  margin-top: 67px;
+}
+
+.final p {
+  display: none;
+}
+
+.final a {
+  background: black;
+}
+
+/* Media queries para responsividad */
 @media (max-width: 900px) {
   #flipbook {
     margin-top: 0;
     width: 300px;
+    height: auto;
+
     p {
       font-size: 13px;
+    }
+
+    .p4 {
+      h3 {
+        margin: 10px auto;
+      }
+
+      ul {
+        margin: 10px;
+      }
+    }
+
+    .p13 {
+      img {
+        width: 200px;
+      }
+
+      .w3-panel {
+        width: 278px;
+      }
+    }
+
+    .p14 audio {
+      width: 100%;
+    }
+
+    .p15 video {
+      width: 100%;
+    }
+
+    .p18 * {
+      margin: 1px;
+    }
+
+    .p20 ul {
+      margin: 10px;
+    }
+
+    .final {
+      p {
+        display: block;
+      }
+
+      a {
+        background: initial;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #flipbook {
+    width: 100%;
+    max-width: 100%;
+    height: 440px;
+    z-index: 2;
+
+    img {
+      max-height: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #flipbook {
+    height: auto;
+    max-height: 390px;
+
+    img {
+      max-height: 100%;
     }
   }
 }

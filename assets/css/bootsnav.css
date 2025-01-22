@@ -52,7 +52,7 @@ nav.navbar.bootsnav {
 }
 
 nav.navbar.bootsnav ul.nav>li>a {
-    color: #6f6f6f;
+    color: #000;
     background-color: transparent !important;
 }
 
@@ -358,7 +358,7 @@ body {
 }
 
 body.on-side {
-    margin-left: -280px;
+    /* margin-left: -280px; */
 }
 
 .side {
@@ -461,12 +461,14 @@ nav.navbar.bootsnav.navbar-fixed {
     width: 100%;
 }
 
+/* Transparent de modelo responsive */
 nav.navbar.bootsnav.no-background {
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
+    background-color: #fff;
 }
 
 /* Navbar Sticky
@@ -500,13 +502,20 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
     left: -280px;
 }
 
+.container {
+    width: 90%;
+    max-width: none;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 /* Navbar Responsive
 =================================*/
 @media (min-width: 1024px) and (max-width:1400px) {
     body.wrap-nav-sidebar .wrapper .container {
         width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -1138,7 +1147,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
         margin-bottom: 0;
         cursor: pointer;
         border-bottom: solid 1px #e0e0e0;
-        color: #6f6f6f;
+        color: #;
     }
 
     nav.navbar.bootsnav .dropdown .megamenu-content .col-menu ul>li>a {

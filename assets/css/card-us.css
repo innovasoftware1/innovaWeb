@@ -47,7 +47,7 @@
 }
 
 .content {
-    background: transparent;
+    /* background: transparent; */
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/pilares/pilar-2.jpg");
@@ -147,15 +147,16 @@
     word-wrap: break-word;
     white-space: normal;
     line-height: 1.5;
-    margin: 10px 30px;
+    /* margin: 10px 30px; */
 }
 
 /* estilos de las tarjetas de aesores */
 .row-card {
     display: flex;
-    flex-wrap: wrap;
-    gap: 11%;
-    justify-content: space-between; 
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en pantallas pequeñas */
+    justify-content: center;
+    gap: 20px;
+    padding: 0 15px; 
 }
 
 .outer-div,
@@ -398,8 +399,5 @@
     .content p {
         font-size: 0.7rem;
         margin: 10px 30px 0 10px ;
-    }
-    .outer-div {
-        margin-left: 10%;
     }
 }

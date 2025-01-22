@@ -1,3 +1,12 @@
+@keyframes colorChange {
+    0% { background-color: #FFCC29; } 
+    20% { background-color: #AF2040; } 
+    40% { background-color: #E9258C; } 
+    60% { background-color: #009ACC; } 
+    80% { background-color: #00A659; } 
+    100% { background-color: #25d366; } 
+}
+
 .float {
     position: fixed;
     width: 45px;
@@ -10,15 +19,53 @@
     text-align: center;
     font-size: 30px;
     box-shadow: 2px 2px 3px #999;
-    z-index: 100;
+    z-index: 2;
+    animation: colorChange 16s infinite; 
 }
 
 .float:hover {
     text-decoration: none;
     color: #25d366 !important;
     background-color: #fff;
+    border: 1px solid #25d366;
+    animation: none; 
 }
 
 .my-float {
     margin-top: 8px;
+}
+
+.tooltip {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1200;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 87%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #25d366 transparent transparent transparent;
+}
+
+.tooltip.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
