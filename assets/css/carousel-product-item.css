@@ -89,9 +89,7 @@
 @media (min-width: 550px) and (max-width: 991px) {
 	.carousel__item {
 		margin-left: auto;
-		/* Márgenes automáticos para centrar el elemento */
 		margin-right: auto;
-		/* Márgenes automáticos para centrar el elemento */
 		width: 100%;
 	}
 }
@@ -257,13 +255,15 @@
 @media (max-width: 550px) {
 
 	.carousel__item-body {
-		width: 90%;
+		width: 100%;
 		max-width: none;
-		height: auto;
+		height: 100%;
 		aspect-ratio: 16/9;
 		padding: 10px;
+		margin-top: 20px;
 	}
 
 	.carousel-products {
 		margin-top: 200px !important;
+	}
 }

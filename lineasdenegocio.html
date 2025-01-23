@@ -372,6 +372,77 @@
             transform: translateY(3px);
             /* Efecto de hundido */
         }
+
+
+        /* Estilos base para los botones */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #7f8c8d;
+            color: #fff;
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0px 3px 0px #373c3c;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .button-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .button span {
+            display: inline-block;
+            line-height: 1.2;
+            font-size: 100%;
+        }
+
+        .filters-button-group {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        @media (max-width: 900px) {
+            .filters-button-group {
+                grid-template-columns: repeat(3, 1fr);
+                font-size: 5px;
+            }
+
+            .button {
+                font-size: 5px;
+                padding: 8px 15px;
+            }
+
+            .button-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filters-button-group {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .button {
+                font-size: 90% !important;
+                padding: 6px 10px;
+            }
+
+            .button-icon {
+                width: 20% !important;
+            }
+        }
     </style>
 </head>
 
@@ -1313,7 +1384,7 @@
                             <b>Dirección: </b>Carrera 25A # 10 - 60, Bogotá. |
                             <b>Teléfono: </b>(601) 7560547 |
                             <b><span style="color: #25D366;">Whatsapp: </span></b><i class="fab fa-whatsapp"
-                                style="color: #25D366;"></i> 3202005197 |
+                                style="color: #25D366;"></i> <b class="color-what">3202005197</b> |
                             <b>E-mail: </b>info@innovapublicidad.com.co
                         </p>
                         </p>
@@ -1521,61 +1592,61 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".filters-button-group .button");
+            const buttons = document.querySelectorAll(".filters-button-group .button");
 
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            // Remover la clase 'selected' de todos los botones
-            buttons.forEach(btn => btn.classList.remove("selected"));
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    // Remover la clase 'selected' de todos los botones
+                    buttons.forEach(btn => btn.classList.remove("selected"));
 
-            // Agregar la clase 'selected' al botón clickeado
-            this.classList.add("selected");
+                    // Agregar la clase 'selected' al botón clickeado
+                    this.classList.add("selected");
 
-            // Aquí puedes agregar la lógica de filtrado que ya tienes
-            const filterValue = this.getAttribute("data-filter").replace(".", "");
-            const buttonText = this.querySelector("span").textContent;
+                    // Aquí puedes agregar la lógica de filtrado que ya tienes
+                    const filterValue = this.getAttribute("data-filter").replace(".", "");
+                    const buttonText = this.querySelector("span").textContent;
 
-            // Mostrar el título de la categoría
-            const categoryTitle = document.getElementById("category-title");
-            categoryTitle.style.display = "block";
-            categoryTitle.textContent = buttonText;
+                    // Mostrar el título de la categoría
+                    const categoryTitle = document.getElementById("category-title");
+                    categoryTitle.style.display = "block";
+                    categoryTitle.textContent = buttonText;
 
-            // Aplicar el color de fondo correspondiente
-            const categoryColors = {
-                impresion: { border: '#6768ad', background: '#6768ad' },
-                vallas: { border: '#00bff2', background: '#00bff2' },
-                fachada: { border: '#e73a2f', background: '#e73a2f' },
-                pventa: { border: '#2eab5a', background: '#2eab5a' },
-                cerramiento: { border: '#f79847', background: '#f79847' },
-                vehicular: { border: '#5cc6d0', background: '#5cc6d0' },
-                banderas: { border: '#b06095', background: '#b06095' },
-                inflable: { border: '#dbbd60', background: '#dbbd60' },
-                señalizacion: { border: '#b8b9bb', background: '#b8b9bb' },
-                exportatil: { border: '#927181', background: '#927181' },
-                alquiler: { border: '#b5d559', background: '#b5d559' },
-                cyglaser: { border: '#f05768', background: '#f05768' },
-                audiovisual: { border: '#876141', background: '#876141' },
-                obra: { border: '#ac4a9c', background: '#ac4a9c' }
-            };
+                    // Aplicar el color de fondo correspondiente
+                    const categoryColors = {
+                        impresion: { border: '#6768ad', background: '#6768ad' },
+                        vallas: { border: '#00bff2', background: '#00bff2' },
+                        fachada: { border: '#e73a2f', background: '#e73a2f' },
+                        pventa: { border: '#2eab5a', background: '#2eab5a' },
+                        cerramiento: { border: '#f79847', background: '#f79847' },
+                        vehicular: { border: '#5cc6d0', background: '#5cc6d0' },
+                        banderas: { border: '#b06095', background: '#b06095' },
+                        inflable: { border: '#dbbd60', background: '#dbbd60' },
+                        señalizacion: { border: '#b8b9bb', background: '#b8b9bb' },
+                        exportatil: { border: '#927181', background: '#927181' },
+                        alquiler: { border: '#b5d559', background: '#b5d559' },
+                        cyglaser: { border: '#f05768', background: '#f05768' },
+                        audiovisual: { border: '#876141', background: '#876141' },
+                        obra: { border: '#ac4a9c', background: '#ac4a9c' }
+                    };
 
-            if (categoryColors[filterValue]) {
-                categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
-                categoryTitle.style.borderColor = categoryColors[filterValue].border;
+                    if (categoryColors[filterValue]) {
+                        categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
+                        categoryTitle.style.borderColor = categoryColors[filterValue].border;
+                    }
+                });
+            });
+
+            // Manejar la categoría desde la URL (opcional)
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+
+            if (category) {
+                const button = document.querySelector(`button[data-filter=".${category}"]`);
+                if (button) {
+                    button.click();
+                }
             }
         });
-    });
-
-    // Manejar la categoría desde la URL (opcional)
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category');
-
-    if (category) {
-        const button = document.querySelector(`button[data-filter=".${category}"]`);
-        if (button) {
-            button.click();
-        }
-    }
-});
     </script>
 
 

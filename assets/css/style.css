@@ -82,7 +82,7 @@ body {
 }
 
 .roomy-80 {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 80px;
 }
 
@@ -1734,11 +1734,6 @@ Models Section style
     color: #000;
 }
 
-.model_text_down {
-    margin-top: 45;
-    /* color: #515a5a; */
-}
-
 /*
 Contact Section style
 =====================*/
@@ -1865,6 +1860,9 @@ footer {
     }
 }
 
+.color-what {
+    color: #25D366;
+}
 
 /*
 ==================================================

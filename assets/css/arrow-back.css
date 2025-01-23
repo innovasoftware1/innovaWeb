@@ -1,18 +1,3 @@
-/* Flecha de retroceso - Lineas*/
-@keyframes move-left-right {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
 .back-arrow {
     display: inline-flex;
     align-items: center;
@@ -42,17 +27,55 @@
 }
 
 @media (max-width: 768px) {
+    .model_text .row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        position: relative;
+    }
+
+    .breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin: 12px;
+        padding: 0;
+        text-align: left;
+        /* margin-left: 50px; */
+    }
+
+    .breadcrumb li {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .breadcrumb li::before {
+        content: " / ";
+        margin: 0 5px;
+    }
+
+    .breadcrumb li:first-child::before {
+        display: none;
+    }
+
+    .breadcrumb li a {
+        font-size: 12px;
+        text-decoration: none;
+        color: inherit;
+    }
+
     .back-arrow {
         font-size: 16px;
-        padding: 8px 12px;
-        margin-top: 10px;
+        padding: 2px 12px;
         background-color: rgba(0, 0, 0, 0.7);
         width: 40px;
         height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
-        animation: move-left-right 3s ease-in-out infinite;
+        position: absolute;
     }
 
     .arrow-text {
@@ -65,89 +88,89 @@
 
     .col-md-4.text-right {
         text-align: left;
+        flex-shrink: 0;
     }
 }
 
-
-
-/* Ruta de la direccion de lineas */
-@media (max-width: 768px) {
-    .breadcrumb {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0;
-        z-index: 2;
-    }
-
-    .breadcrumb li {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .breadcrumb li::before {
-        display: none;
-    }
-
+@media (max-width: 576px) {
     .breadcrumb li a {
-        font-size: 16px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .breadcrumb li a {
+        font-size: 8px;
     }
 }
 
 
 .impresion {
-    color: #6768ad; /* Color de impresión */
+    color: #6768ad;
+    /* Color de impresión */
 }
 
 .vallas {
-    color: #00bff2; /* Color de vallas */
+    color: #00bff2;
+    /* Color de vallas */
 }
 
 .fachada {
-    color: #e73a2f; /* Color de fachada */
+    color: #e73a2f;
+    /* Color de fachada */
 }
 
 .pventa {
-    color: #2eab5a; /* Color de punto de venta */
+    color: #2eab5a;
+    /* Color de punto de venta */
 }
 
 .cerramiento {
-    color: #f79847; /* Color de cerramiento */
+    color: #f79847;
+    /* Color de cerramiento */
 }
 
 .vehicular {
-    color: #5cc6d0; /* Color de decoración vehicular */
+    color: #5cc6d0;
+    /* Color de decoración vehicular */
 }
 
 .banderas {
-    color: #b06095; /* Color de banderas */
+    color: #b06095;
+    /* Color de banderas */
 }
 
 .inflable {
-    color: #dbbd60; /* Color de inflables */
+    color: #dbbd60;
+    /* Color de inflables */
 }
 
 .señalizacion {
-    color: #b8b9bb; /* Color de señalización */
+    color: #b8b9bb;
+    /* Color de señalización */
 }
 
 .exportatil {
-    color: #927181; /* Color de exhibición portátil */
+    color: #927181;
+    /* Color de exhibición portátil */
 }
 
 .alquiler {
-    color: #859b43; /* Color de alquiler */
+    color: #859b43;
+    /* Color de alquiler */
 }
 
 .cyglaser {
-    color: #f05768; /* Color de corte y grabado láser */
+    color: #f05768;
+    /* Color de corte y grabado láser */
 }
 
 .audiovisual {
-    color: #876141; /* Color de audiovisual */
+    color: #876141;
+    /* Color de audiovisual */
 }
 
 .obra {
-    color: #ac4a9c; /* Color de mano de obra */
+    color: #ac4a9c;
+    /* Color de mano de obra */
 }
