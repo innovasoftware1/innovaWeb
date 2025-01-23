@@ -41,8 +41,9 @@
         flex-wrap: wrap;
         overflow: hidden;
         margin: 12px;
-        padding: 0;
+        padding: 6px;
         text-align: left;
+        margin-top: 4% !important;
         /* margin-left: 50px; */
     }
 
@@ -52,8 +53,9 @@
     }
 
     .breadcrumb li::before {
-        content: " / ";
-        margin: 0 5px;
+        content: "/";
+        font-size: 5px !important;
+        /* margin: 0 5px; */
     }
 
     .breadcrumb li:first-child::before {
