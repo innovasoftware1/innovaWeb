@@ -201,7 +201,7 @@
                                     <!-- Fila 1 -->
                                     <div class="grid-item">
                                         <button class="btn-hover color-1" aria-label="Impresión"
-                                            onclick="window.location.href='lineasdenegocio?category=impresion'">
+                                            onclick="window.location.href='lineasdenegocio?category=impresion#category-title'">
                                             <div class="circle">
                                                 <img src="assets/images/botones_inicio/priter.svg"
                                                     alt="Icono de impresión" class="icon">
@@ -211,7 +211,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <button class="btn-hover color-2" aria-label="Vallas publicitarias"
-                                            onclick="window.location.href='lineasdenegocio?category=vallas'">
+                                            onclick="window.location.href='lineasdenegocio?category=vallas#category-title'">
                                             <div class="circle">
                                                 <img src="assets/images/botones_inicio/valla.svg" alt="Icono de valla"
                                                     class="icon">
@@ -873,6 +873,24 @@
         // Ejecutar al cargar la página y al cambiar el tamaño de la ventana
         window.addEventListener('load', adjustText);
         window.addEventListener('resize', adjustText);
+
+    // Espera a que la página cargue completamente
+    window.onload = function () {
+        // Obtén el valor de la categoría desde la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+
+        // Si hay una categoría en la URL, realiza el scroll
+        if (category) {
+            const sectionId = `${category}-section`; // Ajusta el ID según tu estructura
+            const section = document.getElementById(sectionId);
+
+            if (section) {
+                // Realiza el scroll suave hacia la sección
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    };
     </script>
 
     <script>

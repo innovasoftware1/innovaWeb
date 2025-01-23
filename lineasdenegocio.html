@@ -1433,220 +1433,116 @@
 
     <script>
 
-        const categoryColors = {
-            impresion: { border: '#6768ad', background: '#6768ad' },
-            vallas: { border: '#00bff2', background: '#00bff2' },
-            fachada: { border: '#e73a2f', background: '#e73a2f' },
-            pventa: { border: '#2eab5a', background: '#2eab5a' },
-            cerramiento: { border: '#f79847', background: '#f79847' },
-            vehicular: { border: '#5cc6d0', background: '#5cc6d0' },
-            banderas: { border: '#b06095', background: '#b06095' },
-            inflable: { border: '#dbbd60', background: '#dbbd60' },
-            señalizacion: { border: '#b8b9bb', background: '#b8b9bb' },
-            exportatil: { border: '#927181', background: '#927181' },
-            alquiler: { border: '#b5d559', background: '#b5d559' },
-            cyglaser: { border: '#f05768', background: '#f05768' },
-            audiovisual: { border: '#876141', background: '#876141' },
-            obra: { border: '#ac4a9c', background: '#ac4a9c' }
-        };
+       // Objeto con los colores para cada categoría
+const categoryColors = {
+    impresion: { border: '#6768ad', background: '#6768ad' },
+    vallas: { border: '#00bff2', background: '#00bff2' },
+    fachada: { border: '#e73a2f', background: '#e73a2f' },
+    pventa: { border: '#2eab5a', background: '#2eab5a' },
+    cerramiento: { border: '#f79847', background: '#f79847' },
+    vehicular: { border: '#5cc6d0', background: '#5cc6d0' },
+    banderas: { border: '#b06095', background: '#b06095' },
+    inflable: { border: '#dbbd60', background: '#dbbd60' },
+    señalizacion: { border: '#b8b9bb', background: '#b8b9bb' },
+    exportatil: { border: '#927181', background: '#927181' },
+    alquiler: { border: '#b5d559', background: '#b5d559' },
+    cyglaser: { border: '#f05768', background: '#f05768' },
+    audiovisual: { border: '#876141', background: '#876141' },
+    obra: { border: '#ac4a9c', background: '#ac4a9c' }
+};
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const cardLinks = document.querySelectorAll(".card-link");
+// Función para manejar el scroll suave al título de la categoría
+function scrollToCategoryTitle() {
+    const categoryTitle = document.getElementById("category-title");
 
-            cardLinks.forEach(function (link) {
-                link.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    const href = this.getAttribute("href");
+    if (categoryTitle) {
+        setTimeout(() => {
+            categoryTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 500); // Retraso para asegurar que la página esté completamente renderizada
+    }
+}
 
-                    setTimeout(function () {
-                        window.location.href = href;
-                    }, 500);
-                });
-            });
-        });
+// Función para manejar el comportamiento de los botones
+function setupCategoryButtons() {
+    const buttons = document.querySelectorAll(".filters-button-group .button");
+    const categoryTitle = document.getElementById("category-title");
 
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            // Remover la clase 'selected' de todos los botones
+            buttons.forEach(btn => btn.classList.remove("selected"));
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".filters-button-group .button");
-            const categoryTitle = document.getElementById("category-title");
+            // Agregar la clase 'selected' al botón clickeado
+            this.classList.add("selected");
 
-            // Objeto con los colores para cada categoría
-            const categoryColors = {
-                impresion: { border: '#6768ad', background: '#6768ad' },
-                vallas: { border: '#00bff2', background: '#00bff2' },
-                fachada: { border: '#e73a2f', background: '#e73a2f' },
-                pventa: { border: '#2eab5a', background: '#2eab5a' },
-                cerramiento: { border: '#f79847', background: '#f79847' },
-                vehicular: { border: '#5cc6d0', background: '#5cc6d0' },
-                banderas: { border: '#b06095', background: '#b06095' },
-                inflable: { border: '#dbbd60', background: '#dbbd60' },
-                señalizacion: { border: '#b8b9bb', background: '#b8b9bb' },
-                exportatil: { border: '#927181', background: '#927181' },
-                alquiler: { border: '#b5d559', background: '#b5d559' },
-                cyglaser: { border: '#f05768', background: '#f05768' },
-                audiovisual: { border: '#876141', background: '#876141' },
-                obra: { border: '#ac4a9c', background: '#ac4a9c' }
-            };
+            // Obtener el valor del filtro y el texto del botón
+            const filterValue = this.getAttribute("data-filter").replace(".", "");
+            const buttonText = this.querySelector("span").textContent;
 
-            buttons.forEach(button => {
-                button.addEventListener("click", function () {
-                    const filterValue = this.getAttribute("data-filter").replace(".", "");
-                    const tooltipText = this.querySelector(".tooltip-text").textContent;
+            // Mostrar el título de la categoría
+            categoryTitle.style.display = "block";
+            categoryTitle.textContent = buttonText;
 
-                    categoryTitle.style.display = "block";
-
-                    categoryTitle.textContent = tooltipText;
-
-                    if (categoryColors[filterValue]) {
-                        categoryTitle.style.borderColor = categoryColors[filterValue].border;
-                        categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
-                    }
-                });
-            });
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-
-            if (category) {
-                const button = document.querySelector(`button[data-filter=".${category}"]`);
-                if (button) {
-                    button.click();
-                    const tooltipText = button.querySelector(".tooltip-text").textContent;
-                    categoryTitle.textContent = tooltipText;
-
-                    categoryTitle.style.display = "block";
-
-                    if (categoryColors[category]) {
-                        categoryTitle.style.borderColor = categoryColors[category].border;
-                        categoryTitle.style.backgroundColor = categoryColors[category].background;
-                    }
-                }
+            // Aplicar el color de fondo y borde correspondiente
+            if (categoryColors[filterValue]) {
+                categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
+                categoryTitle.style.borderColor = categoryColors[filterValue].border;
             }
+
+            // Realizar el scroll suave hasta el título de la categoría
+            scrollToCategoryTitle();
         });
+    });
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".filters-button-group .button");
-            const categoryTitle = document.getElementById("category-title");
+    // Manejar la categoría desde la URL (opcional)
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
 
-            // Objeto con los colores de fondo para cada categoría
-            const categoryColors = {
-                impresion: { background: '#6768ad' },
-                vallas: { background: '#00bff2' },
-                fachada: { background: '#e73a2f' },
-                pventa: { background: '#2eab5a' },
-                cerramiento: { background: '#f79847' },
-                vehicular: { background: '#5cc6d0' },
-                banderas: { background: '#b06095' },
-                inflable: { background: '#dbbd60' },
-                señalizacion: { background: '#b8b9bb' },
-                exportatil: { background: '#927181' },
-                alquiler: { background: '#b5d559' },
-                cyglaser: { background: '#f05768' },
-                audiovisual: { background: '#876141' },
-                obra: { background: '#ac4a9c' }
-            };
+    if (category) {
+        const button = document.querySelector(`button[data-filter=".${category}"]`);
+        if (button) {
+            button.click(); // Simula el clic en el botón correspondiente
+        }
+    }
+}
 
-            buttons.forEach(button => {
-                button.addEventListener("click", function () {
-                    const filterValue = this.getAttribute("data-filter").replace(".", "");
-                    const tooltipText = this.querySelector(".tooltip-text").textContent;
+// Función para manejar los enlaces de las tarjetas
+function setupCardLinks() {
+    const cardLinks = document.querySelectorAll(".card-link");
 
-                    categoryTitle.style.display = "block";
-                    categoryTitle.textContent = tooltipText;
+    cardLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const href = this.getAttribute("href");
 
-                    if (categoryColors[filterValue]) {
-                        categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
-
-                        // Cambiar el color de fondo del <span> correspondiente
-                        const spanElement = document.querySelector(`.${filterValue}`);
-                        if (spanElement) {
-                            spanElement.style.backgroundColor = categoryColors[filterValue].background;
-                        }
-                    }
-                });
-            });
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-
-            if (category) {
-                const button = document.querySelector(`button[data-filter=".${category}"]`);
-                if (button) {
-                    button.click();
-                    const tooltipText = button.querySelector(".tooltip-text").textContent;
-                    categoryTitle.textContent = tooltipText;
-
-                    categoryTitle.style.display = "block";
-
-                    if (categoryColors[category]) {
-                        categoryTitle.style.backgroundColor = categoryColors[category].background;
-
-                        // Cambiar el color de fondo del <span> correspondiente
-                        const spanElement = document.querySelector(`.${category}`);
-                        if (spanElement) {
-                            spanElement.style.backgroundColor = categoryColors[category].background;
-                        }
-                    }
-                }
-            }
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500); // Retraso para permitir animaciones o transiciones
         });
+    });
+}
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".filters-button-group .button");
+// Inicializar todo cuando el DOM esté listo
+document.addEventListener("DOMContentLoaded", function () {
+    setupCategoryButtons(); // Configurar los botones de categoría
+    setupCardLinks(); // Configurar los enlaces de las tarjetas
+});
 
-            buttons.forEach(button => {
-                button.addEventListener("click", function () {
-                    // Remover la clase 'selected' de todos los botones
-                    buttons.forEach(btn => btn.classList.remove("selected"));
+// Manejar el scroll al cargar la página
+window.onload = function () {
+    const hash = window.location.hash;
 
-                    // Agregar la clase 'selected' al botón clickeado
-                    this.classList.add("selected");
+    if (hash) {
+        const section = document.querySelector(hash);
 
-                    // Aquí puedes agregar la lógica de filtrado que ya tienes
-                    const filterValue = this.getAttribute("data-filter").replace(".", "");
-                    const buttonText = this.querySelector("span").textContent;
+        if (section) {
+            setTimeout(() => {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 500); // Retraso para asegurar que la página esté completamente renderizada
+        }
+    }
+};
 
-                    // Mostrar el título de la categoría
-                    const categoryTitle = document.getElementById("category-title");
-                    categoryTitle.style.display = "block";
-                    categoryTitle.textContent = buttonText;
-
-                    // Aplicar el color de fondo correspondiente
-                    const categoryColors = {
-                        impresion: { border: '#6768ad', background: '#6768ad' },
-                        vallas: { border: '#00bff2', background: '#00bff2' },
-                        fachada: { border: '#e73a2f', background: '#e73a2f' },
-                        pventa: { border: '#2eab5a', background: '#2eab5a' },
-                        cerramiento: { border: '#f79847', background: '#f79847' },
-                        vehicular: { border: '#5cc6d0', background: '#5cc6d0' },
-                        banderas: { border: '#b06095', background: '#b06095' },
-                        inflable: { border: '#dbbd60', background: '#dbbd60' },
-                        señalizacion: { border: '#b8b9bb', background: '#b8b9bb' },
-                        exportatil: { border: '#927181', background: '#927181' },
-                        alquiler: { border: '#b5d559', background: '#b5d559' },
-                        cyglaser: { border: '#f05768', background: '#f05768' },
-                        audiovisual: { border: '#876141', background: '#876141' },
-                        obra: { border: '#ac4a9c', background: '#ac4a9c' }
-                    };
-
-                    if (categoryColors[filterValue]) {
-                        categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
-                        categoryTitle.style.borderColor = categoryColors[filterValue].border;
-                    }
-                });
-            });
-
-            // Manejar la categoría desde la URL (opcional)
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-
-            if (category) {
-                const button = document.querySelector(`button[data-filter=".${category}"]`);
-                if (button) {
-                    button.click();
-                }
-            }
-        });
     </script>
 
 
