@@ -7,14 +7,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="assets/images/innova-logo/logo-bm.png">
-
-    <!--Google Fonts link-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
-
-
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -25,58 +21,14 @@
     <link rel="stylesheet" href="assets/css/bootsnav.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <!-- Estilos footer social network -->
     <link rel="stylesheet" href="assets/css/carousel-social.css">
-    <!-- Estilos btn-product -->
     <link rel="stylesheet" href="assets/css/product_log.css">
-    <!-- Whatsapp icon -->
     <link rel="stylesheet" href="assets/css/whatsapp-style.css">
-
     <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-
     <style>
-        /* Estilos base para los botones */
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #7f8c8d;
-            /* Color base */
-            color: #fff;
-            font-size: 1em;
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            border-radius: 5px;
-            /* Bordes ligeramente redondeados */
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0px 3px 0px #373c3c;
-            transition: all 0.3s ease;
-            text-align: center;
-            /* Alinear texto al centro */
-        }
-
-        /* Tamaño y estilo del ícono */
-        .button-icon {
-            width: 32px;
-            /* Aumentar el tamaño del ícono */
-            height: 32px;
-            margin-right: 10px;
-            /* Espacio entre el ícono y el texto */
-        }
-
-        /* Estilos para el texto con salto de línea */
-        .button span {
-            display: inline-block;
-            line-height: 1.2;
-            /* Espaciado entre líneas */
-        }
-
-        /* Colores personalizados para cada botón */
         .button[data-filter=".impresion"] {
             background-color: #6768ad;
-            box-shadow: 0px 3px 0px #4c4d7f;
+            box-shadow: 0px 7px 0px #4c4d7f;
         }
 
         .button[data-filter=".vallas"] {
@@ -144,27 +96,20 @@
             box-shadow: 0px 3px 0px #863a7a;
         }
 
-        /* Efecto hover */
         .button:hover {
             box-shadow: 0px 0px 0px;
             transform: translateY(3px);
         }
 
-        /* Responsividad */
         @media (max-width: 768px) {
             .button {
                 width: 100%;
-                /* Ocupa todo el ancho en móviles */
                 margin: 5px 0;
-                /* Reduce el margen */
             }
         }
 
-
-        /* Estilos para el título de la categoría */
         #category-title {
             display: none;
-            /* Oculto por defecto */
             border-radius: 5px;
             border: 1px solid;
             width: 80%;
@@ -177,7 +122,6 @@
             margin-bottom: 20px;
         }
 
-        /* Colores de fondo para cada categoría */
         #category-title.impresion {
             background-color: #6768ad;
             border-color: #4c4d7f;
@@ -284,76 +228,60 @@
             }
         }
 
-
-        /* Colores de fondo para cada categoría */
         .impresion {
             background-color: #6768ad;
-            /* Color de impresión */
         }
 
         .vallas {
             background-color: #00bff2;
-            /* Color de vallas */
         }
 
         .fachada {
             background-color: #e73a2f;
-            /* Color de fachada */
         }
 
         .pventa {
             background-color: #2eab5a;
-            /* Color de punto de venta */
         }
 
         .cerramiento {
             background-color: #f79847;
-            /* Color de cerramiento */
         }
 
         .vehicular {
             background-color: #5cc6d0;
-            /* Color de decoración vehicular */
         }
 
         .banderas {
             background-color: #b06095;
-            /* Color de banderas */
         }
 
         .inflable {
             background-color: #dbbd60;
-            /* Color de inflables */
         }
 
         .señalizacion {
             background-color: #b8b9bb;
-            /* Color de señalización */
         }
 
         .exportatil {
             background-color: #927181;
-            /* Color de exhibición portátil */
         }
 
         .alquiler {
             background-color: #b5d559;
-            /* Color de alquiler */
         }
 
         .cyglaser {
             background-color: #f05768;
-            /* Color de corte y grabado láser */
         }
 
         .audiovisual {
             background-color: #876141;
-            /* Color de audiovisual */
         }
 
         .obra {
             background-color: #ac4a9c;
-            /* Color de mano de obra */
         }
 
         @media (min-width: 1199px) {
@@ -363,18 +291,12 @@
             }
         }
 
-        /* Estilo para el botón seleccionado */
         .button.selected {
             filter: brightness(80%);
-            /* Oscurece el botón */
             box-shadow: 0px 0px 0px;
-            /* Elimina la sombra para dar efecto de "presionado" */
             transform: translateY(3px);
-            /* Efecto de hundido */
         }
 
-
-        /* Estilos base para los botones */
         .button {
             display: inline-flex;
             align-items: center;
@@ -391,7 +313,7 @@
             box-shadow: 0px 3px 0px #373c3c;
             transition: all 0.3s ease;
             text-align: center;
-            width: 100%;
+            width: 90%;
         }
 
         .button-icon {
@@ -409,13 +331,13 @@
         .filters-button-group {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 10px;
+            gap: 5px;
         }
 
         @media (max-width: 900px) {
             .filters-button-group {
                 grid-template-columns: repeat(3, 1fr);
-                font-size: 5px;
+                font-size: 10px;
             }
 
             .button {
@@ -424,8 +346,8 @@
             }
 
             .button-icon {
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
             }
         }
 
@@ -437,25 +359,102 @@
             .button {
                 font-size: 90% !important;
                 padding: 6px 10px;
+                box-shadow: 0px 7px 0px !important;
             }
 
             .button-icon {
                 width: 20% !important;
+                align-items: center;
+                margin-left: 20%;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .filters-button-group {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+            }
+
+            .button {
+                font-size: 12px !important;
+                padding: 8px 10px;
+                margin: 5px 0;
+            }
+
+            .button-icon {
+                width: 20px !important;
+                height: 20px !important;
+                margin-right: 5px;
+            }
+
+            .btn-responsive {
+                width: 90%;
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+
+            .model_text_down h1 {
+                font-size: 24px;
+            }
+
+            .model_text_down h3 {
+                font-size: 18px;
+            }
+
+            .grid-item {
+                width: 100%;
+            }
+
+            .model_img img {
+                width: 100%;
+                height: auto;
+            }
+
+            .model_caption h5 {
+                font-size: 14px;
+            }
+
+            .btn-default-static {
+                font-size: 14px;
+            }
+
+            .main_home.text-center {
+                padding: 10px;
+            }
+
+            .main-gallery {
+                padding: 10px;
+            }
+
+            .main-model {
+                padding: 10px;
+            }
+
+            .roomy-80 {
+                padding: 40px 0;
+            }
+
+            .footer p {
+                font-size: 12px;
+            }
+
+            .footer .col-md-4 {
+                text-align: center;
+            }
+
+            .footer .text-white {
+                font-size: 12px;
             }
         }
     </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
-
-    <!-- icono de whatsapp inicio -->
     <a href="https://api.whatsapp.com/send?phone=573202005197&text=Quiero%20más%20información%20acerca%20de%20sus%20productos..."
         target="_blank" class="float">
         <i class="fab fa-whatsapp my-float"></i>
     </a>
     <div id="tooltip" class="tooltip"><b>¡Contáctanos por WhatsApp!</b></div>
-    <!-- icono de whatsapp final -->
-
     <div id="loading">
         <div id="loading-center">
             <div id="loading-center-absolute">
@@ -473,14 +472,12 @@
         </div>
     </div>
     <div class="culmn">
-
         <nav class="navbar navbar-default navbar-fixed white no-background bootsnav text-uppercase">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <!-- Inicio logos INNOVA -->
                     <a class="navbar-brand" href="index">
                         <img src="assets/images/innova-logo/logo-innova-white.png" class="logo logo-display" alt="">
                         <img src="assets/images/innova-logo/logo-innova-black.png" class="logo logo-scrolled" alt="">
@@ -493,28 +490,22 @@
                         <li id="md"><a href="clientes">Clientes</a></li>
                         <li id="bg"><a href="nosotros">Nosotros</a></li>
                         <li><a id="none" style="font-size: 25px;">|</a></li>
-                        <li id="dw"><a href="catalogo">
-                                Catálogo <i class="fas fa-download"></i>
-                            </a></li>
+                        <li id="dw"><a href="catalogo">Catálogo <i class="fas fa-download"></i></a></li>
                     </ul>
-
                 </div>
             </div>
         </nav>
         <div class="gradient-line"></div>
-
         <section id="hello" class="model-banner bg-mega">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
                     <div class="main_home text-center">
-                        <div class="model_text_down">
-                        </div>
+                        <div class="model_text_down"></div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section>
             <div class="container">
                 <div class="row">
@@ -530,121 +521,60 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="lineasdenegocio" class="btn btn-primary btn-lg btn-block btn-responsive">
-                            Ver todos
-                        </a>
+                        <a href="lineasdenegocio" class="btn btn-primary btn-lg btn-block btn-responsive">Ver todos</a>
                         <div class="col-md-12">
                             <div class="filters-button-group sm-text-center main-wrapper">
-                                <!-- Botón Impresión -->
-                                <button class="button" data-filter=".impresion">
-                                    <img src="assets/images/product_icons/priter.svg" alt="Impresión"
-                                        class="button-icon">
-                                    <span>IMPRESIÓN</span>
-                                </button>
-
-                                <!-- Botón Vallas -->
-                                <button class="button" data-filter=".vallas">
-                                    <img src="assets/images/product_icons/valla.svg" alt="Vallas" class="button-icon">
-                                    <span>VALLAS PUBLICITARIAS</span>
-                                </button>
-
-                                <!-- Botón Fachada -->
-                                <button class="button" data-filter=".fachada">
-                                    <img src="assets/images/product_icons/fachada.svg" alt="Fachada"
-                                        class="button-icon">
-                                    <span>AVISOS DE FACHADA</span>
-                                </button>
-
-                                <!-- Botón Punto de Venta -->
-                                <button class="button" data-filter=".pventa">
-                                    <img src="assets/images/product_icons/puntoventa.svg" alt="Punto de Venta"
-                                        class="button-icon">
-                                    <span>PUNTO DE VENTA</span>
-                                </button>
-
-                                <!-- Botón Cerramientos -->
-                                <button class="button" data-filter=".cerramiento">
-                                    <img src="assets/images/product_icons/cerramiento.svg" alt="Cerramientos"
-                                        class="button-icon">
-                                    <span>CERRAMIENTOS</span>
-                                </button>
-
-                                <!-- Botón Decoración Vehicular -->
-                                <button class="button" data-filter=".vehicular">
-                                    <img src="assets/images/product_icons/carro.svg" alt="Decoración Vehicular"
-                                        class="button-icon">
-                                    <span>DECORACIÓ NVEHICULAR</span>
-                                </button>
-
-                                <!-- Botón Banderas -->
-                                <button class="button" data-filter=".banderas">
-                                    <img src="assets/images/product_icons/flag.svg" alt="Banderas" class="button-icon">
-                                    <span>BANDERAS</span>
-                                </button>
-
-                                <!-- Botón Inflables -->
-                                <button class="button" data-filter=".inflable">
-                                    <img src="assets/images/product_icons/inflable.svg" alt="Inflables"
-                                        class="button-icon">
-                                    <span>INFLABLES</span>
-                                </button>
-
-                                <!-- Botón Señalización -->
-                                <button class="button" data-filter=".señalizacion">
-                                    <img src="assets/images/product_icons/señalizacion.svg" alt="Señalización"
-                                        class="button-icon">
-                                    <span>SEÑALIZACIÓN</span>
-                                </button>
-
-                                <!-- Botón Exhibición Portátil -->
-                                <button class="button" data-filter=".exportatil">
-                                    <img src="assets/images/product_icons/portatil.svg" alt="Exhibición Portátil"
-                                        class="button-icon">
-                                    <span>EXHIBICIÓN PORTÁTIL</span>
-                                </button>
-
-                                <!-- Botón Alquiler de Publicidad Exterior -->
-                                <button class="button" data-filter=".alquiler">
-                                    <img src="assets/images/product_icons/exterior.svg" alt="Alquiler"
-                                        class="button-icon">
-                                    <span>ALQUILER DE PUBLICIDAD EXTERIOR</span>
-                                </button>
-
-                                <!-- Botón Corte y Grabado Láser -->
-                                <button class="button" data-filter=".cyglaser">
-                                    <img src="assets/images/product_icons/laser.svg" alt="Corte y Grabado Láser"
-                                        class="button-icon">
-                                    <span>CORTE Y GRABADO LÁSER</span>
-                                </button>
-
-                                <!-- Botón Audiovisual -->
-                                <button class="button" data-filter=".audiovisual">
-                                    <img src="assets/images/product_icons/drone.svg" alt="Audiovisual"
-                                        class="button-icon">
-                                    <span>AUDIOVISUAL</span>
-                                </button>
-
-                                <!-- Botón Mano de Obra e Instalación -->
-                                <button class="button" data-filter=".obra">
-                                    <img src="assets/images/product_icons/obra.svg" alt="Mano de Obra"
-                                        class="button-icon">
-                                    <span>MANO DE OBRA E INSTALACIÓN</span>
-                                </button>
+                                <button class="button" data-filter=".impresion"><img
+                                        src="assets/images/product_icons/priter.svg" alt="Impresión"
+                                        class="button-icon"><span>IMPRESIÓN</span></button>
+                                <button class="button" data-filter=".vallas"><img
+                                        src="assets/images/product_icons/valla.svg" alt="Vallas"
+                                        class="button-icon"><span>VALLAS PUBLICITARIAS</span></button>
+                                <button class="button" data-filter=".fachada"><img
+                                        src="assets/images/product_icons/fachada.svg" alt="Fachada"
+                                        class="button-icon"><span>AVISOS DE FACHADA</span></button>
+                                <button class="button" data-filter=".pventa"><img
+                                        src="assets/images/product_icons/puntoventa.svg" alt="Punto de Venta"
+                                        class="button-icon"><span>PUNTO DE VENTA</span></button>
+                                <button class="button" data-filter=".cerramiento"><img
+                                        src="assets/images/product_icons/cerramiento.svg" alt="Cerramientos"
+                                        class="button-icon"><span>CERRAMIENTOS</span></button>
+                                <button class="button" data-filter=".vehicular"><img
+                                        src="assets/images/product_icons/carro.svg" alt="Decoración Vehicular"
+                                        class="button-icon"><span>DECORACIÓ NVEHICULAR</span></button>
+                                <button class="button" data-filter=".banderas"><img
+                                        src="assets/images/product_icons/flag.svg" alt="Banderas"
+                                        class="button-icon"><span>BANDERAS</span></button>
+                                <button class="button" data-filter=".inflable"><img
+                                        src="assets/images/product_icons/inflable.svg" alt="Inflables"
+                                        class="button-icon"><span>INFLABLES</span></button>
+                                <button class="button" data-filter=".señalizacion"><img
+                                        src="assets/images/product_icons/señalizacion.svg" alt="Señalización"
+                                        class="button-icon"><span>SEÑALIZACIÓN</span></button>
+                                <button class="button" data-filter=".exportatil"><img
+                                        src="assets/images/product_icons/portatil.svg" alt="Exhibición Portátil"
+                                        class="button-icon"><span>EXHIBICIÓN PORTÁTIL</span></button>
+                                <button class="button" data-filter=".alquiler"><img
+                                        src="assets/images/product_icons/exterior.svg" alt="Alquiler"
+                                        class="button-icon"><span>ALQUILER DE PUBLICIDAD EXTERIOR</span></button>
+                                <button class="button" data-filter=".cyglaser"><img
+                                        src="assets/images/product_icons/laser.svg" alt="Corte y Grabado Láser"
+                                        class="button-icon"><span>CORTE Y GRABADO LÁSER</span></button>
+                                <button class="button" data-filter=".audiovisual"><img
+                                        src="assets/images/product_icons/drone.svg" alt="Audiovisual"
+                                        class="button-icon"><span>AUDIOVISUAL</span></button>
+                                <button class="button" data-filter=".obra"><img
+                                        src="assets/images/product_icons/obra.svg" alt="Mano de Obra"
+                                        class="button-icon"><span>MANO DE OBRA E INSTALACIÓN</span></button>
                             </div>
                         </div>
-
-
                         <div style="clear: both;"></div>
-                        <br>
-                        <br>
-
-                        <!-- Título de la categoría seleccionada -->
+                        <br><br>
                         <h2 id="category-title" class="text-center"
                             style="display: none; border-radius: 5px; border: 1px solid; width: 80%; margin: 0 auto; padding: 10px; color: #fff;">
                         </h2>
                         <br>
                         <div class="grid text-center">
-                            <!-- SECCION DE IMPRESION -->
                             <div class="grid-item model-item transition impresion">
                                 <a href="lineas/impresión/impresiongranformato" class="card-link">
                                     <div class="model_img">
@@ -1280,7 +1210,7 @@
                             <div class="grid-item model-item transition cyglaser">
                                 <a href="lineas/corteygrabadolaser/corte-laser" class="card-link">
                                     <div class="model_img">
-                                        <img src="assets/images/lineas/laser/corte/corte.JPG" alt="" />
+                                        <img src="assets/images/lineas/laser/corte/corte.jpg" alt="" />
                                         <div class="model_caption cyglaser">
                                             <h5 class="text-white">Corte Láser<br><br><span class="text-white"><b>CORTE
                                                         &
@@ -1351,9 +1281,7 @@
 
 
                         </div>
-
                         <div style="clear: both;"></div>
-
                     </div>
                 </div>
             </div>
@@ -1370,7 +1298,7 @@
                                 <a id="ancla" href="https://www.facebook.com/InnovaPublicidadVisualSAS"><img
                                         id="img-social" src="assets/images/innova-logo/l1.PNG" alt=""></a>
                                 <a id="ancla" href="https://www.instagram.com/innovapublicidadweb/"><img id="img-social"
-                                        src="assets/images/innova-logo/l2.JPG" alt=""></a>
+                                        src="assets/images/innova-logo/l2.jpg" alt=""></a>
                                 <a id="ancla" href="https://www.youtube.com/channel/UCIzvliqgblphfOdJUyyZfAg"><img
                                         id="img-social" src="assets/images/innova-logo/l3.png" alt=""></a>
                                 <a id="ancla" href="https://x.com/innovapvisual"><img id="img-social"
@@ -1393,7 +1321,6 @@
             </div>
         </footer>
     </div>
-
     <script>
         function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
@@ -1406,10 +1333,8 @@
         }
         window.onload = function () {
             const category = getQueryParam('category');
-
             if (category) {
                 const button = document.querySelector(`button[data-filter=".${category}"]`);
-
                 if (button) {
                     button.click();
                     removeCategoryFromUrl();
@@ -1419,134 +1344,95 @@
     </script>
     <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
-
     <script src="assets/js/isotope.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.js"></script>
     <script src="assets/js/jquery.easing.1.3.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.collapse.js"></script>
     <script src="assets/js/bootsnav.js"></script>
-
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/btn-whatsapp.js"></script>
-
     <script>
-
-       // Objeto con los colores para cada categoría
-const categoryColors = {
-    impresion: { border: '#6768ad', background: '#6768ad' },
-    vallas: { border: '#00bff2', background: '#00bff2' },
-    fachada: { border: '#e73a2f', background: '#e73a2f' },
-    pventa: { border: '#2eab5a', background: '#2eab5a' },
-    cerramiento: { border: '#f79847', background: '#f79847' },
-    vehicular: { border: '#5cc6d0', background: '#5cc6d0' },
-    banderas: { border: '#b06095', background: '#b06095' },
-    inflable: { border: '#dbbd60', background: '#dbbd60' },
-    señalizacion: { border: '#b8b9bb', background: '#b8b9bb' },
-    exportatil: { border: '#927181', background: '#927181' },
-    alquiler: { border: '#b5d559', background: '#b5d559' },
-    cyglaser: { border: '#f05768', background: '#f05768' },
-    audiovisual: { border: '#876141', background: '#876141' },
-    obra: { border: '#ac4a9c', background: '#ac4a9c' }
-};
-
-// Función para manejar el scroll suave al título de la categoría
-function scrollToCategoryTitle() {
-    const categoryTitle = document.getElementById("category-title");
-
-    if (categoryTitle) {
-        setTimeout(() => {
-            categoryTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 500); // Retraso para asegurar que la página esté completamente renderizada
-    }
-}
-
-// Función para manejar el comportamiento de los botones
-function setupCategoryButtons() {
-    const buttons = document.querySelectorAll(".filters-button-group .button");
-    const categoryTitle = document.getElementById("category-title");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            // Remover la clase 'selected' de todos los botones
-            buttons.forEach(btn => btn.classList.remove("selected"));
-
-            // Agregar la clase 'selected' al botón clickeado
-            this.classList.add("selected");
-
-            // Obtener el valor del filtro y el texto del botón
-            const filterValue = this.getAttribute("data-filter").replace(".", "");
-            const buttonText = this.querySelector("span").textContent;
-
-            // Mostrar el título de la categoría
-            categoryTitle.style.display = "block";
-            categoryTitle.textContent = buttonText;
-
-            // Aplicar el color de fondo y borde correspondiente
-            if (categoryColors[filterValue]) {
-                categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
-                categoryTitle.style.borderColor = categoryColors[filterValue].border;
+        const categoryColors = {
+            impresion: { border: '#6768ad', background: '#6768ad' },
+            vallas: { border: '#00bff2', background: '#00bff2' },
+            fachada: { border: '#e73a2f', background: '#e73a2f' },
+            pventa: { border: '#2eab5a', background: '#2eab5a' },
+            cerramiento: { border: '#f79847', background: '#f79847' },
+            vehicular: { border: '#5cc6d0', background: '#5cc6d0' },
+            banderas: { border: '#b06095', background: '#b06095' },
+            inflable: { border: '#dbbd60', background: '#dbbd60' },
+            señalizacion: { border: '#b8b9bb', background: '#b8b9bb' },
+            exportatil: { border: '#927181', background: '#927181' },
+            alquiler: { border: '#b5d559', background: '#b5d559' },
+            cyglaser: { border: '#f05768', background: '#f05768' },
+            audiovisual: { border: '#876141', background: '#876141' },
+            obra: { border: '#ac4a9c', background: '#ac4a9c' }
+        };
+        function scrollToCategoryTitle() {
+            const categoryTitle = document.getElementById("category-title");
+            if (categoryTitle) {
+                setTimeout(() => {
+                    categoryTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 500);
             }
-
-            // Realizar el scroll suave hasta el título de la categoría
-            scrollToCategoryTitle();
-        });
-    });
-
-    // Manejar la categoría desde la URL (opcional)
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category');
-
-    if (category) {
-        const button = document.querySelector(`button[data-filter=".${category}"]`);
-        if (button) {
-            button.click(); // Simula el clic en el botón correspondiente
         }
-    }
-}
-
-// Función para manejar los enlaces de las tarjetas
-function setupCardLinks() {
-    const cardLinks = document.querySelectorAll(".card-link");
-
-    cardLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const href = this.getAttribute("href");
-
-            setTimeout(() => {
-                window.location.href = href;
-            }, 500); // Retraso para permitir animaciones o transiciones
-        });
-    });
-}
-
-// Inicializar todo cuando el DOM esté listo
-document.addEventListener("DOMContentLoaded", function () {
-    setupCategoryButtons(); // Configurar los botones de categoría
-    setupCardLinks(); // Configurar los enlaces de las tarjetas
-});
-
-// Manejar el scroll al cargar la página
-window.onload = function () {
-    const hash = window.location.hash;
-
-    if (hash) {
-        const section = document.querySelector(hash);
-
-        if (section) {
-            setTimeout(() => {
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 500); // Retraso para asegurar que la página esté completamente renderizada
+        function setupCategoryButtons() {
+            const buttons = document.querySelectorAll(".filters-button-group .button");
+            const categoryTitle = document.getElementById("category-title");
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    buttons.forEach(btn => btn.classList.remove("selected"));
+                    this.classList.add("selected");
+                    const filterValue = this.getAttribute("data-filter").replace(".", "");
+                    const buttonText = this.querySelector("span").textContent;
+                    categoryTitle.style.display = "block";
+                    categoryTitle.textContent = buttonText;
+                    if (categoryColors[filterValue]) {
+                        categoryTitle.style.backgroundColor = categoryColors[filterValue].background;
+                        categoryTitle.style.borderColor = categoryColors[filterValue].border;
+                    }
+                    scrollToCategoryTitle();
+                });
+            });
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            if (category) {
+                const button = document.querySelector(`button[data-filter=".${category}"]`);
+                if (button) {
+                    button.click();
+                }
+            }
         }
-    }
-};
-
+        function setupCardLinks() {
+            const cardLinks = document.querySelectorAll(".card-link");
+            cardLinks.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const href = this.getAttribute("href");
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500);
+                });
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            setupCategoryButtons();
+            setupCardLinks();
+        });
+        window.onload = function () {
+            const hash = window.location.hash;
+            if (hash) {
+                const section = document.querySelector(hash);
+                if (section) {
+                    setTimeout(() => {
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 500);
+                }
+            }
+        };
     </script>
-
-
-
 </body>
 
 </html>

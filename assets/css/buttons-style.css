@@ -264,6 +264,20 @@
     text-align: center;
 }
 
+.col-md-12 {
+    width: 100%;
+    padding: 0 15px; /* Añade un padding para evitar que los botones toquen los bordes */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 15px; /* Añade un padding para evitar que los botones toquen los bordes */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
 /* Media responsive para botones de index */
 @media (max-width: 991px) {
     .btn-hover {
@@ -339,6 +353,7 @@
     background-color: #F8F8F0;
     padding: 15px 35px;
     color: #000007;
+    max-width: 80%;
     text-decoration: none;
     justify-content: center;
     margin-top: 30px;
@@ -348,11 +363,11 @@
   
     border: none;
   
-    --timing: linear;
+    /* --timing: linear;
     border-image-source: conic-gradient(from var(--a), #FFCC29, #AF2040, #E9258C, #009ACC, #00A659);
     border-image-slice: 1;
     border-image-width: 0.4rem;
-    animation: move 3s infinite var(--timing);
+    animation: move 3s infinite var(--timing); */
   }
   
   @keyframes move {
@@ -392,3 +407,5 @@
       transform: translate(-5px, -5px);
     }
   }
+
+  

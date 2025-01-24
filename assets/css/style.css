@@ -579,9 +579,10 @@ Separator
 }
 
 .tittle-us {
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
-    margin: 50px;
+    margin-bottom: 50px;
+    font-weight: bold ;
 }
 
 .m-0 {
@@ -2104,8 +2105,10 @@ footer {
 .hr-ctg {
     background-color: #b8b8b8;
     width: 90%;
-    height: 5px;
+    height: 2px;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 
